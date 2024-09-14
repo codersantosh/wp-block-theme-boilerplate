@@ -75,6 +75,10 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 
   - Readymade theme info page on admin with banner, theme features, support, contact, recommended plugins, quick links and free vs pro sections.
 
+- **[Powered by Atomic CSS](https://github.com/codersantosh/atomic-css):**
+
+  - The WP Block Theme Boilerplate leverages Atomic CSS to simplify and enhance the styling process.
+    
 - **Customization Encouraged:**
 
   - Since the WP Block Theme Boilerplate is designed to be highly customizable, developers are encouraged to modify and adapt `Atomic CSS` according to their specific project requirements.
