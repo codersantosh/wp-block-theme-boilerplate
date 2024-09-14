@@ -1,0 +1,32 @@
+@import '../common.scss';
+@import '../../prefix-vars.scss';
+
+#{$themePrefix} {
+    &-gsn {
+        #{$varPrefix}-pos: relative;
+
+        &-screenshot {
+            #{$varPrefix}-w: 300px;
+        }
+
+        &-container {
+            #{$varPrefix}-gap: 40px;
+            #{$varPrefix}-p: 20px;
+
+            a {
+                #{$varPrefix}-cl: #48b44f;
+                color: var(#{$varPrefix}-cl);
+            }
+        }
+    }
+
+    &-review-notice {
+        #{$varPrefix}-pos: relative;
+        #{$varPrefix}-p: 20px;
+        padding: var(#{$varPrefix}-p) !important;
+
+        .button-primary {
+            #{$varPrefix}-gap: 5px;
+        }
+    }
+}

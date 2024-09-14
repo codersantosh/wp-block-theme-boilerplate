@@ -1,0 +1,88 @@
+@import '../_global';
+
+// Absolute Header
+body {
+    &:not(.admin-bar) {
+        #{$themePrefix} {
+            &-header {
+                #{$varPrefix}-t: 0;
+            }
+        }
+    }
+}
+
+#{$themePrefix} {
+
+    //Absolute Header
+    &-header {
+        #{$varPrefix}-pos: absolute;
+        #{$varPrefix}-t: var(--wp-admin--admin-bar--height);
+        #{$varPrefix}-l: 0;
+        #{$varPrefix}-r: 0;
+        #{$varPrefix}-z-idx: 9;
+    }
+
+    // Hero Banner
+    &-hero {
+        &-banner {
+            #{$varPrefix}-pos: relative;
+
+            @include respond-above(xxl) {
+                min-height: 85vh !important;
+            }
+
+            &-content {
+                #{$varPrefix}-pos: relative;
+                #{$varPrefix}-z-idx: 2;
+            }
+
+            .at-svg {
+                #{$varPrefix}-cl: var(--wp--preset--color--secondary);
+                #{$varPrefix}-pos: absolute;
+                max-width: 100%;
+            }
+        }
+    }
+
+    //Global Height & Width
+    &-is-h-w {
+        &-40 {
+            $hw40: 40px;
+            #{$varPrefix}-h: $hw40;
+            #{$varPrefix}-w: $hw40;
+        }
+
+        &-70 {
+            $hw70: 70px;
+            #{$varPrefix}-h: $hw70;
+            #{$varPrefix}-w: $hw70;
+        }
+    }
+
+    //Global SVG Color and Spacing
+    &-svg {
+        &-icon {
+            #{$varPrefix}-cl: var(--wp--preset--color--primary);
+            #{$varPrefix}-m: 0 0 30px 0;
+        }
+    }
+
+    //SVG Shapes top and bottom
+    &-shape {
+        &-t {
+            #{$varPrefix}-t: 0;
+            #{$varPrefix}-z-idx: 1;
+            #{$varPrefix}-l: 0;
+            #{$varPrefix}-r: 0;
+            #{$varPrefix}-h: 120px;
+        }
+
+        &-b {
+            #{$varPrefix}-b: 0;
+            #{$varPrefix}-z-idx: 1;
+            #{$varPrefix}-l: 0;
+            #{$varPrefix}-r: 0;
+            #{$varPrefix}-h: 120px;
+        }
+    }
+}

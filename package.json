@@ -1,0 +1,43 @@
+{
+	"name": "wp-block-theme-boilerplate",
+	"version": "1.0.0",
+	"description": "WP Block Theme Boilerplate - WordPress Starter Theme",
+	"author": "codersantosh",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build:adminInfo": "wp-scripts build src/info.js --webpack-src-dir='' --output-path=build/admin/info",
+		"build:adminNotice": "wp-scripts build src/notice.js --webpack-src-dir='' --output-path=build/admin/notice",
+		"build:editor": "wp-scripts build src/editor.js --webpack-src-dir='' --output-path=build/admin/editor",
+		"build:public": "wp-scripts build src/public.js --webpack-src-dir='' --output-path=build/public",
+		"build": "npm-run-all build:adminInfo build:adminNotice build:editor build:public",
+		"start:adminInfo": "wp-scripts start src/info.js --webpack-src-dir='' --output-path=build/admin/info",
+		"start:adminNotice": "wp-scripts start src/notice.js --webpack-src-dir='' --output-path=build/admin/notice",
+		"start:editor": "wp-scripts start src/editor.js --webpack-src-dir='' --output-path=build/admin/editor",
+		"start:public": "wp-scripts start src/public.js --webpack-src-dir='' --output-path=build/public",
+		"start": "npm-run-all --parallel start:adminInfo start:adminNotice start:editor start:public",
+		"packages-update": "wp-scripts packages-update",
+		"makejsstring": "node .bin/make-string.js",
+		"makepot": "wp i18n make-pot . languages/wp-block-theme-boilerplate.pot --skip-js --exclude=src,vendor,node_modules --merge=languages/js.pot",
+		"copy": "node .bin/copy.js",
+		"deploy": "npm-run-all build makepot copy",
+		"initial-rename": "node .bin/initial-rename.js",
+		"rename": "node .bin/rename-filename.js"
+	},
+	"devDependencies": {
+		"@wordpress/babel-plugin-makepot": "^6.3.0",
+		"@wordpress/scripts": "^28.3.0",
+		"autoprefixer": "^10.4.19",
+		"ncp": "^2.0.0",
+		"npm-run-all": "^4.1.5",
+		"replace-in-file": "^7.2.0"
+	},
+	"browserslist": [
+		"last 3 versions",
+		"> 1%"
+	],
+	"dependencies": {
+		"@wordpress/api-fetch": "^7.4.0",
+		"atrc": "^1.0.36"
+	}
+}

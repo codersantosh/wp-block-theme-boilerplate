@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Scroll to top",
+	"slug": "scroll-to-top",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"css": ".wp-element-button{font-size:inherit;position:fixed;right:15px;bottom:15px;z-index:999;text-indent:-5000px;width:50px;height:50px;opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;}"
+	}
+}

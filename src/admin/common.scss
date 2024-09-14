@@ -1,0 +1,90 @@
+@import '../prefix-vars';
+
+#{$themePrefix} {
+    &-btn {
+        &-default {
+            #{$varPrefix}-bg-cl: #2e312f;
+            #{$varPrefix}-bdr-cl: #2e312f;
+            #{$varPrefix}-cl: #fff;
+
+            background-color: var(#{$varPrefix}-bg-cl) !important;
+            border-color: var(#{$varPrefix}-bdr-cl) !important;
+            color: var(#{$varPrefix}-cl) !important;
+
+            &:hover,
+            &:focus {
+                #{$varPrefix}-bg-cl: #585a59;
+                #{$varPrefix}-bdr-cl: #585a59;
+            }
+        }
+
+        &-primary {
+            #{$varPrefix}-bg-cl: #48b44f;
+            #{$varPrefix}-bdr-cl: #48b44f;
+
+            background-color: var(#{$varPrefix}-bg-cl) !important;
+            border-color: var(#{$varPrefix}-bdr-cl) !important;
+        }
+
+        &-secondary {
+            #{$varPrefix}-bg-cl: #e8f3eb;
+            #{$varPrefix}-bdr-cl: #e8f3eb;
+            #{$varPrefix}-cl: #2e312f;
+
+            background-color: var(#{$varPrefix}-bg-cl) !important;
+            border-color: var(#{$varPrefix}-bdr-cl) !important;
+            color: var(#{$varPrefix}-cl) !important;
+
+            &:hover,
+            &:focus {
+                #{$varPrefix}-bg-cl: #fff;
+                #{$varPrefix}-bdr-cl: #fff;
+                #{$varPrefix}-c: #2e312f;
+            }
+        }
+
+        &-primary-outline {
+            #{$varPrefix}-bg-cl: transparent;
+            #{$varPrefix}-bdr-cl: #48b44f;
+            #{$varPrefix}-cl: #48b44f;
+
+            background-color: var(#{$varPrefix}-bg-cl) !important;
+            border-color: var(#{$varPrefix}-bdr-cl) !important;
+            color: var(#{$varPrefix}-cl) !important;
+
+            &:hover,
+            &:focus {
+                #{$varPrefix}-bg-cl: #48b44f;
+                #{$varPrefix}-bdr-cl: #48b44f;
+                #{$varPrefix}-cl: #fff;
+            }
+        }
+
+        &-outline {
+            #{$varPrefix}-bg-cl: transparent;
+            #{$varPrefix}-bdr-cl: #2e312f;
+            #{$varPrefix}-cl: #2e312f;
+
+            background-color: var(#{$varPrefix}-bg-cl) !important;
+            border-color: var(#{$varPrefix}-bdr-cl) !important;
+            color: var(#{$varPrefix}-cl) !important;
+
+            &:hover,
+            &:focus {
+                #{$varPrefix}-bg-cl: #585a59;
+                #{$varPrefix}-bdr-cl: #585a59;
+                #{$varPrefix}-cl: #fff;
+            }
+        }
+    }
+
+    &-processing:before {
+        content: '\f463';
+        font: normal 20px / 1 dashicons;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        animation: rotation 2s infinite linear;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,145 @@
+@import './prefix-vars.scss';
+@import './mixins';
+
+// Form fields
+select,
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'] {
+    #{$varPrefix}-p: 10px;
+    #{$varPrefix}-w: 100%;
+    #{$varPrefix}-box-szg: border-box;
+
+    width: var(#{$varPrefix}-w);
+    box-sizing: var(#{$varPrefix}-box-szg);
+    padding: var(#{$varPrefix}-p);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search']:not(.wp-block-search__input),
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'] {
+    #{$varPrefix}-h: 30px;
+    height: var(#{$varPrefix}-h);
+}
+
+input[type='submit'] {
+    #{$varPrefix}-p: 6px 12px;
+    #{$varPrefix}-bg-cl: var(--wp--preset--color--primary);
+    #{$varPrefix}-bdr-cl: var(--wp--preset--color--primary);
+    #{$varPrefix}-bdr-sty: solid;
+    #{$varPrefix}-bdr-w: solid;
+    #{$varPrefix}-cl: var(--wp--preset--color--default);
+    #{$varPrefix}-cur: pointer;
+
+    padding: var(#{$varPrefix}-p);
+    background: var(#{$varPrefix}-bg-cl);
+    color: var(#{$varPrefix}-cl);
+    border-color: var(#{$varPrefix}-bdr-cl);
+    border-width: var(#{$varPrefix}-bdr-w);
+    border-style: var(#{$varPrefix}-bdr-sty);
+    cursor: var(#{$varPrefix}-cur);
+
+    &:hover,
+    &:focus {
+        #{$varPrefix}-bg-cl: var(--wp--preset--color--quaternary);
+        #{$varPrefix}-bdr-cl: var(--wp--preset--color--quaternary);
+    }
+}
+
+// Ordered List
+ol {
+    list-style-position: inside;
+
+    li {
+
+        ul,
+        ol {
+            #{$varPrefix}-m: 0 0 0 25px;
+            margin: var(#{$varPrefix}-m);
+        }
+    }
+}
+
+//Unordered List
+ul {
+    list-style-position: inside;
+    #{$varPrefix}-m: 0;
+    #{$varPrefix}-p: 0;
+    margin: var(#{$varPrefix}-m);
+    padding: var(#{$varPrefix}-p);
+
+    li {
+
+        ul,
+        ol {
+            #{$varPrefix}-m: 0 0 0 25px;
+            margin: var(#{$varPrefix}-m);
+        }
+    }
+}
+
+//Global HR
+hr:not(.wp-block-separator) {
+    #{$varPrefix}-m: 15px 0;
+    margin: var(#{$varPrefix}-m);
+}
+
+//Post Password Form
+.post-password-form {
+    input {
+        &[type='submit'] {
+            #{$varPrefix}-m: 15px 0 0 0;
+            margin: var(#{$varPrefix}-m);
+        }
+    }
+}
+
+//WordPress Reset
+:where(.wp-site-blocks)>*+* {
+    margin-block-start: 0 !important;
+
+    >* {
+        margin-block-start: 0 !important;
+    }
+}
+
+//Scroll to top button
+.is-style-scroll-to-top {
+    .wp-element-button::after {
+        content: '\2191';
+        #{$varPrefix}-pos: absolute;
+        #{$varPrefix}-l: 50%;
+        #{$varPrefix}-t: 50%;
+        #{$varPrefix}-tf: translate(-50%, -50%);
+
+        position: var(#{$varPrefix}-pos);
+        text-indent: 0;
+        left: var(#{$varPrefix}-l);
+        top: var(#{$varPrefix}-t);
+        transform: var(#{$varPrefix}-tf);
+    }
+}

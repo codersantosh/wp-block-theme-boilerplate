@@ -1,0 +1,850 @@
+# Copyright (C) 2024 codersantosh
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Bock Theme Boilerplate 1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wp-block-theme-boilerplate\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-06T12:37:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: wp-block-theme-boilerplate\n"
+
+#. Theme Name of the theme
+#: admin/templates/notice-getting-started.php:21
+#: admin/templates/page-theme-info.php:116
+#: admin/templates/page-theme-info.php:121
+msgid "WP Bock Theme Boilerplate"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://patternswp.com/my-blank-theme/"
+msgstr ""
+
+#. Description of the theme
+msgid "A a starter WordPress theme to develop WordPress block themes with modern development practices"
+msgstr ""
+
+#. Author of the theme
+msgid "codersantosh"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://patternswp.com/"
+msgstr ""
+
+#: admin/class-info.php:80
+msgid "Theme Info"
+msgstr ""
+
+#: admin/templates/notice-getting-started.php:18
+#: admin/templates/notice-review.php:20
+msgid "Dismiss"
+msgstr ""
+
+#. translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag.
+#: admin/templates/notice-getting-started.php:27
+msgid "Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer, please make sure you visit our %2$swelcome page%3$s."
+msgstr ""
+
+#. translators: %s: singular/plular .
+#: admin/templates/notice-getting-started.php:43
+msgid "Clicking the button below will install and activate the following %s:"
+msgstr ""
+
+#: admin/templates/notice-getting-started.php:44
+msgid "plugins"
+msgstr ""
+
+#: admin/templates/notice-getting-started.php:44
+msgid "plugin"
+msgstr ""
+
+#: admin/templates/notice-getting-started.php:54
+msgid "Get started with WP Bock Theme Boilerplate"
+msgstr ""
+
+#. Translators: %1$s current user display name.
+#: admin/templates/notice-review.php:26
+msgid "Howdy, %1$s! It seems that you have been using this theme for more than 15 days. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a review on WordPress.org. By spreading the love, we can continue to develop new amazing features in the future!"
+msgstr ""
+
+#: admin/templates/notice-review.php:38
+msgid "Sure"
+msgstr ""
+
+#: admin/templates/notice-review.php:43
+msgid "Maybe later"
+msgstr ""
+
+#: admin/templates/notice-review.php:48
+msgid "I already did"
+msgstr ""
+
+#: admin/templates/notice-review.php:53
+msgid "Got theme support question?"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:21
+msgid "Welcome to WP Bock Theme Boilerplate"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:25
+msgid "The WP Block Theme Boilerplate is now active and ready for use. Unleash your creativity with its extensive library of one-click demo Starter Packages, Patterns, and Pattern Kits."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:30
+msgid "Upgrade to the pro version for access to even more demo Starter Packages, Patterns, and Pattern Kits."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:39
+msgid "Get WP Bock Theme Boilerplate Pro"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:46
+msgid "Documentation"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:49
+msgid "Visit Starter Templates"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:60
+msgid "Use ready-made Design, Patterns, Templates & Template Parts"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:62
+msgid "Effortlessly use ready-made patterns, templates, and template parts to enhance your site design, making customization quick and easy without starting from scratch."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:65
+msgid "Add a new page"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:76
+msgid "Customize Templates, Template Parts & More"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:79
+msgid "With a block theme, you can customize every aspect of both the theme and the site, from headers and footers to individual blocks, providing a cohesive and personalized design."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:82
+msgid "Site Editor"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:93
+msgid "Transform your site's appearance with customizable fonts & colors"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:96
+msgid "Give your site a unique look by customizing fonts and colors. Achieve anything from subtle tweaks to complete makeovers, enhancing your  site's visual appeal and overall design."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:99
+msgid "Customize styles"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:124
+msgid "Visit Site"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:127
+msgid "Support"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:136
+msgid "Contact Information"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:147
+msgid "Support:"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:152
+#: admin/templates/page-theme-info.php:255
+msgid "Create A Ticket"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:162
+msgid "Email:"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:167
+msgid "email-address"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:177
+msgid "Location:"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:181
+msgid "Kathmandu, Nepal"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:211
+msgid "Knowledge Base"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:216
+msgid "In-depth and well documented articles will help you to use the WP Bock Theme Boilerplate Themes in easiest way."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:219
+msgid "Visit Knowledge Base"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:229
+msgid "Community"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:234
+msgid "We want to make customer experience even better. So, join our Facebook community for instant support from experts."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:237
+msgid "Join Facebook Group"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:247
+msgid "24x7 Support"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:252
+msgid "We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Bock Theme Boilerplate."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:265
+msgid "Video Guide"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:270
+msgid "WP Bock Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration."
+msgstr ""
+
+#: admin/templates/page-theme-info.php:273
+msgid "View Video Guide"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:292
+msgid "Recommended Plugins"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:317
+#: admin/templates/page-theme-info.php:322
+msgid "Installed and Activated"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:322
+msgid "Failed to install"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:325
+msgid "Activate"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:327
+msgid "Install and Activate"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:349
+#: patterns/footer.php:42
+msgid "Quick Links"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:355
+msgid "Edit Header"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:358
+msgid "Edit Footer"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:361
+msgid "Edit Primary Sidebar"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:364
+msgid "Edit Secondary Sidebar"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:367
+msgid "All template parts"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:370
+msgid "Edit Frontpage"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:373
+msgid "Edit Atchive Page"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:376
+msgid "All Templates"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:389
+msgid "Free vs Pro"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:397
+msgid "Features"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:398
+msgid "Free"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:399
+msgid "Pro"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:404
+msgid "Home Page Template Patterns"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:405
+#: admin/templates/page-theme-info.php:410
+#: patterns/card-2.php:18
+msgid "1"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:406
+msgid "9+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:409
+msgid "Pre-build Starter Demos"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:411
+msgid "100+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:414
+msgid "Header Patterns"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:415
+#: admin/templates/page-theme-info.php:420
+msgid "2+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:416
+#: admin/templates/page-theme-info.php:421
+msgid "10+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:419
+msgid "Footer Patterns"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:424
+msgid "Pre-build Patterns"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:425
+msgid "50+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:426
+msgid "1000+"
+msgstr ""
+
+#: admin/templates/page-theme-info.php:445
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#. translators: %s: Property name.
+#: includes/api/class-api-settings.php:154
+msgid "The %s property has an invalid stored value, and cannot be updated to null."
+msgstr ""
+
+#: includes/api/class-api.php:115
+#: includes/api/class-api.php:127
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/class-block-bindings.php:59
+msgid "Copyright"
+msgstr ""
+
+#. translators: Copyright date format, see https://www.php.net/manual/datetime.format.php
+#: includes/class-block-bindings.php:84
+msgctxt "copyright date format"
+msgid "Y"
+msgstr ""
+
+#. translators: 1: Copyright symbol or word, 2: Date, 3: Site title
+#: includes/class-block-bindings.php:87
+msgid "%1$s %2$s %3$s"
+msgstr ""
+
+#: includes/functions.php:28
+msgid "Gutentor"
+msgstr ""
+
+#: includes/functions.php:34
+msgid "Templateberg"
+msgstr ""
+
+#. translators: %s the plugin info
+#: includes/functions.php:74
+msgid "Not enough information about plugin. Plugin info %s"
+msgstr ""
+
+#. translators: %s is the plugin name
+#: includes/functions.php:95
+#: includes/functions.php:111
+msgid "Plugin \"%s\" is already active."
+msgstr ""
+
+#. translators: %1$s is the plugin name, %2$s is error message
+#: includes/functions.php:125
+#: includes/functions.php:256
+msgid "Error activating plugin \"%1$s\": %2$s"
+msgstr ""
+
+#. translators: %s is the plugin name.
+#: includes/functions.php:136
+#: includes/functions.php:242
+msgid "Plugin \"%s\" activated successfully."
+msgstr ""
+
+#. translators: %s is the plugin name.
+#: includes/functions.php:145
+#: includes/functions.php:267
+msgid "You don't have permission to activate the plugin \"%s\"."
+msgstr ""
+
+#. translators: %1$s is the plugin name, %2$s is error message
+#: includes/functions.php:170
+msgid "Error retrieving information for plugin \"%1$s\": %2$s"
+msgstr ""
+
+#. translators: %1$s is the plugin name, %2$s is error message
+#: includes/functions.php:189
+#: includes/functions.php:199
+#: includes/functions.php:209
+#: includes/functions.php:229
+msgid "Error installing plugin \"%1$s\": %2$s"
+msgstr ""
+
+#: includes/functions.php:219
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#. translators: %s is the plugin name.
+#: includes/functions.php:277
+msgid "Plugin \"%s\" installed and activated successfully."
+msgstr ""
+
+#: includes/functions.php:311
+msgid "and"
+msgstr ""
+
+#: includes/functions.php:555
+msgid "How can I customize the theme header?"
+msgstr ""
+
+#: includes/functions.php:556
+msgid "You can customize the theme header by editing the Header template part in the Site Editor. Go to Appearance > Editor > Patterns > Header, then select and edit the Header template part."
+msgstr ""
+
+#: includes/functions.php:559
+msgid "How do I change the footer credits?"
+msgstr ""
+
+#: includes/functions.php:560
+msgid "To change the footer credits, go to  Appearance > Editor > Patterns > Footer, then select and edit the Footer template part. You can add your own text or remove the existing credits."
+msgstr ""
+
+#: includes/functions.php:563
+msgid "Does this theme support block patterns?"
+msgstr ""
+
+#: includes/functions.php:564
+msgid "Yes, this theme includes several pre-designed block patterns that you can use to quickly create layouts. You can find these patterns in the block inserter."
+msgstr ""
+
+#: includes/functions.php:567
+msgid "How can I create custom templates?"
+msgstr ""
+
+#: includes/functions.php:568
+msgid "You can create custom templates by going to Appearance > Editor > Templates, then click Add New Template. You can then design your custom template using blocks."
+msgstr ""
+
+#: includes/functions.php:571
+msgid "How do I use global styles?"
+msgstr ""
+
+#: includes/functions.php:572
+msgid "To use global styles, go to Appearance > Editor > Styles, then click on the Edit icon in the top right side of Styles. From there, you can customize the colors, typography, and layout for your entire site."
+msgstr ""
+
+#: patterns/archives.php:18
+msgid "Archives"
+msgstr ""
+
+#: patterns/calendar.php:17
+msgid "Calendar"
+msgstr ""
+
+#: patterns/card-1.php:22
+msgid "Visual Page Builder"
+msgstr ""
+
+#: patterns/card-1.php:26
+#: patterns/featured-section-1.php:60
+#: patterns/featured-section-1.php:78
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatu"
+msgstr ""
+
+#: patterns/card-2.php:25
+#: patterns/featured-section-2.php:38
+msgid "Customize Typography and Colors Style panel"
+msgstr ""
+
+#: patterns/card-2.php:29
+#: patterns/featured-section-2.php:42
+msgid "Elementum ipsum donec usodales porttitor mauris augue fermentum sagittis elementum."
+msgstr ""
+
+#: patterns/comments.php:19
+msgid "Comments"
+msgstr ""
+
+#: patterns/copyright.php:14
+msgid "Dynamic copyright text"
+msgstr ""
+
+#: patterns/featured-section-1.php:36
+msgid "Free Lifetime Update"
+msgstr ""
+
+#: patterns/featured-section-1.php:40
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatu "
+msgstr ""
+
+#: patterns/featured-section-1.php:56
+msgid "Modern Minimal Design"
+msgstr ""
+
+#: patterns/featured-section-1.php:74
+msgid "Easy Customization"
+msgstr ""
+
+#: patterns/featured-section-2.php:51
+msgid "Know More"
+msgstr ""
+
+#: patterns/footer.php:36
+msgid "We are available to take the next project with full energy"
+msgstr ""
+
+#: patterns/footer.php:51
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer.php:58
+msgid "000 - 9874 563 210"
+msgstr ""
+
+#: patterns/footer.php:62
+msgid "codersantosh@gmail.com"
+msgstr ""
+
+#: patterns/header-absolute.php:18
+#: patterns/header-default.php:18
+msgid "WP Block Theme Boilerplate : "
+msgstr ""
+
+#: patterns/header-absolute.php:18
+#: patterns/header-default.php:18
+msgid "Complete your website with millions of Patterns, Templates &amp; Many more."
+msgstr ""
+
+#: patterns/header-absolute.php:23
+#: patterns/header-default.php:23
+msgid "Get Unlimited Downloads"
+msgstr ""
+
+#: patterns/header-absolute.php:45
+#: patterns/header-default.php:45
+msgid "Get Started"
+msgstr ""
+
+#: patterns/hidden-404.php:22
+msgid "Ooops!"
+msgstr ""
+
+#: patterns/hidden-404.php:26
+msgid "This page could not be found."
+msgstr ""
+
+#: patterns/hidden-404.php:30
+msgid "We can't find the page you're looking for. Check out our Help Center or head back to home"
+msgstr ""
+
+#: patterns/hidden-404.php:36
+msgid "Help Center"
+msgstr ""
+
+#: patterns/hidden-404.php:40
+msgid "Home"
+msgstr ""
+
+#: patterns/hidden-no-search-results.php:15
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: patterns/hidden-no-search-results.php:19
+msgctxt "label"
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-no-search-results.php:19
+msgctxt "placeholder for search field"
+msgid "Search..."
+msgstr ""
+
+#: patterns/hidden-no-search-results.php:19
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-query-no-results.php:15
+msgid "Page could not be found"
+msgstr ""
+
+#: patterns/hidden-query-no-results.php:19
+msgid "We're sorry, the page you requested could not be found. Please go back to the homepage"
+msgstr ""
+
+#: patterns/hidden-query-no-results.php:24
+msgid "Back to Home"
+msgstr ""
+
+#: patterns/home.php:26
+msgid "Blog"
+msgstr ""
+
+#: patterns/latest-comments.php:16
+msgid "Recent comments"
+msgstr ""
+
+#: patterns/latest-posts.php:16
+msgid "Recent Posts"
+msgstr ""
+
+#: patterns/navigation-menu.php:15
+msgctxt "label"
+msgid "Home"
+msgstr ""
+
+#: patterns/pagination.php:15
+msgctxt "label"
+msgid "Previous"
+msgstr ""
+
+#: patterns/pagination.php:19
+msgctxt "label"
+msgid "Next"
+msgstr ""
+
+#: patterns/post-meta.php:18
+msgid "Posted :"
+msgstr ""
+
+#: patterns/post-meta.php:25
+msgid "by :"
+msgstr ""
+
+#: patterns/scroll-to-top-button.php:16
+msgid "Scroll To Top"
+msgstr ""
+
+#: patterns/section-title-1.php:15
+msgid "Amazing services to build busines growth"
+msgstr ""
+
+#: patterns/section-title-1.php:19
+#: patterns/section-title-2.php:23
+#: patterns/section-title-4.php:20
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in"
+msgstr ""
+
+#: patterns/section-title-1.php:24
+#: patterns/section-title-2.php:29
+#: patterns/section-title-4.php:26
+msgid "Try for Free"
+msgstr ""
+
+#: patterns/section-title-1.php:28
+msgid "See How It works "
+msgstr ""
+
+#: patterns/section-title-2.php:18
+#: patterns/section-title-3.php:16
+msgid "An award winning agency specialized in web design"
+msgstr ""
+
+#: patterns/section-title-3.php:20
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor"
+msgstr ""
+
+#: patterns/section-title-4.php:16
+msgid "Try it now !"
+msgstr ""
+
+#: patterns/sitemap.php:25
+msgid "Pages"
+msgstr ""
+
+#: patterns/sitemap.php:35
+msgid "Categories"
+msgstr ""
+
+#: patterns/sitemap.php:45
+msgid "Posts"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Default"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Quaternary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Quinary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Archive (with both sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Archive (with full width)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Archive (with left sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (with both sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (with left sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (with right sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (Sitemap)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single (with both sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single (with left sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single (with right sidebar)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Comments"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header(with absolute position)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header(default)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post Meta"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post Navigation"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Primary Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Secondary Sidebar"
+msgstr ""
