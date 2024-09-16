@@ -5,8 +5,8 @@
  * Categories: featured
  * Description: A layout that displays a title, content, and button group, suited for showcasing a hero banner.
  *
- * @package    PatternsWP
- * @subpackage PatternsWP/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 

@@ -6,8 +6,8 @@
  * Block Types: core/template-part/footer
  * Description: A pattern for displaying the site footer.
  *
- * @package    PatternsWP
- * @subpackage PatternsWP/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 
