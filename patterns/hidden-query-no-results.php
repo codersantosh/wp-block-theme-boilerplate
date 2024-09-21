@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Title: Query No Result
  * Slug: wp-block-theme-boilerplate/hidden-query-no-results
  * Inserter: no

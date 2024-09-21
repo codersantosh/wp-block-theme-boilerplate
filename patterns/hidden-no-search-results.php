@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Title: No Search Result
  * Slug: wp-block-theme-boilerplate/hidden-no-search-results
  * Inserter: no
