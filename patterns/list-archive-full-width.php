@@ -2,7 +2,7 @@
 /**
  * Title: Archive Full Width
  * Slug: wp-block-theme-boilerplate/list-archive-full-width
- * Template Types: archive
+ * Template Types: archive, home, search
  * Description: Full-width layout template for displaying archives without sidebars.
  *
  * @package    Wp_Block_Theme_Boilerplate

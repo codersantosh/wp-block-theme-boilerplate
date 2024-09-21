@@ -53,10 +53,20 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Block_Bindings' ) ) {
 				return;
 			}
 
+			/* Register the copyright block binding source. */
 			register_block_bindings_source(
 				'wp-block-theme-boilerplate/copyright',
 				array(
-					'label'              => __( 'Copyright', 'wp-block-theme-boilerplate' ),
+					'label'              => _x( '&copy; YEAR', 'Label for the copyright placeholder in the editor', 'wp-block-theme-boilerplate' ),
+					'get_value_callback' => array( $this, 'get_binding_data' ),
+				)
+			);
+
+			/* Register the archive-title block binding source. */
+			register_block_bindings_source(
+				'wp-block-theme-boilerplate/archive-title',
+				array(
+					'label'              => _x( 'Archive title', 'Label for the archive title placeholder in the editor', 'wp-block-theme-boilerplate' ),
 					'get_value_callback' => array( $this, 'get_binding_data' ),
 				)
 			);
@@ -89,6 +99,18 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Block_Bindings' ) ) {
 					wp_date( $date_format ),
 					get_bloginfo( 'name' )
 				);
+			} elseif ( 'archive-title' === $source_args['key'] ) {
+				if ( is_archive() ) {
+					$binding_data = get_the_archive_title();
+				} elseif ( is_search() ) {
+					$binding_data = sprintf(
+						/* translators: %s is the search term. */
+						__( 'Search results for: "%s"', 'wp-block-theme-boilerplate' ),
+						get_search_query()
+					);
+				} elseif ( is_home() ) {
+					$binding_data = __( 'Blog', 'wp-block-theme-boilerplate' );
+				}
 			}
 
 			return apply_filters( 'wp_block_theme_boilerplate_binding_get_binding_data', $binding_data, $source_args, $block_instance );

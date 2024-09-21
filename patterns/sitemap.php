@@ -48,7 +48,7 @@
 			<div class="wp-block-query alignfull">
 				<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"default"}} -->
 				<div class="wp-block-group alignfull" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0">
-					<!-- wp:post-template {"style":{"typography":{"textTransform":"none"}}} -->
+					<!-- wp:post-template {"align":"wide", "style":{"typography":{"textTransform":"none"}}} -->
 					<!-- wp:group {"layout":{"type":"constrained","contentSize":"780px","justifyContent":"left","wideSize":"780px"}} -->
 					<div class="wp-block-group">
 						<!-- wp:group {"style":{"spacing":{"blockGap":"10px","padding":{"bottom":"0"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
