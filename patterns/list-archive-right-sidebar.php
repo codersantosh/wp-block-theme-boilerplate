@@ -2,7 +2,7 @@
 /**
  * Title: Archive with Right Sidebar
  * Slug: wp-block-theme-boilerplate/list-archive-right-sidebar
- * Template Types: archive
+ * Template Types: archive, home, search
  * Description: Layout template for displaying archives with a right sidebar.
  *
  * @package    Wp_Block_Theme_Boilerplate

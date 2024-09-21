@@ -19,7 +19,9 @@
 			style="background-position:50% 50%;background-image:url(<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-banner.jpg)">
 		</div>
 		<div class="wp-block-cover__inner-container">
-			<!-- wp:query-title {"type":"archive","textAlign":"center","level":1,"style":{"typography":{"textTransform":"capitalize"}},"textColor":"default","fontSize":"xx-large"} /-->
+			<!-- wp:heading {"metadata":{"bindings":{"content":{"source":"wp-block-theme-boilerplate/archive-title","args":{"key":"archive-title"}}}}, "textAlign":"center","level":1,"style":{"typography":{"textTransform":"capitalize"}},"textColor":"default","fontSize":"xx-large"} -->
+			<h1 class="wp-block-heading has-text-align-center has-default-color has-text-color has-xx-large-font-size" style="text-transform:capitalize"></h1>
+			<!-- /wp:heading -->
 		</div>
 	</div>
 <!-- /wp:cover -->

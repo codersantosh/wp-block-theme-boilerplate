@@ -2,7 +2,7 @@
 /**
  * Title: Archive with Left Sidebar
  * Slug: wp-block-theme-boilerplate/list-archive-left-sidebar
- * Template Types: archive
+ * Template Types: archive, home, search
  * Description: Layout template for displaying a archives with a left sidebar.
  *
  * @package    Wp_Block_Theme_Boilerplate

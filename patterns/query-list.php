@@ -14,7 +14,7 @@
 ?>
 <!-- wp:query {"query":{"inherit":true,"postType":"post"},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-query alignwide">
-<!-- wp:post-template {"layout":{"type":"default"}} -->
+<!-- wp:post-template {"align":"wide","layout":{"type":"default"}} -->
 <!-- wp:post-title {"isLink":true} /-->
 
 <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/post-meta"} /-->
