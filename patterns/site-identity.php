@@ -5,8 +5,8 @@
  * Categories: posts
  * Description: Display site logo, title and tagline.
  *
- * @package    Patterns_Store_Front
- * @subpackage Patterns_Store_Front/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 

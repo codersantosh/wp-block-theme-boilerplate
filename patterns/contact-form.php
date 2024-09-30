@@ -5,8 +5,8 @@
  * Categories: contact, call-to-action
  * Description: A layout with a contact information on the left and a contact form on the right.
  *
- * @package    Patterns_Store_Front
- * @subpackage Patterns_Store_Front/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 
