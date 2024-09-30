@@ -5,8 +5,8 @@
  * Categories: contact, call-to-action
  * Description: A layout with a title and subtitle on the header and FAQ as a content .
  *
- * @package    Patterns_Store_Front
- * @subpackage Patterns_Store_Front/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 

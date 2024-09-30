@@ -2,9 +2,10 @@
 /**
  * Title: Primary Header
  * Slug: wp-block-theme-boilerplate/hidden-primary-header
+ * Inserter: no
  *
- * @package    Patterns_Store_Front
- * @subpackage Patterns_Store_Front/patterns
+ * @package    Wp_Block_Theme_Boilerplate
+ * @subpackage Wp_Block_Theme_Boilerplate/patterns
  * @since      1.0.0
  */
 
@@ -15,7 +16,7 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"10px","bottom":"10px"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:10px;padding-bottom:10px"><!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
 <div class="wp-block-group alignwide"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"textColor":"default"} -->
-<p class="has-default-color has-text-color" style="margin-top:0px;margin-bottom:0px"><strong><?php esc_html_e( 'Patterns Store Front : ', 'wp-block-theme-boilerplate' ); ?></strong><?php esc_html_e( 'Complete your website with millions of Patterns, Templates &amp; Many more.', 'wp-block-theme-boilerplate' ); ?></p>
+<p class="has-default-color has-text-color" style="margin-top:0px;margin-bottom:0px"><strong><?php esc_html_e( 'WP Block Theme Boilerplate : ', 'wp-block-theme-boilerplate' ); ?></strong><?php esc_html_e( 'Complete your website with millions of Patterns, Templates &amp; Many more.', 'wp-block-theme-boilerplate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
