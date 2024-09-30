@@ -47,12 +47,14 @@
 		<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|30","right":"16px","left":"16px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide"
 			style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:16px;padding-bottom:var(--wp--preset--spacing--30);padding-left:16px">
-			
-			<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
 
-			<!-- wp:query-no-results -->
-			<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-no-search-results"} /-->
-			<!-- /wp:query-no-results -->
+			<?php
+			// Need to include from PHP since wp:pattern not working
+			// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
+			// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-query-no-results"} /--> .
+			require 'pagination.php';
+			require 'hidden-query-no-results.php';
+			?>
 		</div>
 		<!-- /wp:group -->
 	</div>

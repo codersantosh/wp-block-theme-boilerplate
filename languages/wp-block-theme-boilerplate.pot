@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-06T12:37:23+00:00\n"
+"POT-Creation-Date: 2024-09-27T05:31:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-block-theme-boilerplate\n"
@@ -22,7 +22,7 @@ msgid "WP Bock Theme Boilerplate"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "https://patternswp.com/my-blank-theme/"
+msgid ""
 msgstr ""
 
 #. Description of the theme
@@ -252,7 +252,7 @@ msgid "Install and Activate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:349
-#: patterns/footer.php:42
+#: patterns/footer.php:43
 msgid "Quick Links"
 msgstr ""
 
@@ -357,6 +357,7 @@ msgid "1000+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:445
+#: patterns/faq.php:18
 msgid "Frequently Asked Questions"
 msgstr ""
 
@@ -370,19 +371,34 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: includes/class-block-bindings.php:59
-msgid "Copyright"
+#: includes/class-block-bindings.php:60
+msgctxt "Label for the copyright placeholder in the editor"
+msgid "&copy; YEAR"
+msgstr ""
+
+#: includes/class-block-bindings.php:69
+msgctxt "Label for the archive title placeholder in the editor"
+msgid "Archive title"
 msgstr ""
 
 #. translators: Copyright date format, see https://www.php.net/manual/datetime.format.php
-#: includes/class-block-bindings.php:84
+#: includes/class-block-bindings.php:94
 msgctxt "copyright date format"
 msgid "Y"
 msgstr ""
 
 #. translators: 1: Copyright symbol or word, 2: Date, 3: Site title
-#: includes/class-block-bindings.php:87
+#: includes/class-block-bindings.php:97
 msgid "%1$s %2$s %3$s"
+msgstr ""
+
+#. translators: %s is the search term.
+#: includes/class-block-bindings.php:108
+msgid "Search results for: \"%s\""
+msgstr ""
+
+#: includes/class-block-bindings.php:112
+msgid "Blog"
 msgstr ""
 
 #: includes/functions.php:28
@@ -520,8 +536,82 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: patterns/copyright.php:14
+#: patterns/contact-form.php:21
+msgid "Let’s talk"
+msgstr ""
+
+#: patterns/contact-form.php:26
+msgid "Feel Free To Contact Us."
+msgstr ""
+
+#: patterns/contact-form.php:30
+msgid "We’d love to hear from you! Please fill out the form or reach us through the following methods."
+msgstr ""
+
+#: patterns/contact-form.php:36
+msgid "Get Direction"
+msgstr ""
+
+#: patterns/contact-form.php:40
+msgid "785 15h Street, Office 478 Berlin, De 81566 6391 Elgin St. Celina, 10299"
+msgstr ""
+
+#: patterns/contact-form.php:46
+msgid "Phone Number"
+msgstr ""
+
+#: patterns/contact-form.php:50
+#: patterns/contact-form.php:54
+msgid "(629) 555-0129"
+msgstr ""
+
+#: patterns/contact-form.php:60
+msgid "E-mail"
+msgstr ""
+
+#: patterns/contact-form.php:64
+#: patterns/contact-form.php:68
+msgid "info@example.com"
+msgstr ""
+
+#: patterns/contact-form.php:79
+msgid "Add Contact form shortcode"
+msgstr ""
+
+#: patterns/copyright.php:15
 msgid "Dynamic copyright text"
+msgstr ""
+
+#: patterns/faq.php:22
+#: patterns/faq.php:35
+#: patterns/faq.php:45
+#: patterns/faq.php:69
+#: patterns/faq.php:79
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+msgstr ""
+
+#: patterns/faq.php:30
+msgid "What are included in the purchased package?"
+msgstr ""
+
+#: patterns/faq.php:40
+msgid "What are the minimal requirements to use admin themes?"
+msgstr ""
+
+#: patterns/faq.php:54
+msgid "What are the available payment options?"
+msgstr ""
+
+#: patterns/faq.php:59
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old"
+msgstr ""
+
+#: patterns/faq.php:64
+msgid "What kind of support is available?"
+msgstr ""
+
+#: patterns/faq.php:74
+msgid "How long is support valid for?"
 msgstr ""
 
 #: patterns/featured-section-1.php:36
@@ -544,40 +634,20 @@ msgstr ""
 msgid "Know More"
 msgstr ""
 
-#: patterns/footer.php:36
+#: patterns/footer.php:37
 msgid "We are available to take the next project with full energy"
 msgstr ""
 
-#: patterns/footer.php:51
+#: patterns/footer.php:52
 msgid "Contact"
 msgstr ""
 
-#: patterns/footer.php:58
+#: patterns/footer.php:59
 msgid "000 - 9874 563 210"
 msgstr ""
 
-#: patterns/footer.php:62
+#: patterns/footer.php:63
 msgid "codersantosh@gmail.com"
-msgstr ""
-
-#: patterns/header-absolute.php:18
-#: patterns/header-default.php:18
-msgid "WP Block Theme Boilerplate : "
-msgstr ""
-
-#: patterns/header-absolute.php:18
-#: patterns/header-default.php:18
-msgid "Complete your website with millions of Patterns, Templates &amp; Many more."
-msgstr ""
-
-#: patterns/header-absolute.php:23
-#: patterns/header-default.php:23
-msgid "Get Unlimited Downloads"
-msgstr ""
-
-#: patterns/header-absolute.php:45
-#: patterns/header-default.php:45
-msgid "Get Started"
 msgstr ""
 
 #: patterns/hidden-404.php:22
@@ -618,6 +688,22 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
+#: patterns/hidden-primary-header.php:18
+msgid "Patterns Store Front : "
+msgstr ""
+
+#: patterns/hidden-primary-header.php:18
+msgid "Complete your website with millions of Patterns, Templates &amp; Many more."
+msgstr ""
+
+#: patterns/hidden-primary-header.php:23
+msgid "Get Unlimited Downloads"
+msgstr ""
+
+#: patterns/hidden-primary-header.php:39
+msgid "Get Started"
+msgstr ""
+
 #: patterns/hidden-query-no-results.php:15
 msgid "Page could not be found"
 msgstr ""
@@ -630,10 +716,6 @@ msgstr ""
 msgid "Back to Home"
 msgstr ""
 
-#: patterns/home.php:26
-msgid "Blog"
-msgstr ""
-
 #: patterns/latest-comments.php:16
 msgid "Recent comments"
 msgstr ""
@@ -642,7 +724,7 @@ msgstr ""
 msgid "Recent Posts"
 msgstr ""
 
-#: patterns/navigation-menu.php:15
+#: patterns/navigation-menu.php:14
 msgctxt "label"
 msgid "Home"
 msgstr ""
@@ -657,15 +739,15 @@ msgctxt "label"
 msgid "Next"
 msgstr ""
 
-#: patterns/post-meta.php:18
+#: patterns/post-meta.php:19
 msgid "Posted :"
 msgstr ""
 
-#: patterns/post-meta.php:25
+#: patterns/post-meta.php:26
 msgid "by :"
 msgstr ""
 
-#: patterns/scroll-to-top-button.php:16
+#: patterns/scroll-to-top-button.php:17
 msgid "Scroll To Top"
 msgstr ""
 
@@ -702,15 +784,15 @@ msgstr ""
 msgid "Try it now !"
 msgstr ""
 
-#: patterns/sitemap.php:25
+#: patterns/sitemap.php:19
 msgid "Pages"
 msgstr ""
 
-#: patterns/sitemap.php:35
+#: patterns/sitemap.php:29
 msgid "Categories"
 msgstr ""
 
-#: patterns/sitemap.php:45
+#: patterns/sitemap.php:39
 msgid "Posts"
 msgstr ""
 
@@ -756,21 +838,6 @@ msgstr ""
 
 #: theme.json
 msgctxt "Custom template name"
-msgid "Archive (with both sidebar)"
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Archive (with full width)"
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Archive (with left sidebar)"
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
 msgid "Blank"
 msgstr ""
 
@@ -787,11 +854,6 @@ msgstr ""
 #: theme.json
 msgctxt "Custom template name"
 msgid "Page (with right sidebar)"
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Page (Sitemap)"
 msgstr ""
 
 #: theme.json
@@ -816,17 +878,32 @@ msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
-msgid "Footer"
+msgid "Site Footer"
 msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
-msgid "Header(with absolute position)"
+msgid "Site Header (with absolute position)"
 msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
-msgid "Header(default)"
+msgid "Site Header (default)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Archive Page Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Blog Home Page Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Search Page Header"
 msgstr ""
 
 #: theme.json
@@ -847,4 +924,14 @@ msgstr ""
 #: theme.json
 msgctxt "Template part name"
 msgid "Secondary Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Single Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Primary Header"
 msgstr ""

@@ -403,6 +403,9 @@
 					}
 				}
 			},
+			"core/navigation-submenu": {
+				"css": "& ul li a{padding:10px;}"
+			},
 			"core/button": {
 				"variations": {
 					"outline": {
@@ -888,11 +891,6 @@
 			"postTypes": ["page"]
 		},
 		{
-			"title": "Page (Sitemap)",
-			"name": "page-sitemap",
-			"postTypes": ["page"]
-		},
-		{
 			"title": "Single (with both sidebar)",
 			"name": "single-both-sidebar",
 			"postTypes": ["post"]
@@ -967,7 +965,12 @@
 		{
 			"area": "uncategorized",
 			"name": "single-header",
-			"title": "Page header of a post, page, or any other content-type."
+			"title": "Single Header"
+		},
+		{
+			"area": "uncategorized",
+			"name": "primary-header",
+			"title": "Primary Header"
 		}
 	]
 }

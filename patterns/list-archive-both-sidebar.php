@@ -2,7 +2,7 @@
 /**
  * Title: Archive with Both Sidebars
  * Slug: wp-block-theme-boilerplate/list-archive-both-sidebar
- * Template Types: archive, home, search
+ * Template Types: archive, home, search, category, tag, author, date
  * Description: Layout template for displaying archives with both left and right sidebars.
  *
  * @package    Wp_Block_Theme_Boilerplate

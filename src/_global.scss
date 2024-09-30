@@ -42,7 +42,7 @@ input[type='week'],
 input[type='time'],
 input[type='datetime'],
 input[type='datetime-local'] {
-    #{$varPrefix}-h: 30px;
+    #{$varPrefix}-h: 40px;
     height: var(#{$varPrefix}-h);
 }
 

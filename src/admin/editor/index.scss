@@ -1,9 +1,11 @@
 @import '../../_global';
 
+/* Overiding CSS for editor of blocks\button.json */
 .is-style-scroll-to-top {
-	.wp-element-button {
-		opacity: 1;
-		visibility: visible;
-	}
+    .wp-element-button {
+        opacity: 1;
+        visibility: visible;
+    }
 }
+
 /* Write own CSS */

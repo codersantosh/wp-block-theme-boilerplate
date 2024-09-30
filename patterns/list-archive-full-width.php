@@ -2,7 +2,7 @@
 /**
  * Title: Archive Full Width
  * Slug: wp-block-theme-boilerplate/list-archive-full-width
- * Template Types: archive, home, search
+ * Template Types: archive, home, search, category, tag, author, date
  * Description: Full-width layout template for displaying archives without sidebars.
  *
  * @package    Wp_Block_Theme_Boilerplate
@@ -12,7 +12,6 @@
 
 ?>
 <!-- wp:template-part {"slug":"header-default","tagName":"header"} /-->
-
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignfull">

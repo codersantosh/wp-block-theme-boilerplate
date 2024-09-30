@@ -5,23 +5,18 @@
  * Post Types: page
  * Description: A layout that displays site maps.
  *
- * @package    Wp_Block_Theme_Boilerplate
- * @subpackage Wp_Block_Theme_Boilerplate/patterns
+ * @package    Patterns_Store_Front
+ * @subpackage Patterns_Store_Front/patterns
  * @since      1.0.0
  */
 
 ?>
-<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
-<main class="wp-block-group alignfull">
-
-<!-- wp:template-part {"slug":"single-header", "align":"full"} /-->
-
 <!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"80px","bottom":"80px"}}}} -->
 <div class="wp-block-columns alignwide" style="padding-top:80px;padding-bottom:80px">
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading"><?php echo esc_html__( 'Pages', 'wp-block-theme-boilerplate' ); ?></h4>
+			<h4 class="wp-block-heading"><?php esc_html_e( 'Pages', 'wp-block-theme-boilerplate' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:page-list {"style":{"typography":{"lineHeight":"2"}}} /-->
@@ -31,7 +26,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading"><?php echo esc_html__( 'Categories', 'wp-block-theme-boilerplate' ); ?></h4>
+			<h4 class="wp-block-heading"><?php esc_html_e( 'Categories', 'wp-block-theme-boilerplate' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:categories {"showHierarchy":true,"showPostCounts":true,"style":{"typography":{"lineHeight":"2"}}} /-->
@@ -41,7 +36,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading"><?php echo esc_html__( 'Posts', 'wp-block-theme-boilerplate' ); ?></h4>
+			<h4 class="wp-block-heading"><?php esc_html_e( 'Posts', 'wp-block-theme-boilerplate' ); ?></h4>
 			<!-- /wp:heading -->
 
 			<!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"full","layout":{"type":"default"}} -->
@@ -67,13 +62,16 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"780px"}} -->
 				<div class="wp-block-group" style="margin-top: 0; margin-bottom: 0; padding-top: var(--wp--preset--spacing--60); padding-right: 0; padding-bottom: var(--wp--preset--spacing--40); padding-left: 0">
 					<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
+					<?php
+					// Need to include from PHP since wp:pattern not working
+					// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /--> .
+					require 'pagination.php';
+					?>
 				</div>
 				<!-- /wp:group -->
 			</div>
 			<!-- /wp:query -->
 		</div>
 		<!-- /wp:column -->
-	</div>
-	<!-- /wp:columns -->
-</main>
-<!-- /wp:group -->
+</div>
+<!-- /wp:columns -->

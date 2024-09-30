@@ -3,6 +3,7 @@
  * Title: Query No Result
  * Slug: wp-block-theme-boilerplate/hidden-query-no-results
  * Inserter: no
+ * Block Types: core/query-no-results
  *
  * @package    Wp_Block_Theme_Boilerplate
  * @subpackage Wp_Block_Theme_Boilerplate/patterns

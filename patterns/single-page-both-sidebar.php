@@ -13,7 +13,6 @@
 ?>
 <!-- wp:template-part {"slug":"header-default","tagName":"header"} /-->
 
-
 <!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignfull">
 
