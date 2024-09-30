@@ -4,6 +4,8 @@
 
 ## Description
 
+[Demo WP React Plugin Boilerplate](https://demo.patternswp.com/wp-block-theme-boilerplate/)
+
 Creating a block theme often involves repetitive tasks, as much of the code is reused. Typically, you begin by building a comprehensive base theme, and then for niche themes such as business, education, or e-commerce, you only need to adjust global settings and styles in the theme.json, add pre-made patterns to the patterns folder, and include relevant templates in the templates folder, such as single-product.html for WooCommerce.
 
 The WP Block Theme Boilerplate starter theme is built to simplify and optimize the development process by providing essential tools and managing repetitive code and features within the theme. It includes a "Getting Started" notice to help users with the initial setup, instructions for installing recommended plugins, and a theme review prompt after 15 days to encourage feedback. Additionally, a detailed theme info page offers an overview of the theme's features and support options. The boilerplate also comes with key development commands to ensure efficient workflow management.
@@ -78,7 +80,7 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 - **[Powered by Atomic CSS](https://github.com/codersantosh/atomic-css):**
 
   - The WP Block Theme Boilerplate leverages Atomic CSS to simplify and enhance the styling process.
-    
+
 - **Customization Encouraged:**
 
   - Since the WP Block Theme Boilerplate is designed to be highly customizable, developers are encouraged to modify and adapt `Atomic CSS` according to their specific project requirements.

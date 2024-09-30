@@ -28,8 +28,13 @@
 <!-- /wp:spacer -->
 <!-- /wp:post-template -->
 
-<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
-<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-query-no-results"} /-->
+<?php
+	// Need to include from PHP since wp:pattern not working
+	// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
+	// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-query-no-results"} /--> .
+	require 'pagination.php';
+	require 'hidden-query-no-results.php';
+?>
 
 </div>
 <!-- /wp:query -->

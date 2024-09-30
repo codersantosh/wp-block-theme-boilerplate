@@ -25,13 +25,58 @@ WP Block Theme Boilerplate, Copyright © 2024  Santosh Kunwar(codersantosh)
 WP Block Theme Boilerplate is distributed under the terms of the GNU General Public License v2
 The exceptions to license are as follows:
 
-* Based on WP Block Theme Boilerplate https: //github.com/codersantosh/wp-block-theme-boilerplate, (C) 2024 Santosh Kunwar(codersantosh), [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Atomic CSS Licensed GPLv2 or later, Copyright © 2024, Santosh Kunwar(codersantosh)
+Atomic CSS https://github.com/codersantosh/atomic-css, (C) 2024 [Santosh Kunwar](https://twitter.com/codersantosh)., [MIT](https://opensource.org/licenses/MIT)
 
-== Screenshots ==
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
-Logo, Copyright © 2024, [Your Company Name]
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+This theme bundles the following third-party resources:
+
+=== Fonts ===
+
+Inter Font
+Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/rsms/inter
+
+Mukta Font
+Copyright (c) 2013-2016 Ek Type (www.ektype.in)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/EkType/Mukta
+
+=== Images ===
+
 License: GNU GPL, Version 3, https://www.gnu.org/licenses/gpl-3.0.html
+patternswp-logo.png, Copyright © 2024, PatternsWP.com
+
+License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
+
+https://pxhere.com/en/photo/595421
+https://pxhere.com/en/photo/810006
+https://pxhere.com/en/photo/603436
+https://pxhere.com/en/photo/1388154
+https://pxhere.com/en/photo/12395
+https://pxhere.com/en/photo/712884
+https://pxhere.com/en/photo/1049354
+https://pxhere.com/en/photo/798079
+https://pxhere.com/en/photo/1169007
+https://pxhere.com/en/photo/674478
+https://pxhere.com/en/photo/1172657
+https://pxhere.com/en/photo/612883
+https://pxhere.com/en/photo/1604350
+https://pxhere.com/en/photo/656212
+https://pxhere.com/en/photo/1610984
+https://pxhere.com/en/photo/716267
+https://pxhere.com/en/photo/764428
+https://pxhere.com/en/photo/51009
+https://pxhere.com/en/photo/644378
 
 == Frequently Asked Questions ==
 
@@ -67,7 +112,13 @@ You can create custom templates by going to Appearance > Editor > Templates, the
 To use global styles, go to Appearance > Editor > Styles, then click on the Edit icon in the top right side of Styles. From there, you can customize the colors, typography, and layout for your entire site.
 
 
+= How to add contact form 7? =
+
+<div class="at-row"><div class="at-col-6"><label>[text* your-name autocomplete:name placeholder "Your name"] </label></div><div class="at-col-6"><label>[email* your-email autocomplete:email placeholder "Your email"] </label></div><div class="at-col-6"><label>[text* your-subject placeholder "Subject"] </label></div><div class="at-col-6">[text* text-215 placeholder "Phone Number"]</div><div class="at-col-12"><label>[textarea your-message placeholder "Your message (optional)"] </label></div><div class="at-col-12">[submit "Send Message"]</div></div>
+
+
 == Changelog ==
 
 = 1.0.0 =
 * Initial release
+
