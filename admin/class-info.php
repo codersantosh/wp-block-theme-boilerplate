@@ -99,6 +99,7 @@ class Wp_Block_Theme_Boilerplate_Info {
 
 		/* Atomic CSS */
 		wp_enqueue_style( 'atomic' );
+		wp_style_add_data( 'atomic', 'rtl', 'replace' );
 
 		/*Scripts dependency files*/
 		$deps_file = WP_BLOCK_THEME_BOILERPLATE_PATH . 'build/admin/info/info.asset.php';
@@ -117,6 +118,7 @@ class Wp_Block_Theme_Boilerplate_Info {
 		wp_enqueue_script( $unique_id, WP_BLOCK_THEME_BOILERPLATE_URL . 'build/admin/info/info.js', $dependency, $version, true );
 
 		wp_enqueue_style( $unique_id, WP_BLOCK_THEME_BOILERPLATE_URL . 'build/admin/info/info.css', array(), $version );
+		wp_style_add_data( $unique_id, 'rtl', 'replace' );
 
 		/* Localize */
 		$localize = apply_filters(
