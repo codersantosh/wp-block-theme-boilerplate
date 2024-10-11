@@ -63,10 +63,12 @@ class Wp_Block_Theme_Boilerplate_Public {
 	public function enqueue_resources() {
 		/* Atomic CSS */
 		wp_enqueue_style( 'atomic' );
+		wp_style_add_data( 'atomic', 'rtl', 'replace' );
 
 		$version = WP_BLOCK_THEME_BOILERPLATE_VERSION;
 
 		wp_enqueue_style( WP_BLOCK_THEME_BOILERPLATE_THEME_NAME, WP_BLOCK_THEME_BOILERPLATE_URL . 'build/public/public.css', array(), $version );
+		wp_style_add_data( WP_BLOCK_THEME_BOILERPLATE_THEME_NAME, 'rtl', 'replace' );
 
 		/*Scripts dependency files*/
 		$deps_file = WP_BLOCK_THEME_BOILERPLATE_PATH . 'build/public/public.asset.php';
