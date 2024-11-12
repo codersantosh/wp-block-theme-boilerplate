@@ -439,6 +439,9 @@
 				"spacing": { "margin": { "bottom": "0px" } },
 				"elements": {
 					"link": {
+						"typography": {
+							"textDecoration": "none !important"
+						},
 						"color": { "text": "var:preset|color|base" },
 						":hover": {
 							"color": {

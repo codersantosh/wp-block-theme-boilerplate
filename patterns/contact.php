@@ -2,7 +2,7 @@
 /**
  * Title: Page contact
  * Slug: wp-block-theme-boilerplate/page-contact
- * Categories: contact, call-to-action
+ * Categories: contact, call-to-action, page
  * Post Types: page
  * Description: A layout that displays contact page.
  *

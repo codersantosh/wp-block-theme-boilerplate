@@ -33,7 +33,7 @@ global $current_user;
 	</p>
 
 	<div class="links">
-		<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" class="companydomain-wbtb-rn-temporary-close companydomain-wbtb-btn-primary button-primary at-inl-flx at-al-itm-ctr at-gap" target="_blank" rel="noopener noreferrer nofollow">
+		<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" class="companydomain-wbtb-rn-temporary-close companydomain-wbtb-btn-primary button-primary at-inl-flx at-al-itm-ctr at-gap" target="_blank" rel="noopener noreferrer nofollow">
 			<span class="dashicons dashicons-thumbs-up"></span>
 			<span><?php esc_html_e( 'Sure', 'wp-block-theme-boilerplate' ); ?></span>
 		</a>
@@ -48,7 +48,7 @@ global $current_user;
 			<span><?php esc_html_e( 'I already did', 'wp-block-theme-boilerplate' ); ?></span>
 		</button>
 
-		<a href="<?php echo esc_url( 'https://github.com/codersantosh/wp-block-theme-boilerplate' ); ?>" class="companydomain-wbtb-rn-temporary-close button-secondary at-inl-flx at-al-itm-ctr at-gap" target="_blank" rel="noopener noreferrer nofollow">
+		<a href="<?php echo esc_url( 'https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate' ); ?>" class="companydomain-wbtb-rn-temporary-close button-secondary at-inl-flx at-al-itm-ctr at-gap" target="_blank" rel="noopener noreferrer nofollow">
 			<span class="dashicons dashicons-edit"></span>
 			<span><?php esc_html_e( 'Got theme support question?', 'wp-block-theme-boilerplate' ); ?></span>
 		</a>
