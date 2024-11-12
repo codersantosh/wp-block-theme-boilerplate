@@ -66,8 +66,38 @@ class Wp_Block_Theme_Boilerplate_Include {
 	 */
 	public function run() {
 
+		add_action( 'init', array( $this, 'register_block_pattern_category' ) );
 		add_action( 'init', array( $this, 'register_scripts_and_styles' ) );
 		add_action( 'after_setup_theme', array( $this, 'setup_theme' ) );
+	}
+
+	/**
+	 * Register pattern categories
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 * @return void
+	 */
+	public function register_block_pattern_category() {
+		register_block_pattern_category(
+			'page',
+			array(
+				'label'       => _x( 'Pages', 'Block pattern category', 'wp-block-theme-boilerplate' ),
+				'description' => __( 'A collection of full page layouts.', 'wp-block-theme-boilerplate' ),
+			)
+		);
+	}
+
+	/**
+	 * Register scripts and styles
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 * @return void
+	 */
+	public function register_scripts_and_styles() {
+		/* Atomic css */
+		wp_register_style( 'atomic', WP_BLOCK_THEME_BOILERPLATE_URL . 'assets/library/atomic-css/atomic.min.css', array(), WP_BLOCK_THEME_BOILERPLATE_VERSION );
 	}
 
 	/**
@@ -125,18 +155,6 @@ class Wp_Block_Theme_Boilerplate_Include {
 		}
 
 		return $cache[ $user_id ];
-	}
-
-	/**
-	 * Register scripts and styles
-	 *
-	 * @since    1.0.0
-	 * @access   public
-	 * @return void
-	 */
-	public function register_scripts_and_styles() {
-		/* Atomic css */
-		wp_register_style( 'atomic', WP_BLOCK_THEME_BOILERPLATE_URL . 'assets/library/atomic-css/atomic.min.css', array(), WP_BLOCK_THEME_BOILERPLATE_VERSION );
 	}
 }
 

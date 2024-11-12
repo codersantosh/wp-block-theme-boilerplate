@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-30T08:25:32+00:00\n"
+"POT-Creation-Date: 2024-11-12T06:12:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-block-theme-boilerplate\n"
@@ -395,6 +395,15 @@ msgstr ""
 
 #: includes/class-block-bindings.php:112
 msgid "Blog"
+msgstr ""
+
+#: includes/class-include.php:85
+msgctxt "Block pattern category"
+msgid "Pages"
+msgstr ""
+
+#: includes/class-include.php:86
+msgid "A collection of full page layouts."
 msgstr ""
 
 #: includes/functions.php:28

@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php
 				if ( ! wp_block_theme_boilerplate_is_pro_active() ) {
 					?>
-					<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn-primary button button-primary button-hero">
+					<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn-primary button button-primary button-hero">
 						<?php
 							esc_html_e( 'Get WP Bock Theme Boilerplate Pro', 'wp-block-theme-boilerplate' );
 						?>
@@ -42,10 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 				}
 				?>
-				<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-gsn-btn companydomain-wbtb-btn-outline button button-primary button-hero companydomain-wbtb-install-plugins">
+				<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-gsn-btn companydomain-wbtb-btn-outline button button-primary button-hero companydomain-wbtb-install-plugins">
 					<?php esc_html_e( 'Documentation', 'wp-block-theme-boilerplate' ); ?>
 				</a>
-				<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn companydomain-wbtb-btn-default button button-secodary button-hero" target="_blank">
+				<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn companydomain-wbtb-btn-default button button-secodary button-hero" target="_blank">
 					<?php esc_html_e( 'Visit Starter Templates', 'wp-block-theme-boilerplate' ); ?>
 				</a>
 			</div>
@@ -120,10 +120,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<h3 class="txt">
 										<?php esc_html_e( 'WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
 									</h3>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="button-primary companydomain-wbtb-btn-primary">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="button-primary companydomain-wbtb-btn-primary">
 										<?php esc_html_e( 'Visit Site', 'wp-block-theme-boilerplate' ); ?>
 									</a>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="button-secondary companydomain-wbtb-btn-secondary">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="button-secondary companydomain-wbtb-btn-secondary">
 										<?php esc_html_e( 'Support', 'wp-block-theme-boilerplate' ); ?>
 									</a>
 								</div>
@@ -148,7 +148,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												</b>
 											</dt>
 											<dd class="at-m">
-												<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow">
+												<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'Create A Ticket', 'wp-block-theme-boilerplate' ); ?>
 												</a>
 											</dd>                                                        
@@ -215,7 +215,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<p class="at-m">
 										<?php esc_html_e( 'In-depth and well documented articles will help you to use the WP Bock Theme Boilerplate Themes in easiest way.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'Visit Knowledge Base', 'wp-block-theme-boilerplate' ); ?>
 									</a>
 								</div>
@@ -233,7 +233,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<p class="at-m">
 										<?php esc_html_e( 'We want to make customer experience even better. So, join our Facebook community for instant support from experts.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'Join Facebook Group', 'wp-block-theme-boilerplate' ); ?>
 									</a>
 								</div>
@@ -251,7 +251,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<p class="at-m">
 										<?php esc_html_e( 'We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Bock Theme Boilerplate.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'Create A Ticket', 'wp-block-theme-boilerplate' ); ?>
 									</a>
 								</div>
@@ -269,7 +269,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<p class="at-m">
 										<?php esc_html_e( 'WP Bock Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
-									<a href="https://github.com/codersantosh/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
+									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'View Video Guide', 'wp-block-theme-boilerplate' ); ?>
 									</a>
 								</div>
