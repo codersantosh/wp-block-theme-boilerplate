@@ -7,7 +7,6 @@ const destination = 'deploy';
 
 const excludedFiles = [
     destination,
-    'src',
     'node_modules',
     'git-source',
     '.git',
