@@ -11,8 +11,8 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px"}}},"backgroundColor":"secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-secondary-background-color has-background" style="padding-top:80px;padding-bottom:80px"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"60px"}}}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"secondary","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-secondary-background-color has-background" style="padding-top:80px;padding-right:var(--wp--preset--spacing--40);padding-bottom:80px;padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"60px"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"35%"} -->
 <div class="wp-block-column" style="flex-basis:35%"><!-- wp:pattern {"slug":"wp-block-theme-boilerplate/section-title-2"} /--></div>
 <!-- /wp:column -->
