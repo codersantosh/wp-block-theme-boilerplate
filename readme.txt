@@ -3,7 +3,7 @@
 Contributors: codersantosh
 Tags: block-theme, full-site-editing, wide-blocks, custom-colors, custom-fonts, custom-header, custom-logo, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
 Requires at least: 6.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.0
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
