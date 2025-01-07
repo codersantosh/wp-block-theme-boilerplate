@@ -78,6 +78,17 @@ https://pxhere.com/en/photo/764428
 https://pxhere.com/en/photo/51009
 https://pxhere.com/en/photo/644378
 
+
+=== Icons Images ===
+
+https://icons.getbootstrap.com/
+
+Bootstrap Icons
+Copyright (c) 2019-2023 The Bootstrap Authors
+License: MIT License, https://opensource.org/licenses/MIT
+Source: https://github.com/twbs/icons
+
+
 == Frequently Asked Questions ==
 
 = How to install theme? =

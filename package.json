@@ -6,15 +6,15 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
-		"build:adminInfo": "wp-scripts build src/info.js --webpack-src-dir='' --output-path=build/admin/info",
-		"build:adminNotice": "wp-scripts build src/notice.js --webpack-src-dir='' --output-path=build/admin/notice",
-		"build:editor": "wp-scripts build src/editor.js --webpack-src-dir='' --output-path=build/admin/editor",
-		"build:public": "wp-scripts build src/public.js --webpack-src-dir='' --output-path=build/public",
+		"build:adminInfo": "wp-scripts build src/info.js --output-path=build/admin/info",
+		"build:adminNotice": "wp-scripts build src/notice.js --output-path=build/admin/notice",
+		"build:editor": "wp-scripts build src/editor.js --output-path=build/admin/editor",
+		"build:public": "wp-scripts build src/public.js --output-path=build/public",
 		"build": "npm-run-all build:adminInfo build:adminNotice build:editor build:public",
-		"start:adminInfo": "wp-scripts start src/info.js --webpack-src-dir='' --output-path=build/admin/info",
-		"start:adminNotice": "wp-scripts start src/notice.js --webpack-src-dir='' --output-path=build/admin/notice",
-		"start:editor": "wp-scripts start src/editor.js --webpack-src-dir='' --output-path=build/admin/editor",
-		"start:public": "wp-scripts start src/public.js --webpack-src-dir='' --output-path=build/public",
+		"start:adminInfo": "wp-scripts start src/info.js --output-path=build/admin/info",
+		"start:adminNotice": "wp-scripts start src/notice.js --output-path=build/admin/notice",
+		"start:editor": "wp-scripts start src/editor.js --output-path=build/admin/editor",
+		"start:public": "wp-scripts start src/public.js --output-path=build/public",
 		"start": "npm-run-all --parallel start:adminInfo start:adminNotice start:editor start:public",
 		"packages-update": "wp-scripts packages-update",
 		"makejsstring": "node .bin/make-string.js",
@@ -25,8 +25,8 @@
 		"rename": "node .bin/rename-filename.js"
 	},
 	"devDependencies": {
-		"@wordpress/babel-plugin-makepot": "^6.14.0",
-		"@wordpress/scripts": "^30.7.0",
+		"@wordpress/babel-plugin-makepot": "^6.15.0",
+		"@wordpress/scripts": "^30.8.1",
 		"autoprefixer": "^10.4.19",
 		"ncp": "^2.0.0",
 		"npm-run-all": "^4.1.5",
@@ -37,7 +37,7 @@
 		"> 1%"
 	],
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.14.0",
+		"@wordpress/api-fetch": "^7.15.1",
 		"atrc": "^1.0.36"
 	}
 }
