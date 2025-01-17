@@ -3,6 +3,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"settings": {
 		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
 		"color": {
 			"custom": true,
 			"palette": [
@@ -60,9 +61,55 @@
 			"contentSize": "850px",
 			"wideSize": "1320px"
 		},
+		"spacing": {
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "Tiny",
+					"size": "10px",
+					"slug": "10"
+				},
+				{
+					"name": "X-Small",
+					"size": "20px",
+					"slug": "20"
+				},
+				{
+					"name": "Small",
+					"size": "clamp(15px, 5vw, 30px);",
+					"slug": "30"
+				},
+				{
+					"name": "Medium",
+					"size": "clamp(40px, 5vw, 40px);",
+					"slug": "40"
+				},
+				{
+					"name": "Regular",
+					"size": "clamp(25px, 5vw, 50px);",
+					"slug": "50"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(30px, 7vw, 60px);",
+					"slug": "60"
+				},
+				{
+					"name": "X-Large",
+					"size": "clamp(35px, 7vw, 70px);",
+					"slug": "70"
+				},
+				{
+					"name": "XX-Large",
+					"size": "clamp(40px, 10vw, 80px);",
+					"slug": "80"
+				}
+			],
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
+		},
 		"typography": {
 			"defaultFontSizes": false,
-			"fluid": true,
+			"fluid": false,
 			"fontFamilies": [
 				{
 					"fontFamily": "Mukta",
@@ -175,6 +222,15 @@
 			],
 			"fontSizes": [
 				{
+					"_comment": "The default WordPress CSS variable slug is 'small' and it is generated as '--wp--preset--font-size--x-small' ",
+					"fluid": {
+						"max": "0.875rem",
+						"min": "0.875rem"
+					},
+					"size": "0.875rem",
+					"slug": "x-small"
+				},
+				{
 					"_comment": "The default WordPress CSS variable slug is 'small' and it is generated as '--wp--preset--font-size--small' ",
 					"fluid": {
 						"max": "1rem",
@@ -205,7 +261,7 @@
 					"_comment": "The default WordPress CSS variable slug is 'x-large' and it is generated as '--wp--preset--font-size--x-large' ",
 					"fluid": {
 						"max": "2.875rem",
-						"min": "2rem"
+						"min": "1.75rem"
 					},
 					"size": "2.25rem",
 					"slug": "x-large"
@@ -236,6 +292,12 @@
 	"styles": {
 		"color": {
 			"text": "var:preset|color|base"
+		},
+		"spacing": {
+			"padding": {
+				"left": "var(--wp--preset--spacing--30)",
+				"right": "var(--wp--preset--spacing--30)"
+			}
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|base",

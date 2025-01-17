@@ -11,12 +11,13 @@
  */
 
 ?>
-<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"75px","fontStyle":"normal","fontWeight":"800","lineHeight":"0.9"},"spacing":{"margin":{"bottom":"20px"}}},"textColor":"base"} -->
-<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color" style="margin-bottom:20px;font-size:75px;font-style:normal;font-weight:800;line-height:0.9"><?php esc_html_e( 'Amazing services to build busines growth', 'wp-block-theme-boilerplate' ); ?></h1>
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontStyle":"normal","fontWeight":"800","lineHeight":"0.9"},"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}},"textColor":"base","fontSize":"xx-large"} -->
+<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-xx-large-font-size" style="margin-bottom:var(--wp--preset--spacing--20);font-style:normal;font-weight:800;line-height:0.9"><?php esc_html_e( 'Amazing services to build busines growth', 'wp-block-theme-boilerplate' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"40px"}},"typography":{"fontSize":"16px","lineHeight":"1.7"}},"textColor":"accent"} -->
-<p class="has-text-align-center has-accent-color has-text-color" style="margin-bottom:40px;font-size:16px;line-height:1.7"><?php esc_html_e( 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in', 'wp-block-theme-boilerplate' ); ?></p>
+
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}},"typography":{"lineHeight":"1.7"}},"textColor":"accent","fontSize":"small"} -->
+<p class="has-text-align-center has-accent-color has-text-color has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--40);line-height:1.7"><?php esc_html_e( 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in', 'wp-block-theme-boilerplate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

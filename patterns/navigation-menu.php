@@ -12,5 +12,8 @@
 ?>
 <!-- wp:navigation -->
 	<!-- wp:home-link {"label":"<?php echo esc_html_x( 'Home', 'label', 'wp-block-theme-boilerplate' ); ?>"} /-->
-	<!-- wp:page-list /-->
+    <!-- wp:navigation-link {"label":"<?php esc_html_e( 'About', 'wp-block-theme-boilerplate' ); ?>","url":"#"} /-->
+	<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Services', 'wp-block-theme-boilerplate' ); ?>","url":"#"} /-->
+	<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Blog', 'wp-block-theme-boilerplate' ); ?>","url":"#"} /-->
+	<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Contact', 'wp-block-theme-boilerplate' ); ?>","url":"#"} /-->
 <!-- /wp:navigation -->

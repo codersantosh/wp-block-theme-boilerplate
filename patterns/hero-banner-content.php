@@ -11,9 +11,10 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Hero content"},"align":"full","className":"at-pos at-z-idx companydomain-wbtb-hero-banner-content","style":{"spacing":{"padding":{"top":"200px","bottom":"450px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull at-pos at-z-idx companydomain-wbtb-hero-banner-content" style="padding-top:200px;padding-bottom:450px">
-
+<!-- wp:group {"metadata":{"name":"Hero content"},"align":"full","className":"at-pos at-z-idx companydomain-wbtb-hero-banner-content","style":{"spacing":{"padding":{"right":"0px","left":"0px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull at-pos at-z-idx companydomain-wbtb-hero-banner-content"
+    style="padding-right:0px;padding-left:0px">
+    
 <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/section-title-1"} /-->
 
 </div>
