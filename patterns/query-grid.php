@@ -19,7 +19,7 @@
 
 <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/post-meta"} /-->
 
-<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"clamp(15vw, 30vh, 400px)","align":"wide","style":{"spacing":{"margin":{"bottom":"20px"}}}} /-->
+<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"clamp(15vw, 30vh, 400px)","align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}}} /-->
 
 <!-- wp:post-excerpt {"moreText":""} /-->
 

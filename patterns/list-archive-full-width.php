@@ -19,12 +19,12 @@
 	<!-- wp:spacer {"height":"80px"} -->
 	<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
-     <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-        
-        <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/query-list"} /-->
-    </div>
-    <!-- /wp:group -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull">
+		
+		<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/query-list"} /-->
+	</div>
+	<!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->

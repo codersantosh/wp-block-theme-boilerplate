@@ -27,14 +27,22 @@ body {
 	&-hero {
 		&-banner {
 			#{$varPrefix}-pos: relative;
-
-			@include respond-above(xxl) {
-				min-height: 85vh !important;
+			@include respond-below(xs) {
+				min-height: 80vh !important;
+			}
+			.wp-block-cover__image-background {
+				@include respond-below(xs) {
+					object-fit: contain !important;
+					object-position: 0% 100% !important;
+				}
 			}
 
 			&-content {
 				#{$varPrefix}-pos: relative;
 				#{$varPrefix}-z-idx: 2;
+				@include respond-above(lg) {
+					margin-top: calc(var(--wp--preset--spacing--80) * -1);
+				}
 			}
 
 			.at-svg {

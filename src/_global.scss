@@ -162,6 +162,11 @@ hr:not(.wp-block-separator) {
 }
 
 //WordPress Reset
+.pwp-child-reset {
+	> * {
+		margin-block-start: 0 !important;
+	}
+}
 :where(.wp-site-blocks) > * + * {
 	margin-block-start: 0 !important;
 

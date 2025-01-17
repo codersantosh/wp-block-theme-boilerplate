@@ -16,7 +16,7 @@
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"0px"},"layout":{"selfStretch":"fixed","flexSize":"180px"}},"layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"}} -->
 	<div class="wp-block-group">
-        <!-- wp:site-title /-->
+         <!-- wp:site-title {"fontSize":"medium"} /-->
 	</div>
 	<!-- /wp:group -->
 </div>

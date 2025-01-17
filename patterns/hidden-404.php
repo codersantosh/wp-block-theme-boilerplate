@@ -15,23 +15,23 @@
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 	
-<!-- wp:heading {"textAlign":"left","level":1,"align":"wide","style":{"typography":{"fontSize":"8rem"}}} -->
-<h1 class="wp-block-heading alignwide has-text-align-left" style="font-size:8rem"><?php esc_html_e( 'Ooops!', 'wp-block-theme-boilerplate' ); ?></h1>
+<!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"typography":{"fontSize":"6rem"}}} -->
+<h1 class="wp-block-heading alignwide has-text-align-center" style="font-size:6rem"><?php esc_html_e( 'Ooops!', 'wp-block-theme-boilerplate' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"bottom":"15px"}}},"fontSize":"large"} -->
-<p class="has-text-align-left has-large-font-size" style="margin-bottom:15px"><?php esc_html_e( 'This page could not be found.', 'wp-block-theme-boilerplate' ); ?></p>
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"15px"}}},"fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size" style="margin-bottom:15px"><?php esc_html_e( 'This page could not be found.', 'wp-block-theme-boilerplate' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"bottom":"30px"}}},"fontSize":"small"} -->
-<p class="has-text-align-left has-small-font-size" style="margin-bottom:30px"><?php esc_html_e( 'We can\'t find the page you\'re looking for. Check out our Help Center or head back to home', 'wp-block-theme-boilerplate' ); ?>
+<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}},"fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--30)"><?php esc_html_e( 'We can\'t find the page you\'re looking for. Check out our Help Center or head back to home', 'wp-block-theme-boilerplate' ); ?>
 </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Help Center', 'wp-block-theme-boilerplate' ); ?></a></div>
 <!-- /wp:button -->
