@@ -31,6 +31,6 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:spacer {"height":"80px"} -->
-<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var:preset|spacing|80"} -->
+<div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
