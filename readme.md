@@ -44,11 +44,6 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 
 - **Language File Creation:** Generates `.pot` files from both JavaScript and PHP code.
 
-- **Deployment Command:**
-
-  - Run `npm run deploy` to create a production-ready deploy folder.
-  - Rename and upload this folder to your WordPress site or WordPress.org after thorough testing.
-
 - **Development Environment Setup:**
 
   - Includes `npm run start` command to initialize CSS/JS development environment with a live development server.
@@ -56,6 +51,11 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 - **Production Build:**
 
   - Provides `npm run build` command to generate optimized production files for the theme.
+
+- **Deployment Command:**
+
+  - Run `npm run deploy` to create a production-ready deploy folder.
+  - Rename and upload this folder to your WordPress site or WordPress.org after thorough testing.
 
 - **REST API Integration:**
 
@@ -93,6 +93,8 @@ Before getting started with the WP Block Theme Boilerplate, ensure you have the 
 - **WordPress Installation:** The theme requires a WordPress installation set up on your local machine.
 
 - **Node.js and npm:** Make sure Node.js (which includes npm, the Node Package Manager) is installed on your development environment. You can download and install Node.js from [nodejs.org](https://nodejs.org/en/download/).
+
+- **WP-CLI:** Required to generate `.pot` files for language translations. [Install WP-CLI](https://make.wordpress.org/cli/handbook/guides/installing/)| [View More](https://wp-cli.org/).
 
 - **Code Editor:** Use your preferred code editor (e.g., Visual Studio Code, Sublime Text, Atom) to customize and develop the theme.
 
