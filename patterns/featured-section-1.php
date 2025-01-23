@@ -17,7 +17,7 @@
 <div class="wp-block-column" style="flex-basis:35%"><!-- wp:pattern {"slug":"wp-block-theme-boilerplate/section-title-2"} /--></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"65%","style":{"spacing":{"blockGap":"40px"}}} -->
+<!-- wp:column {"width":"65%","style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 <div class="wp-block-column" style="flex-basis:65%"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:pattern {"slug":"wp-block-theme-boilerplate/card-1"} /--></div>

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-17T12:05:57+00:00\n"
+"POT-Creation-Date: 2025-01-23T05:34:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wp-block-theme-boilerplate\n"
@@ -18,6 +18,9 @@ msgstr ""
 #: admin/templates/notice-getting-started.php:21
 #: admin/templates/page-theme-info.php:116
 #: admin/templates/page-theme-info.php:121
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:21
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:116
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:121
 msgid "WP Bock Theme Boilerplate"
 msgstr ""
 
@@ -34,423 +37,539 @@ msgid "https://patternswp.com/"
 msgstr ""
 
 #: admin/class-info.php:80
+#: deploy/wp-block-theme-boilerplate/admin/class-info.php:80
 msgid "Theme Info"
 msgstr ""
 
 #: admin/templates/notice-getting-started.php:18
 #: admin/templates/notice-review.php:20
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:18
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:20
 msgid "Dismiss"
 msgstr ""
 
 #. translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag.
 #: admin/templates/notice-getting-started.php:27
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:27
 msgid "Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer, please make sure you visit our %2$swelcome page%3$s."
 msgstr ""
 
 #. translators: %s: singular/plular .
 #: admin/templates/notice-getting-started.php:43
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:43
 msgid "Clicking the button below will install and activate the following %s:"
 msgstr ""
 
 #: admin/templates/notice-getting-started.php:44
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:44
 msgid "plugins"
 msgstr ""
 
 #: admin/templates/notice-getting-started.php:44
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:44
 msgid "plugin"
 msgstr ""
 
 #: admin/templates/notice-getting-started.php:54
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:54
 msgid "Get started with WP Bock Theme Boilerplate"
 msgstr ""
 
 #. Translators: %1$s current user display name.
 #: admin/templates/notice-review.php:26
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:26
 msgid "Howdy, %1$s! It seems that you have been using this theme for more than 15 days. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a review on WordPress.org. By spreading the love, we can continue to develop new amazing features in the future!"
 msgstr ""
 
 #: admin/templates/notice-review.php:38
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:38
 msgid "Sure"
 msgstr ""
 
 #: admin/templates/notice-review.php:43
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:43
 msgid "Maybe later"
 msgstr ""
 
 #: admin/templates/notice-review.php:48
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:48
 msgid "I already did"
 msgstr ""
 
 #: admin/templates/notice-review.php:53
+#: deploy/wp-block-theme-boilerplate/admin/templates/notice-review.php:53
 msgid "Got theme support question?"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:21
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:21
 msgid "Welcome to WP Bock Theme Boilerplate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:25
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:25
 msgid "The WP Block Theme Boilerplate is now active and ready for use. Unleash your creativity with its extensive library of one-click demo Starter Packages, Patterns, and Pattern Kits."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:30
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:30
 msgid "Upgrade to the pro version for access to even more demo Starter Packages, Patterns, and Pattern Kits."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:39
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:39
 msgid "Get WP Bock Theme Boilerplate Pro"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:46
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:46
 msgid "Documentation"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:49
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:49
 msgid "Visit Starter Templates"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:60
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:60
 msgid "Use ready-made Design, Patterns, Templates & Template Parts"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:62
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:62
 msgid "Effortlessly use ready-made patterns, templates, and template parts to enhance your site design, making customization quick and easy without starting from scratch."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:65
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:65
 msgid "Add a new page"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:76
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:76
 msgid "Customize Templates, Template Parts & More"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:79
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:79
 msgid "With a block theme, you can customize every aspect of both the theme and the site, from headers and footers to individual blocks, providing a cohesive and personalized design."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:82
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:82
 msgid "Site Editor"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:93
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:93
 msgid "Transform your site's appearance with customizable fonts & colors"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:96
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:96
 msgid "Give your site a unique look by customizing fonts and colors. Achieve anything from subtle tweaks to complete makeovers, enhancing your  site's visual appeal and overall design."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:99
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:99
 msgid "Customize styles"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:124
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:124
 msgid "Visit Site"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:127
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:127
 msgid "Support"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:136
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:136
 msgid "Contact Information"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:147
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:147
 msgid "Support:"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:152
 #: admin/templates/page-theme-info.php:255
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:152
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:255
 msgid "Create A Ticket"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:162
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:162
 msgid "Email:"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:167
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:167
 msgid "email-address"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:177
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:177
 msgid "Location:"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:181
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:181
 msgid "Kathmandu, Nepal"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:211
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:211
 msgid "Knowledge Base"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:216
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:216
 msgid "In-depth and well documented articles will help you to use the WP Bock Theme Boilerplate Themes in easiest way."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:219
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:219
 msgid "Visit Knowledge Base"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:229
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:229
 msgid "Community"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:234
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:234
 msgid "We want to make customer experience even better. So, join our Facebook community for instant support from experts."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:237
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:237
 msgid "Join Facebook Group"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:247
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:247
 msgid "24x7 Support"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:252
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:252
 msgid "We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Bock Theme Boilerplate."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:265
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:265
 msgid "Video Guide"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:270
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:270
 msgid "WP Bock Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:273
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:273
 msgid "View Video Guide"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:292
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:292
 msgid "Recommended Plugins"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:317
 #: admin/templates/page-theme-info.php:322
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:317
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:322
 msgid "Installed and Activated"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:322
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:322
 msgid "Failed to install"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:325
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:325
 msgid "Activate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:327
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:327
 msgid "Install and Activate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:349
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:349
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:33
 #: patterns/footer.php:33
 msgid "Quick Links"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:355
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:355
 msgid "Edit Header"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:358
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:358
 msgid "Edit Footer"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:361
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:361
 msgid "Edit Primary Sidebar"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:364
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:364
 msgid "Edit Secondary Sidebar"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:367
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:367
 msgid "All template parts"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:370
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:370
 msgid "Edit Frontpage"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:373
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:373
 msgid "Edit Atchive Page"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:376
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:376
 msgid "All Templates"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:389
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:389
 msgid "Free vs Pro"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:397
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:397
 msgid "Features"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:398
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:398
 msgid "Free"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:399
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:399
 msgid "Pro"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:404
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:404
 msgid "Home Page Template Patterns"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:405
 #: admin/templates/page-theme-info.php:410
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:405
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:410
+#: deploy/wp-block-theme-boilerplate/patterns/card-2.php:18
 #: patterns/card-2.php:18
 msgid "1"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:406
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:406
 msgid "9+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:409
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:409
 msgid "Pre-build Starter Demos"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:411
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:411
 msgid "100+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:414
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:414
 msgid "Header Patterns"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:415
 #: admin/templates/page-theme-info.php:420
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:415
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:420
 msgid "2+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:416
 #: admin/templates/page-theme-info.php:421
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:416
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:421
 msgid "10+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:419
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:419
 msgid "Footer Patterns"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:424
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:424
 msgid "Pre-build Patterns"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:425
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:425
 msgid "50+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:426
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:426
 msgid "1000+"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:445
+#: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:445
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:18
 #: patterns/faq.php:18
 msgid "Frequently Asked Questions"
 msgstr ""
 
 #. translators: %s: Property name.
+#: deploy/wp-block-theme-boilerplate/includes/api/class-api-settings.php:154
 #: includes/api/class-api-settings.php:154
 msgid "The %s property has an invalid stored value, and cannot be updated to null."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/api/class-api.php:115
+#: deploy/wp-block-theme-boilerplate/includes/api/class-api.php:127
 #: includes/api/class-api.php:115
 #: includes/api/class-api.php:127
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:60
 #: includes/class-block-bindings.php:60
 msgctxt "Label for the copyright placeholder in the editor"
 msgid "&copy; YEAR"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:69
 #: includes/class-block-bindings.php:69
 msgctxt "Label for the archive title placeholder in the editor"
 msgid "Archive title"
 msgstr ""
 
 #. translators: Copyright date format, see https://www.php.net/manual/datetime.format.php
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:94
 #: includes/class-block-bindings.php:94
 msgctxt "copyright date format"
 msgid "Y"
 msgstr ""
 
 #. translators: 1: Copyright symbol or word, 2: Date, 3: Site title
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:97
 #: includes/class-block-bindings.php:97
 msgid "%1$s %2$s %3$s"
 msgstr ""
 
 #. translators: %s is the search term.
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:108
 #: includes/class-block-bindings.php:108
 msgid "Search results for: \"%s\""
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/class-block-bindings.php:112
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:37
+#: deploy/wp-block-theme-boilerplate/patterns/navigation-menu.php:17
 #: includes/class-block-bindings.php:112
 #: patterns/footer.php:37
 #: patterns/navigation-menu.php:17
 msgid "Blog"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/class-include.php:85
 #: includes/class-include.php:85
 msgctxt "Block pattern category"
 msgid "Pages"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/class-include.php:86
 #: includes/class-include.php:86
 msgid "A collection of full page layouts."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:28
 #: includes/functions.php:28
 msgid "Gutentor"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:34
 #: includes/functions.php:34
 msgid "Templateberg"
 msgstr ""
 
 #. translators: %s the plugin info
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:74
 #: includes/functions.php:74
 msgid "Not enough information about plugin. Plugin info %s"
 msgstr ""
 
 #. translators: %s is the plugin name
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:96
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:112
 #: includes/functions.php:96
 #: includes/functions.php:112
 msgid "Plugin \"%s\" is already active."
 msgstr ""
 
 #. translators: %1$s is the plugin name, %2$s is error message
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:126
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:257
 #: includes/functions.php:126
 #: includes/functions.php:257
 msgid "Error activating plugin \"%1$s\": %2$s"
 msgstr ""
 
 #. translators: %s is the plugin name.
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:137
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:243
 #: includes/functions.php:137
 #: includes/functions.php:243
 msgid "Plugin \"%s\" activated successfully."
 msgstr ""
 
 #. translators: %s is the plugin name.
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:146
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:268
 #: includes/functions.php:146
 #: includes/functions.php:268
 msgid "You don't have permission to activate the plugin \"%s\"."
 msgstr ""
 
 #. translators: %1$s is the plugin name, %2$s is error message
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:171
 #: includes/functions.php:171
 msgid "Error retrieving information for plugin \"%1$s\": %2$s"
 msgstr ""
 
 #. translators: %1$s is the plugin name, %2$s is error message
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:190
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:200
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:210
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:230
 #: includes/functions.php:190
 #: includes/functions.php:200
 #: includes/functions.php:210
@@ -458,71 +577,91 @@ msgstr ""
 msgid "Error installing plugin \"%1$s\": %2$s"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:220
 #: includes/functions.php:220
 msgid "Unable to connect to the filesystem. Please confirm your credentials."
 msgstr ""
 
 #. translators: %s is the plugin name.
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:278
 #: includes/functions.php:278
 msgid "Plugin \"%s\" installed and activated successfully."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:312
 #: includes/functions.php:312
 msgid "and"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:556
 #: includes/functions.php:556
 msgid "How can I customize the theme header?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:557
 #: includes/functions.php:557
 msgid "You can customize the theme header by editing the Header template part in the Site Editor. Go to Appearance > Editor > Patterns > Header, then select and edit the Header template part."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:560
 #: includes/functions.php:560
 msgid "How do I change the footer credits?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:561
 #: includes/functions.php:561
 msgid "To change the footer credits, go to  Appearance > Editor > Patterns > Footer, then select and edit the Footer template part. You can add your own text or remove the existing credits."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:564
 #: includes/functions.php:564
 msgid "Does this theme support block patterns?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:565
 #: includes/functions.php:565
 msgid "Yes, this theme includes several pre-designed block patterns that you can use to quickly create layouts. You can find these patterns in the block inserter."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:568
 #: includes/functions.php:568
 msgid "How can I create custom templates?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:569
 #: includes/functions.php:569
 msgid "You can create custom templates by going to Appearance > Editor > Templates, then click Add New Template. You can then design your custom template using blocks."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:572
 #: includes/functions.php:572
 msgid "How do I use global styles?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/includes/functions.php:573
 #: includes/functions.php:573
 msgid "To use global styles, go to Appearance > Editor > Styles, then click on the Edit icon in the top right side of Styles. From there, you can customize the colors, typography, and layout for your entire site."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/archives.php:18
 #: patterns/archives.php:18
 msgid "Archives"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/calendar.php:17
 #: patterns/calendar.php:17
 msgid "Calendar"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/card-1.php:20
 #: patterns/card-1.php:20
 msgid "Visual Page Builder"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/card-1.php:24
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:37
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:55
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:71
 #: patterns/card-1.php:24
 #: patterns/featured-section-1.php:37
 #: patterns/featured-section-1.php:55
@@ -530,66 +669,89 @@ msgstr ""
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatu"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/card-2.php:25
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-2.php:41
 #: patterns/card-2.php:25
 #: patterns/featured-section-2.php:41
 msgid "Customize Typography and Colors Style panel"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/card-2.php:29
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-2.php:45
 #: patterns/card-2.php:29
 #: patterns/featured-section-2.php:45
 msgid "Elementum ipsum donec usodales porttitor mauris augue fermentum sagittis elementum."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/comments.php:19
 #: patterns/comments.php:19
 msgid "Comments"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:21
 #: patterns/contact-form.php:21
 msgid "Let’s talk"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:26
 #: patterns/contact-form.php:26
 msgid "Feel Free To Contact Us."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:30
 #: patterns/contact-form.php:30
 msgid "We’d love to hear from you! Please fill out the form or reach us through the following methods."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:36
 #: patterns/contact-form.php:36
 msgid "Get Direction"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:40
 #: patterns/contact-form.php:40
 msgid "785 15h Street, Office 478 Berlin, De 81566 6391 Elgin St. Celina, 10299"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:46
 #: patterns/contact-form.php:46
 msgid "Phone Number"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:50
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:54
 #: patterns/contact-form.php:50
 #: patterns/contact-form.php:54
 msgid "(629) 555-0129"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:60
 #: patterns/contact-form.php:60
 msgid "E-mail"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:64
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:68
 #: patterns/contact-form.php:64
 #: patterns/contact-form.php:68
 msgid "info@example.com"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/contact-form.php:79
 #: patterns/contact-form.php:79
 msgid "Add Contact form shortcode"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/copyright.php:15
 #: patterns/copyright.php:15
 msgid "Dynamic copyright text"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:22
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:36
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:46
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:70
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:80
 #: patterns/faq.php:22
 #: patterns/faq.php:36
 #: patterns/faq.php:46
@@ -598,417 +760,516 @@ msgstr ""
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:31
 #: patterns/faq.php:31
 msgid "What are included in the purchased package?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:41
 #: patterns/faq.php:41
 msgid "What are the minimal requirements to use admin themes?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:55
 #: patterns/faq.php:55
 msgid "What are the available payment options?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:60
 #: patterns/faq.php:60
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:65
 #: patterns/faq.php:65
 msgid "What kind of support is available?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/faq.php:75
 #: patterns/faq.php:75
 msgid "How long is support valid for?"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:33
 #: patterns/featured-section-1.php:33
 msgid "Free Lifetime Update"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:51
 #: patterns/featured-section-1.php:51
 msgid "Modern Minimal Design"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-1.php:67
 #: patterns/featured-section-1.php:67
 msgid "Easy Customization"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-2.php:34
 #: patterns/featured-section-2.php:34
 msgid "2"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/featured-section-2.php:57
 #: patterns/featured-section-2.php:57
 msgid "Know More"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:25
 #: patterns/footer.php:25
 msgid "We are available to take the next project with full energy"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:39
+#: deploy/wp-block-theme-boilerplate/patterns/navigation-menu.php:15
 #: patterns/footer.php:39
 #: patterns/navigation-menu.php:15
 msgid "About"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:41
 #: patterns/footer.php:41
 msgid "FAQs"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:43
 #: patterns/footer.php:43
 msgid "Authors"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:50
+#: deploy/wp-block-theme-boilerplate/patterns/navigation-menu.php:18
 #: patterns/footer.php:50
 #: patterns/navigation-menu.php:18
 msgid "Contact"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:57
 #: patterns/footer.php:57
 msgid "000 - 9874 563 210"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:61
 #: patterns/footer.php:61
 msgid "codersantosh@gmail.com"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:74
 #: patterns/footer.php:74
 msgid "Privacy"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:75
 #: patterns/footer.php:75
 msgid "Policy"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/footer.php:76
 #: patterns/footer.php:76
 msgid "Terms & Conditions"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-404.php:22
 #: patterns/hidden-404.php:22
 msgid "Ooops!"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-404.php:26
 #: patterns/hidden-404.php:26
 msgid "This page could not be found."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-404.php:30
 #: patterns/hidden-404.php:30
 msgid "We can't find the page you're looking for. Check out our Help Center or head back to home"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-404.php:36
 #: patterns/hidden-404.php:36
 msgid "Help Center"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-404.php:40
 #: patterns/hidden-404.php:40
 msgid "Home"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-no-search-results.php:15
 #: patterns/hidden-no-search-results.php:15
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-no-search-results.php:19
 #: patterns/hidden-no-search-results.php:19
 msgctxt "label"
 msgid "Search"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-no-search-results.php:19
 #: patterns/hidden-no-search-results.php:19
 msgctxt "placeholder for search field"
 msgid "Search..."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-no-search-results.php:19
 #: patterns/hidden-no-search-results.php:19
 msgid "Search"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-primary-header.php:19
 #: patterns/hidden-primary-header.php:19
 msgid "WP Block Theme Boilerplate : "
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-primary-header.php:19
 #: patterns/hidden-primary-header.php:19
 msgid "Complete your website with millions of Patterns, Templates &amp; Many more."
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-primary-header.php:24
 #: patterns/hidden-primary-header.php:24
 msgid "Get Unlimited Downloads"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-primary-header.php:45
 #: patterns/hidden-primary-header.php:45
 msgid "Get Started"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-query-no-results.php:16
 #: patterns/hidden-query-no-results.php:16
 msgid "Page could not be found"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-query-no-results.php:20
 #: patterns/hidden-query-no-results.php:20
 msgid "We're sorry, the page you requested could not be found. Please go back to the homepage"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/hidden-query-no-results.php:25
 #: patterns/hidden-query-no-results.php:25
 msgid "Back to Home"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/latest-comments.php:16
 #: patterns/latest-comments.php:16
 msgid "Recent comments"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/latest-posts.php:16
 #: patterns/latest-posts.php:16
 msgid "Recent Posts"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/navigation-menu.php:14
 #: patterns/navigation-menu.php:14
 msgctxt "label"
 msgid "Home"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/navigation-menu.php:16
 #: patterns/navigation-menu.php:16
 msgid "Services"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/pagination.php:15
 #: patterns/pagination.php:15
 msgctxt "label"
 msgid "Previous"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/pagination.php:19
 #: patterns/pagination.php:19
 msgctxt "label"
 msgid "Next"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/post-meta.php:19
 #: patterns/post-meta.php:19
 msgid "Posted :"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/post-meta.php:26
 #: patterns/post-meta.php:26
 msgid "by :"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/scroll-to-top-button.php:17
 #: patterns/scroll-to-top-button.php:17
 msgid "Scroll To Top"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-1.php:15
 #: patterns/section-title-1.php:15
 msgid "Amazing services to build busines growth"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-1.php:20
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-2.php:22
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-4.php:22
 #: patterns/section-title-1.php:20
 #: patterns/section-title-2.php:22
 #: patterns/section-title-4.php:22
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-1.php:25
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-2.php:27
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-4.php:29
 #: patterns/section-title-1.php:25
 #: patterns/section-title-2.php:27
 #: patterns/section-title-4.php:29
 msgid "Try for Free"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-1.php:29
 #: patterns/section-title-1.php:29
 msgid "See How It works "
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-2.php:18
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-3.php:19
 #: patterns/section-title-2.php:18
 #: patterns/section-title-3.php:19
 msgid "An award winning agency specialized in web design"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-3.php:23
 #: patterns/section-title-3.php:23
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/section-title-4.php:17
 #: patterns/section-title-4.php:17
 msgid "Try it now !"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/sitemap.php:19
 #: patterns/sitemap.php:19
 msgid "Pages"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/sitemap.php:29
 #: patterns/sitemap.php:29
 msgid "Categories"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/patterns/sitemap.php:39
 #: patterns/sitemap.php:39
 msgid "Posts"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Base"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Default"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Tertiary"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Quaternary"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Quinary"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Color name"
 msgid "Accent"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "Tiny"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "X-Small"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "Small"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "Medium"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "Regular"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "Large"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "X-Large"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "XX-Large"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Blank"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Page (with both sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Page (with left sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Page (with right sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Single (with both sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Single (with left sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Single (with right sidebar)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Comments"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Site Footer"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Site Header (with absolute position)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Site Header (default)"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Archive Page Header"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Blog Home Page Header"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Search Page Header"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Post Meta"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Post Navigation"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Primary Sidebar"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Secondary Sidebar"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Single Header"
 msgstr ""
 
+#: deploy/wp-block-theme-boilerplate/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Primary Header"
