@@ -12,6 +12,10 @@
  */
 
 ?>
-<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/search-form"} /-->
-<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/latest-posts"} /-->
-<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/latest-comments"} /-->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+    <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/search-form"} /-->
+    <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/latest-posts"} /-->
+    <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/latest-comments"} /-->
+</div>
+<!-- /wp:group -->

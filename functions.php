@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WP Bock Theme Boilerplate functions and definitions
+ * WP Block Theme Boilerplate functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WP Bock Theme Boilerplate
+ * @package WP Block Theme Boilerplate
  */
 
 /**
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'WP_BLOCK_THEME_BOILERPLATE_PATH', trailingslashit( get_template_directory() ) );
 define( 'WP_BLOCK_THEME_BOILERPLATE_URL', trailingslashit( get_template_directory_uri() ) );
-define( 'WP_BLOCK_THEME_BOILERPLATE_VERSION', '1.0.0' );
+define( 'WP_BLOCK_THEME_BOILERPLATE_VERSION', '1.0.1' );
 define( 'WP_BLOCK_THEME_BOILERPLATE_THEME_NAME', 'wp-block-theme-boilerplate' );
 define( 'WP_BLOCK_THEME_BOILERPLATE_OPTION_NAME', 'wp-block-theme-boilerplate' );
 

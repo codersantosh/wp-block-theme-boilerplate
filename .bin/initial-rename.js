@@ -21,7 +21,7 @@ const options = {
 		/Wp-Block-Theme-Boilerplate/g,
 		/Wp_Block_Theme_Boilerplate/g,
 		/WpBlockThemeBoilerplate/g,
-		/WP Bock Theme Boilerplate/g,
+		/WP Block Theme Boilerplate/g,
 		/companydomain-wbtb/g,
 	],
 	to: [

@@ -1,6 +1,6 @@
-@import '../../mixins';
-@import '../common';
-@import '../../prefix-vars.scss';
+@use '../../mixins';
+@use '../common';
+@use '../../prefix-vars';
 
 img {
     max-width: 100%;
@@ -8,8 +8,8 @@ img {
 }
 
 summary {
-    #{$varPrefix}-p: 10px 10px 10px 2.2rem;
-    #{$varPrefix}-pos: relative;
+    #{prefix-vars.$varPrefix}-p: 10px 10px 10px 2.2rem;
+    #{prefix-vars.$varPrefix}-pos: relative;
 
     outline: none;
     display: block;
@@ -19,35 +19,35 @@ summary {
     &:before {
         content: '';
 
-        #{$varPrefix}-bdr-w: 0.4rem;
-        #{$varPrefix}-bdr-sty: solid;
-        #{$varPrefix}-bdr-cl: transparent transparent transparent #444;
-        #{$varPrefix}-pos: absolute;
-        #{$varPrefix}-t: 0.8rem;
-        #{$varPrefix}-l: 1rem;
-        #{$varPrefix}-tf: rotate(0);
-        #{$varPrefix}-tf-org: 0.2rem 50%;
-        #{$varPrefix}-trs: 0.25s transform ease;
+        #{prefix-vars.$varPrefix}-bdr-w: 0.4rem;
+        #{prefix-vars.$varPrefix}-bdr-sty: solid;
+        #{prefix-vars.$varPrefix}-bdr-cl: transparent transparent transparent #444;
+        #{prefix-vars.$varPrefix}-pos: absolute;
+        #{prefix-vars.$varPrefix}-t: 0.8rem;
+        #{prefix-vars.$varPrefix}-l: 1rem;
+        #{prefix-vars.$varPrefix}-tf: rotate(0);
+        #{prefix-vars.$varPrefix}-tf-org: 0.2rem 50%;
+        #{prefix-vars.$varPrefix}-trs: 0.25s transform ease;
 
-        border-color: var(#{$varPrefix}-bdr-cl);
-        border-width: var(#{$varPrefix}-bdr-w);
-        border-style: var(#{$varPrefix}-bdr-sty);
-        position: var(#{$varPrefix}-pos);
-        top: var(#{$varPrefix}-t);
-        left: var(#{$varPrefix}-l);
-        transform: var(#{$varPrefix}-tf);
-        transform-origin: var(#{$varPrefix}-tf-org);
-        transition: var(#{$varPrefix}-trs);
+        border-color: var(#{prefix-vars.$varPrefix}-bdr-cl);
+        border-width: var(#{prefix-vars.$varPrefix}-bdr-w);
+        border-style: var(#{prefix-vars.$varPrefix}-bdr-sty);
+        position: var(#{prefix-vars.$varPrefix}-pos);
+        top: var(#{prefix-vars.$varPrefix}-t);
+        left: var(#{prefix-vars.$varPrefix}-l);
+        transform: var(#{prefix-vars.$varPrefix}-tf);
+        transform-origin: var(#{prefix-vars.$varPrefix}-tf-org);
+        transition: var(#{prefix-vars.$varPrefix}-trs);
     }
 }
 
 details {
-    #{$varPrefix}-bdr-w: 1px;
-    #{$varPrefix}-bdr-sty: solid;
-    #{$varPrefix}-bdr-cl: #dcdcde;
+    #{prefix-vars.$varPrefix}-bdr-w: 1px;
+    #{prefix-vars.$varPrefix}-bdr-sty: solid;
+    #{prefix-vars.$varPrefix}-bdr-cl: #dcdcde;
 
     summary {
-        #{$varPrefix}-bdr-w: 0;
+        #{prefix-vars.$varPrefix}-bdr-w: 0;
 
         &::-webkit-details-marker {
             display: none;
@@ -56,13 +56,13 @@ details {
 
     &[open] {
         >summary {
-            #{$varPrefix}-bdr-w: 0 0 1px 0;
-            #{$varPrefix}-bdr-sty: solid;
-            #{$varPrefix}-bdr-cl: #dcdcde;
+            #{prefix-vars.$varPrefix}-bdr-w: 0 0 1px 0;
+            #{prefix-vars.$varPrefix}-bdr-sty: solid;
+            #{prefix-vars.$varPrefix}-bdr-cl: #dcdcde;
 
             &:before {
-                #{$varPrefix}-tf: rotate(90deg);
-                transform: var(#{$varPrefix}-tf);
+                #{prefix-vars.$varPrefix}-tf: rotate(90deg);
+                transform: var(#{prefix-vars.$varPrefix}-tf);
             }
         }
     }
@@ -117,12 +117,12 @@ table {
     }
 }
 
-#{$themePrefix} {
+#{prefix-vars.$themePrefix} {
     &-hero {
-        #{$varPrefix}-bg-img: linear-gradient(145deg,
+        #{prefix-vars.$varPrefix}-bg-img: linear-gradient(145deg,
                 rgb(232, 243, 235) 50%,
                 rgb(72, 180, 79) 90%);
-        #{$varPrefix}-cl: #2e312f;
+        #{prefix-vars.$varPrefix}-cl: #2e312f;
         margin-left: 15px;
         margin-right: 15px;
 
@@ -133,114 +133,114 @@ table {
 
         .welcome-panel-column {
             a {
-                #{$varPrefix}-cl: #48b44f;
-                color: var(#{$varPrefix}-cl);
+                #{prefix-vars.$varPrefix}-cl: #48b44f;
+                color: var(#{prefix-vars.$varPrefix}-cl);
             }
         }
     }
 
     &-accordion {
-        #{$varPrefix}-gap: 10px;
+        #{prefix-vars.$varPrefix}-gap: 10px;
     }
 
     &-card {
-        #{$varPrefix}-bg-cl: #fff;
-        #{$varPrefix}-bdr-w: 1px;
-        #{$varPrefix}-bdr-sty: solid;
-        #{$varPrefix}-bdr-cl: #dcdcde;
+        #{prefix-vars.$varPrefix}-bg-cl: #fff;
+        #{prefix-vars.$varPrefix}-bdr-w: 1px;
+        #{prefix-vars.$varPrefix}-bdr-sty: solid;
+        #{prefix-vars.$varPrefix}-bdr-cl: #dcdcde;
 
         &-header {
-            #{$varPrefix}-bdr-w: 0 0 1px 0;
-            #{$varPrefix}-bdr-sty: solid;
-            #{$varPrefix}-bdr-cl: #dcdcde;
-            #{$varPrefix}-p: 15px;
-            #{$varPrefix}-gap: 5px;
+            #{prefix-vars.$varPrefix}-bdr-w: 0 0 1px 0;
+            #{prefix-vars.$varPrefix}-bdr-sty: solid;
+            #{prefix-vars.$varPrefix}-bdr-cl: #dcdcde;
+            #{prefix-vars.$varPrefix}-p: 15px;
+            #{prefix-vars.$varPrefix}-gap: 5px;
 
             &-ttl {
-                #{$varPrefix}-fnt-fam: inherit;
-                #{$varPrefix}-fnt-wt: 600;
-                #{$varPrefix}-fnt-sz: 14px;
-                #{$varPrefix}-m: 0;
-                margin: var(#{$varPrefix}-m) !important;
-                font-weight: var(#{$varPrefix}-fnt-wt) !important;
-                font-family: var(#{$varPrefix}-fnt-fam);
+                #{prefix-vars.$varPrefix}-fnt-fam: inherit;
+                #{prefix-vars.$varPrefix}-fnt-wt: 600;
+                #{prefix-vars.$varPrefix}-fnt-sz: 14px;
+                #{prefix-vars.$varPrefix}-m: 0;
+                margin: var(#{prefix-vars.$varPrefix}-m) !important;
+                font-weight: var(#{prefix-vars.$varPrefix}-fnt-wt) !important;
+                font-family: var(#{prefix-vars.$varPrefix}-fnt-fam);
             }
         }
 
         &-body {
-            #{$varPrefix}-p: 15px;
-            #{$varPrefix}-gap: 5px;
+            #{prefix-vars.$varPrefix}-p: 15px;
+            #{prefix-vars.$varPrefix}-gap: 5px;
 
             p {
-                #{$varPrefix}-m: 0 0 15px 0;
+                #{prefix-vars.$varPrefix}-m: 0 0 15px 0;
             }
         }
 
         &-btn-grp {
-            #{$varPrefix}-gap: 15px;
+            #{prefix-vars.$varPrefix}-gap: 15px;
         }
     }
 
     &-personal-detail {
-        #{$varPrefix}-gap: 10px;
+        #{prefix-vars.$varPrefix}-gap: 10px;
 
         dl {
-            #{$varPrefix}-gap: 10px;
+            #{prefix-vars.$varPrefix}-gap: 10px;
         }
 
         dt {
-            #{$varPrefix}-w: 80px;
+            #{prefix-vars.$varPrefix}-w: 80px;
         }
 
         dd {
-            #{$varPrefix}-m: 0;
+            #{prefix-vars.$varPrefix}-m: 0;
         }
     }
 
     &-main {
-        #{$varPrefix}-p: 0 6px;
+        #{prefix-vars.$varPrefix}-p: 0 6px;
 
         &-wrp {
-            #{$varPrefix}-m: 0 -5px;
+            #{prefix-vars.$varPrefix}-m: 0 -5px;
         }
 
         &-sidebar {
-            #{$varPrefix}-gap: 30px;
+            #{prefix-vars.$varPrefix}-gap: 30px;
         }
 
         &-cont {
-            @include respond-above(sm) {
-                #{$varPrefix}-gap: 30px;
+            @include mixins.respond-above(sm) {
+                #{prefix-vars.$varPrefix}-gap: 30px;
             }
 
             .at-row {
-                #{$varPrefix}-gap: 30px 0;
+                #{prefix-vars.$varPrefix}-gap: 30px 0;
             }
         }
 
         a {
-            #{$varPrefix}-cl: #48b44f;
-            color: var(#{$varPrefix}-cl);
+            #{prefix-vars.$varPrefix}-cl: #48b44f;
+            color: var(#{prefix-vars.$varPrefix}-cl);
         }
     }
 
     &-intro {
         &-auth {
-            #{$varPrefix}-p: 40px;
+            #{prefix-vars.$varPrefix}-p: 40px;
 
             &--info {
-                #{$themePrefix} {
+                #{prefix-vars.$themePrefix} {
                     &-social {
-                        #{$varPrefix}-gap: 15px;
-                        #{$varPrefix}-m: 40px 0 20px 0;
+                        #{prefix-vars.$varPrefix}-gap: 15px;
+                        #{prefix-vars.$varPrefix}-m: 40px 0 20px 0;
 
                         li {
                             a {
-                                #{$varPrefix}-bdr-rad: 50%;
-                                #{$varPrefix}-bdr-cl: #48b44f #d3d9de transparent #d3d9de;
-                                #{$varPrefix}-bdr-w: 2px;
-                                #{$varPrefix}-bdr-sty: dashed;
-                                #{$varPrefix}-p: 20px;
+                                #{prefix-vars.$varPrefix}-bdr-rad: 50%;
+                                #{prefix-vars.$varPrefix}-bdr-cl: #48b44f #d3d9de transparent #d3d9de;
+                                #{prefix-vars.$varPrefix}-bdr-w: 2px;
+                                #{prefix-vars.$varPrefix}-bdr-sty: dashed;
+                                #{prefix-vars.$varPrefix}-p: 20px;
                                 text-decoration: none;
                             }
                         }
@@ -250,30 +250,30 @@ table {
         }
 
         &-profile {
-            #{$varPrefix}-w: 150px;
-            #{$varPrefix}-h: 150px;
-            #{$varPrefix}-m: 0 auto;
-            #{$varPrefix}-bdr-rad: 50%;
-            #{$varPrefix}-bdr-cl: #48b44f #d3d9de transparent #d3d9de;
-            #{$varPrefix}-bdr-w: 3px;
-            #{$varPrefix}-bdr-sty: dashed;
+            #{prefix-vars.$varPrefix}-w: 150px;
+            #{prefix-vars.$varPrefix}-h: 150px;
+            #{prefix-vars.$varPrefix}-m: 0 auto;
+            #{prefix-vars.$varPrefix}-bdr-rad: 50%;
+            #{prefix-vars.$varPrefix}-bdr-cl: #48b44f #d3d9de transparent #d3d9de;
+            #{prefix-vars.$varPrefix}-bdr-w: 3px;
+            #{prefix-vars.$varPrefix}-bdr-sty: dashed;
 
             span {
-                #{$varPrefix}-w: 100px;
-                #{$varPrefix}-h: 100px;
-                #{$varPrefix}-bdr-rad: 50%;
+                #{prefix-vars.$varPrefix}-w: 100px;
+                #{prefix-vars.$varPrefix}-h: 100px;
+                #{prefix-vars.$varPrefix}-bdr-rad: 50%;
                 display: block;
             }
 
             &-info {
-                #{$varPrefix}-txt-al: center;
-                #{$varPrefix}-m: 20px 0 0 0;
+                #{prefix-vars.$varPrefix}-txt-al: center;
+                #{prefix-vars.$varPrefix}-m: 20px 0 0 0;
 
                 h3 {
-                    #{$varPrefix}-fnt-sz: 18px;
-                    #{$varPrefix}-fnt-wt: 700;
-                    font-size: var(#{$varPrefix}-fnt-sz) !important;
-                    font-weight: var(#{$varPrefix}-fnt-wt) !important;
+                    #{prefix-vars.$varPrefix}-fnt-sz: 18px;
+                    #{prefix-vars.$varPrefix}-fnt-wt: 700;
+                    font-size: var(#{prefix-vars.$varPrefix}-fnt-sz) !important;
+                    font-weight: var(#{prefix-vars.$varPrefix}-fnt-wt) !important;
                 }
             }
         }

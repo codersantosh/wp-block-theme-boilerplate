@@ -1,32 +1,32 @@
-@import '../common.scss';
-@import '../../prefix-vars.scss';
+@use '../common.scss';
+@use '../../prefix-vars.scss';
 
-#{$themePrefix} {
+#{prefix-vars.$themePrefix} {
     &-gsn {
-        #{$varPrefix}-pos: relative;
+        #{prefix-vars.$varPrefix}-pos: relative;
 
         &-screenshot {
-            #{$varPrefix}-w: 300px;
+            #{prefix-vars.$varPrefix}-w: 300px;
         }
 
         &-container {
-            #{$varPrefix}-gap: 40px;
-            #{$varPrefix}-p: 20px;
+            #{prefix-vars.$varPrefix}-gap: 40px;
+            #{prefix-vars.$varPrefix}-p: 20px;
 
             a {
-                #{$varPrefix}-cl: #48b44f;
-                color: var(#{$varPrefix}-cl);
+                #{prefix-vars.$varPrefix}-cl: #48b44f;
+                color: var(#{prefix-vars.$varPrefix}-cl);
             }
         }
     }
 
     &-review-notice {
-        #{$varPrefix}-pos: relative;
-        #{$varPrefix}-p: 20px;
-        padding: var(#{$varPrefix}-p) !important;
+        #{prefix-vars.$varPrefix}-pos: relative;
+        #{prefix-vars.$varPrefix}-p: 20px;
+        padding: var(#{prefix-vars.$varPrefix}-p) !important;
 
         .button-primary {
-            #{$varPrefix}-gap: 5px;
+            #{prefix-vars.$varPrefix}-gap: 5px;
         }
     }
 }

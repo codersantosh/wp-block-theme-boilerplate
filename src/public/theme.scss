@@ -1,89 +1,101 @@
-@import '../_global';
+@use '../_global';
+@use '../prefix-vars';
+@use '../_mixins';
 
 // Absolute Header
 body {
-	&:not(.admin-bar) {
-		#{$themePrefix} {
-			&-header {
-				#{$varPrefix}-t: 0;
-			}
-		}
-	}
+    &:not(.admin-bar) {
+        #{prefix-vars.$themePrefix} {
+            &-header {
+                #{prefix-vars.$varPrefix}-t: 0;
+            }
+        }
+    }
 }
 
 //Theme CSS
 
-#{$themePrefix} {
-	//Absolute Header
-	&-header {
-		#{$varPrefix}-pos: absolute;
-		#{$varPrefix}-t: var(--wp-admin--admin-bar--height);
-		#{$varPrefix}-l: 0;
-		#{$varPrefix}-r: 0;
-		#{$varPrefix}-z-idx: 9;
-	}
+#{prefix-vars.$themePrefix} {
 
-	// Hero Banner
-	&-hero {
-		&-banner {
-			#{$varPrefix}-pos: relative;
-			@include respond-below(xs) {
-				min-height: 80vh !important;
-			}
-			.wp-block-cover__image-background {
-				@include respond-below(xs) {
-					object-fit: contain !important;
-					object-position: 0% 100% !important;
-				}
-			}
+    //Absolute Header
+    &-header {
+        #{prefix-vars.$varPrefix}-pos: absolute;
+        #{prefix-vars.$varPrefix}-t: var(--wp-admin--admin-bar--height);
+        #{prefix-vars.$varPrefix}-l: 0;
+        #{prefix-vars.$varPrefix}-r: 0;
+        #{prefix-vars.$varPrefix}-z-idx: 9;
+    }
 
-			&-content {
-				#{$varPrefix}-pos: relative;
-				#{$varPrefix}-z-idx: 2;
-				@include respond-above(lg) {
-					margin-top: calc(var(--wp--preset--spacing--80) * -1);
-				}
-			}
+    // Hero Banner
+    &-hero {
+        &-banner {
+            #{prefix-vars.$varPrefix}-pos: relative;
 
-			.at-svg {
-				#{$varPrefix}-cl: var(--wp--preset--color--secondary);
-				#{$varPrefix}-pos: absolute;
-				max-width: 100%;
-			}
-		}
-	}
+            @include mixins.respond-below(xs) {
+                min-height: 80vh !important;
+            }
 
-	//Global Height & Width
-	&-is-h-w {
-		&-40 {
-			$hw40: 40px;
-			#{$varPrefix}-h: $hw40;
-			#{$varPrefix}-w: $hw40;
-		}
+            &.wp-block-cover {
+                .wp-block-cover__inner-container {
+                    position: static;
+                }
+            }
 
-		&-70 {
-			$hw70: 70px;
-			#{$varPrefix}-h: $hw70;
-			#{$varPrefix}-w: $hw70;
-		}
-	}
+            .wp-block-cover__image-background {
+                @include mixins.respond-below(xs) {
+                    object-fit: contain !important;
+                    object-position: 0% 100% !important;
+                }
+            }
 
-	//SVG Shapes top and bottom
-	&-shape {
-		&-t {
-			#{$varPrefix}-t: 0;
-			#{$varPrefix}-z-idx: 1;
-			#{$varPrefix}-l: 0;
-			#{$varPrefix}-r: 0;
-			#{$varPrefix}-h: 120px;
-		}
+            &-content {
+                #{prefix-vars.$varPrefix}-pos: relative;
+                #{prefix-vars.$varPrefix}-z-idx: 2;
 
-		&-b {
-			#{$varPrefix}-b: 0;
-			#{$varPrefix}-z-idx: 1;
-			#{$varPrefix}-l: 0;
-			#{$varPrefix}-r: 0;
-			#{$varPrefix}-h: 120px;
-		}
-	}
+                @include mixins.respond-above(lg) {
+                    margin-top: calc(var(--wp--preset--spacing--80) * -1);
+                }
+            }
+
+            .at-svg {
+                #{prefix-vars.$varPrefix}-cl: var(--wp--preset--color--secondary);
+                #{prefix-vars.$varPrefix}-pos: absolute;
+                max-width: 100%;
+            }
+        }
+    }
+
+    //Global Height & Width
+    &-is-h-w {
+        &-40 {
+            $hw40: 40px;
+            #{prefix-vars.$varPrefix}-h: $hw40;
+            #{prefix-vars.$varPrefix}-w: $hw40;
+        }
+
+        &-70 {
+            $hw70: 70px;
+            #{prefix-vars.$varPrefix}-h: $hw70;
+            #{prefix-vars.$varPrefix}-w: $hw70;
+        }
+    }
+
+    //SVG Shapes top and bottom
+    &-shape {
+        &-t {
+            #{prefix-vars.$varPrefix}-t: 0;
+            #{prefix-vars.$varPrefix}-z-idx: 1;
+            #{prefix-vars.$varPrefix}-l: 0;
+            #{prefix-vars.$varPrefix}-r: 0;
+            #{prefix-vars.$varPrefix}-h: 120px;
+        }
+
+        &-b {
+            #{prefix-vars.$varPrefix}-b: 0;
+            #{prefix-vars.$varPrefix}-z-idx: 1;
+            #{prefix-vars.$varPrefix}-l: 0;
+            #{prefix-vars.$varPrefix}-r: 0;
+            #{prefix-vars.$varPrefix}-h: 120px;
+        }
+    }
 }

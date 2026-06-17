@@ -37,8 +37,55 @@
 				},
 				{
 					"color": "#6C757D",
+					"name": "Quinary",
+					"slug": "quinary"
+				},
+				{
+					"color": "#6C757D",
 					"name": "Accent",
 					"slug": "accent"
+				}
+			],
+			"duotone": [
+				{
+					"colors": ["#212529", "#212529"],
+					"slug": "base",
+					"name": "Base"
+				},
+				{
+					"colors": ["#fff", "#fff"],
+					"slug": "white",
+					"name": "White"
+				},
+				{
+					"colors": ["#343A40", "#343A40"],
+					"slug": "primary",
+					"name": "Primary"
+				},
+				{
+					"colors": ["#DEE2E6", "#DEE2E6"],
+					"slug": "secondary",
+					"name": "Secondary"
+				},
+				{
+					"colors": ["#495057", "#495057"],
+					"slug": "tertiary",
+					"name": "Tertiary"
+				},
+				{
+					"colors": ["#6C757D", "#6C757D"],
+					"slug": "quaternary",
+					"name": "Quaternary"
+				},
+				{
+					"colors": ["#d3d9de", "#d3d9de"],
+					"slug": "quinary",
+					"name": "Quinary"
+				},
+				{
+					"colors": ["#6C757D", "#6C757D"],
+					"slug": "accent",
+					"name": "Accent"
 				}
 			]
 		}

@@ -23,18 +23,11 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_get_recommended_plugins' ) )
 	 */
 	function wp_block_theme_boilerplate_get_recommended_plugins() {
 		$plugins = array(
-			// This is an example of how to include a plugin from the WordPress Plugin Repository.
 			array(
-				'name'   => esc_html__( 'Gutentor', 'wp-block-theme-boilerplate' ), // The plugin name.
-				'slug'   => 'gutentor', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/gutentor).
-				'plugin' => 'gutentor/gutentor.php', // The plugin folder and main file.
-				'url'    => 'https://www.gutentor.com/', // // The plugin full url(optional).
-			),
-			array(
-				'name'   => esc_html__( 'Templateberg', 'wp-block-theme-boilerplate' ), // The plugin name.
-				'slug'   => 'templateberg', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/templateberg).
-				'plugin' => 'templateberg/templateberg.php', // The plugin folder and main file.
-				'source' => 'https://downloads.wordpress.org/plugin/templateberg.1.1.8.zip', // Zip file URL of the plugin. Not allowed for theme in WordPress dot org.
+				'name'   => esc_html__( 'Advanced Import', 'wp-block-theme-boilerplate' ),
+				'slug'   => 'advanced-import',
+				'plugin' => 'advanced-import/advanced-import.php',
+				'url'    => 'https://wordpress.org/plugins/advanced-import/',
 			),
 		);
 

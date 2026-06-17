@@ -13,9 +13,10 @@
 
 ?>
 <!-- wp:template-part {"slug":"header-absolute","tagName":"header"} /-->
+<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hero-banner"} /-->
+ 
 <!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignfull">
-	<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hero-banner"} /-->
 	<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/featured-section-1"} /-->
 	<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/featured-section-2"} /-->
 </main>

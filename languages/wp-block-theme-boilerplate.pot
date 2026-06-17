@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Bock Theme Boilerplate 1.0.0\n"
+"Project-Id-Version: WP Block Theme Boilerplate 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wp-block-theme-boilerplate\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:21
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:116
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:121
-msgid "WP Bock Theme Boilerplate"
+msgid "WP Block Theme Boilerplate"
 msgstr ""
 
 #. Description of the theme
@@ -72,7 +72,7 @@ msgstr ""
 
 #: admin/templates/notice-getting-started.php:54
 #: deploy/wp-block-theme-boilerplate/admin/templates/notice-getting-started.php:54
-msgid "Get started with WP Bock Theme Boilerplate"
+msgid "Get started with WP Block Theme Boilerplate"
 msgstr ""
 
 #. Translators: %1$s current user display name.
@@ -103,7 +103,7 @@ msgstr ""
 
 #: admin/templates/page-theme-info.php:21
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:21
-msgid "Welcome to WP Bock Theme Boilerplate"
+msgid "Welcome to WP Block Theme Boilerplate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:25
@@ -118,7 +118,7 @@ msgstr ""
 
 #: admin/templates/page-theme-info.php:39
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:39
-msgid "Get WP Bock Theme Boilerplate Pro"
+msgid "Get WP Block Theme Boilerplate Pro"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:46
@@ -230,7 +230,7 @@ msgstr ""
 
 #: admin/templates/page-theme-info.php:216
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:216
-msgid "In-depth and well documented articles will help you to use the WP Bock Theme Boilerplate Themes in easiest way."
+msgid "In-depth and well documented articles will help you to use the WP Block Theme Boilerplate Themes in easiest way."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:219
@@ -260,7 +260,7 @@ msgstr ""
 
 #: admin/templates/page-theme-info.php:252
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:252
-msgid "We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Bock Theme Boilerplate."
+msgid "We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Block Theme Boilerplate."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:265
@@ -270,7 +270,7 @@ msgstr ""
 
 #: admin/templates/page-theme-info.php:270
 #: deploy/wp-block-theme-boilerplate/admin/templates/page-theme-info.php:270
-msgid "WP Bock Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration."
+msgid "WP Block Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration."
 msgstr ""
 
 #: admin/templates/page-theme-info.php:273
