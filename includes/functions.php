@@ -58,7 +58,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_install_plugin' ) ) {
 	 * @return array Associative array with 'success' boolean and 'message' string.
 	 */
 	function wp_block_theme_boilerplate_install_plugin( $plugin_info ) {
-		if ( ! isset( $plugin_info ['name'] ) || ! isset( $plugin_info ['slug'] ) || ! isset( $plugin_info ['plugin'] ) ) {
+		if ( ! isset( $plugin_info['name'] ) || ! isset( $plugin_info['slug'] ) || ! isset( $plugin_info['plugin'] ) ) {
 			// Not enough plugin info.
 			return array(
 				'success' => false,
@@ -488,48 +488,6 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_file_system' ) ) {
 
 		WP_Filesystem();
 		return $wp_filesystem;
-	}
-}
-
-if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) {
-	/**
-	 * Parse changelog
-	 *
-	 * @since 1.0.0
-	 * @return string
-	 *
-	 * @author     codersantosh <codersantosh@gmail.com>
-	 */
-	function wp_block_theme_boilerplate_parse_changelog() {
-
-		$wp_filesystem = wp_block_theme_boilerplate_file_system();
-
-		$changelog_file = apply_filters( 'wp_block_theme_boilerplate_changelog_file', WP_BLOCK_THEME_BOILERPLATE_PATH . 'readme.txt' );
-
-		/*Check if the changelog file exists and is readable.*/
-		if ( ! $changelog_file || ! is_readable( $changelog_file ) ) {
-			return '';
-		}
-
-		$content = $wp_filesystem->get_contents( $changelog_file );
-
-		if ( ! $content ) {
-			return '';
-		}
-
-		$matches   = null;
-		$regexp    = '~==\s*Changelog\s*==(.*)($)~Uis';
-		$changelog = '';
-
-		if ( preg_match( $regexp, $content, $matches ) ) {
-			$changes = explode( '\r\n', trim( $matches[1] ) );
-
-			foreach ( $changes as $index => $line ) {
-				$changelog .= wp_kses_post( preg_replace( '~(=\s*Version\s*(\d+(?:\.\d+)+)\s*=|$)~Uis', '', $line ) );
-			}
-		}
-
-		return wp_kses_post( $changelog );
 	}
 }
 

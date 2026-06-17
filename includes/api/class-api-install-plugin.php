@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see Wp_Block_Theme_Boilerplate_Api
  */
-if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Install_Plugin ' ) ) {
+if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Install_Plugin' ) ) {
 
 	/**
 	 * Wp_Block_Theme_Boilerplate_Install_Plugin

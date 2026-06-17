@@ -1048,16 +1048,6 @@
 		},
 		{
 			"area": "uncategorized",
-			"name": "list-home-header",
-			"title": "Blog Home Page Header"
-		},
-		{
-			"area": "uncategorized",
-			"name": "list-search-header",
-			"title": "Search Page Header"
-		},
-		{
-			"area": "uncategorized",
 			"name": "post-meta",
 			"title": "Post Meta"
 		},

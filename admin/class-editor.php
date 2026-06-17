@@ -36,7 +36,7 @@ class Wp_Block_Theme_Boilerplate_Editor {
 	 * @since 1.0.0
 	 * @return object
 	 */
-	public static function instance() {
+	public static function get_instance() {
 		// Store the instance locally to avoid private static replication.
 		static $instance = null;
 
@@ -56,7 +56,7 @@ class Wp_Block_Theme_Boilerplate_Editor {
 	 * @return void
 	 */
 	public function run() {
-		add_action( 'admin_init', array( $this, 'add_editor_style' ) );
+		add_action( 'after_setup_theme', array( $this, 'add_editor_style' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_resources' ) );
 	}
 
@@ -122,6 +122,6 @@ class Wp_Block_Theme_Boilerplate_Editor {
  * @return Wp_Block_Theme_Boilerplate_Editor
  */
 function wp_block_theme_boilerplate_editor() { //phpcs:ignore
-	return Wp_Block_Theme_Boilerplate_Editor::instance();
+	return Wp_Block_Theme_Boilerplate_Editor::get_instance();
 }
 wp_block_theme_boilerplate_editor()->run();

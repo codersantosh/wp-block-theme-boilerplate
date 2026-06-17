@@ -29,21 +29,21 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Api' ) ) {
 	 * Wp_Block_Theme_Boilerplate_Api
 	 *
 	 * @package Wp_Block_Theme_Boilerplate
-	 * @since 1.0.1
+	 * @since 1.0.0
 	 */
 	class Wp_Block_Theme_Boilerplate_Api extends WP_REST_Controller {
 
 		/**
 		 * Rest route namespace.
 		 *
-		 * @var Wp_Block_Theme_Boilerplate_Api
+		 * @var string
 		 */
 		public $namespace = 'wp-block-theme-boilerplate/';
 
 		/**
 		 * Rest route version.
 		 *
-		 * @var Wp_Block_Theme_Boilerplate_Api
+		 * @var string
 		 */
 		public $version = 'v1';
 
@@ -84,7 +84,7 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Api' ) ) {
 		 * @static
 		 * @access public
 		 * @return object
-		 * @since 1.0.1
+		 * @since 1.0.0
 		 */
 		public static function get_instance() {
 			// Store the instance locally to avoid private static replication.
@@ -112,7 +112,7 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Api' ) ) {
 		 */
 		public function __clone() {
 			// Cloning instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'wp-block-theme-boilerplate' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( "Cheatin' huh?", 'wp-block-theme-boilerplate' ), esc_html( WP_BLOCK_THEME_BOILERPLATE_VERSION ) );
 		}
 
 		/**
@@ -124,7 +124,7 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Api' ) ) {
 		 */
 		public function __wakeup() {
 			// Unserializing instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'wp-block-theme-boilerplate' ), '1.0.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( "Cheatin' huh?", 'wp-block-theme-boilerplate' ), esc_html( WP_BLOCK_THEME_BOILERPLATE_VERSION ) );
 		}
 	}
 }

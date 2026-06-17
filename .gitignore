@@ -4,3 +4,6 @@ package-lock.json
 git-source
 build
 deploy
+vendor/
+composer.json
+composer.lock

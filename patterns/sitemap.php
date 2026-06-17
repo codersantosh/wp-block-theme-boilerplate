@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Page Sitemap
- * Slug: wp-block-theme-boilerplate/page-sitemap
+ * Slug: wp-block-theme-boilerplate/sitemap
  * Post Types: page
  * Description: A layout that displays site maps.
  *

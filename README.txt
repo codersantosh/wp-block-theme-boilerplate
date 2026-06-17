@@ -2,10 +2,10 @@
 
 Contributors: codersantosh
 Tags: block-theme, full-site-editing, wide-blocks, custom-colors, custom-fonts, custom-header, custom-logo, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
-Requires at least: 6.0
-Tested up to: 6.8
-Requires PHP: 7.0
-Stable tag: 1.0.1
+Requires at least: 7.0
+Tested up to: 7.0
+Requires PHP: 7.4
+Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

@@ -27,9 +27,9 @@ class Wp_Block_Theme_Boilerplate_Info {
 	 *
 	 * @since    1.0.0
 	 * @access   public
-	 * @var      string    $hook_suffix    Store current added Menu hook_suffix.
+	 * @var      array $hook_suffix Store current added Menu hook_suffix.
 	 */
-	private $hook_suffix;
+	private $hook_suffix = array();
 
 	/**
 	 * Empty Constructor
@@ -45,7 +45,7 @@ class Wp_Block_Theme_Boilerplate_Info {
 	 * @since 1.0.0
 	 * @return object
 	 */
-	public static function instance() {
+	public static function get_instance() {
 		// Store the instance locally to avoid private static replication.
 		static $instance = null;
 
@@ -156,6 +156,6 @@ class Wp_Block_Theme_Boilerplate_Info {
  * @return Wp_Block_Theme_Boilerplate_Info
  */
 function wp_block_theme_boilerplate_info() { //phpcs:ignore
-	return Wp_Block_Theme_Boilerplate_Info::instance();
+	return Wp_Block_Theme_Boilerplate_Info::get_instance();
 }
 wp_block_theme_boilerplate_info()->run();

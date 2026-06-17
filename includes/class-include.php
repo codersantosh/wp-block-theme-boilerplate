@@ -80,7 +80,7 @@ class Wp_Block_Theme_Boilerplate_Include {
 	 */
 	public function register_block_pattern_category() {
 		register_block_pattern_category(
-			'page',
+			'wp-block-theme-boilerplate-page',
 			array(
 				'label'       => _x( 'Pages', 'Block pattern category', 'wp-block-theme-boilerplate' ),
 				'description' => __( 'A collection of full page layouts.', 'wp-block-theme-boilerplate' ),
