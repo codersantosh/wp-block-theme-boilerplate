@@ -156,17 +156,17 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_install_plugin' ) ) {
 				)
 			);
 
-		if ( is_wp_error( $api ) ) {
-			return array(
-				'success' => false,
-				'message' => sprintf(
-					/* translators: %1$s is the plugin name, %2$s is error message */
-					esc_html__( 'Error retrieving information for plugin "%1$s": %2$s', 'wp-block-theme-boilerplate' ),
-					esc_html( $name ),
-					esc_html( $api->get_error_message() )
-				),
-			);
-		}
+			if ( is_wp_error( $api ) ) {
+				return array(
+					'success' => false,
+					'message' => sprintf(
+						/* translators: %1$s is the plugin name, %2$s is error message */
+						esc_html__( 'Error retrieving information for plugin "%1$s": %2$s', 'wp-block-theme-boilerplate' ),
+						esc_html( $name ),
+						esc_html( $api->get_error_message() )
+					),
+				);
+			}
 
 			$download_link = $api->download_link;
 		}
