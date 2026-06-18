@@ -4,7 +4,7 @@
 
 ## Description
 
-[Demo WP React Plugin Boilerplate](https://demo.patternswp.com/wp-block-theme-boilerplate/)
+[Demo WP Block Theme Boilerplate](https://demo.patternswp.com/wp-block-theme-boilerplate/)
 
 Creating a block theme often involves repetitive tasks, as much of the code is reused. Typically, you begin by building a comprehensive base theme, and then for niche themes such as business, education, or e-commerce, you only need to adjust global settings and styles in the theme.json, add pre-made patterns to the patterns folder, and include relevant templates in the templates folder, such as single-product.html for WooCommerce.
 
@@ -529,7 +529,8 @@ These are documented in `AGENTS.md` and observed in the boilerplate
 source code. Do not deviate:
 
 - Singleton method: `get_instance()`.
-- Pattern category slug: `[your-theme-slug]-page`.
+- Pattern category slug: `page` (unchanged across derived themes —
+  bare slug is reused, not prefixed).
 - Version constant: `[YOUR_SLUG_UPPER]_VERSION` (defined in `functions.php`).
   Use this for asset cache busters.
 - Pattern, template, template-part file format: `<?php /** docblock */ ?>`

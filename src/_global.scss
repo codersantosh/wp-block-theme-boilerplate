@@ -51,7 +51,7 @@ input[type='submit'] {
     #{prefix-vars.$varPrefix}-bg-cl: var(--wp--preset--color--primary);
     #{prefix-vars.$varPrefix}-bdr-cl: var(--wp--preset--color--primary);
     #{prefix-vars.$varPrefix}-bdr-sty: solid;
-    #{prefix-vars.$varPrefix}-bdr-w: solid;
+    #{prefix-vars.$varPrefix}-bdr-w: 1px;
     #{prefix-vars.$varPrefix}-cl: var(--wp--preset--color--default);
     #{prefix-vars.$varPrefix}-cur: pointer;
 

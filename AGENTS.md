@@ -19,7 +19,7 @@ conventions but is not authoritative for general WordPress APIs.
 - **Stable tag / Version:** `1.0.0` (boilerplate — locked)
 - **Text Domain:** `wp-block-theme-boilerplate`
 - **Version constant:** `WP_BLOCK_THEME_BOILERPLATE_VERSION` (in `functions.php`)
-- **Pattern category slug:** `wp-block-theme-boilerplate-page`
+- **Pattern category slug:** `page`
 - **Block bindings:** `wp-block-theme-boilerplate/copyright`,
   `wp-block-theme-boilerplate/archive-title`
 - **REST namespace:** `wp-block-theme-boilerplate/v1`
@@ -52,7 +52,10 @@ composer require --dev wp-coding-standards/wpcs squizlabs/php_codesniffer phpcom
   for wp.org submission. Uses `.bin/deploy.js` with the `archiver`
   package.
 - `npm run deploy:bundle` — runs only the bundling step (skip
-  build + makepot). Useful when iterating on `deploy.js`.
+  build + makepot). Useful when iterating on `deploy.js`. **Warning:**
+  if `build/` is empty (e.g. fresh clone without `npm run build` first),
+  this produces a deploy with no compiled JS/CSS. For releases, always
+  run `npm run deploy` (full pipeline).
 - `npm run initial-rename` — replaces boilerplate identifiers across
   all files (run once on new theme creation).
 - `npm run makepot` — regenerates `languages/<text-domain>.pot`.
@@ -227,7 +230,7 @@ Use `theme.json` CSS variables instead (`var(--wp--preset--*)`).
 ### Categories in use
 `posts` (12), `featured` (5), `text, featured` (4), `query` (3),
 `header` (3), `footer` (2), `contact, call-to-action` (2),
-`contact, call-to-action, wp-block-theme-boilerplate-page` (1),
+`contact, call-to-action, page` (1),
 `buttons` (1), `banner` (1).
 
 ### Internal patterns (5 total, `Inserter: no`)
@@ -390,6 +393,17 @@ Both endpoints use `rest_validate_value_from_schema()` and
 - Pattern `query-list.php` swaps the no-results pattern based on
   `is_search()`: `hidden-no-search-results` for search pages,
   `hidden-query-no-results` for archives.
+- `src/prefix-vars.scss` defines `$themePrefix` and `$varPrefix` as
+  `companydomain-wbtb-` and `at-`. After `npm run initial-rename`,
+  **also update these two variables** to match the new prefix —
+  otherwise compiled CSS will use the new prefix but pattern HTML
+  will still reference `companydomain-wbtb-*` classes (broken
+  styles).
+- Block bindings registration assumes the call happens before
+  `init` fires. Currently true (loaded via `functions.php` →
+  `includes/main.php` → `class-block-bindings.php`). Do not move the
+  call to a later hook without also calling
+  `register_block_bindings_source()` directly.
 
 ## Git workflow
 

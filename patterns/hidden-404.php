@@ -1,6 +1,6 @@
 <?php
 /**
- * Title:404
+ * Title: 404
  * Slug: wp-block-theme-boilerplate/hidden-404
  * Inserter: no
  *

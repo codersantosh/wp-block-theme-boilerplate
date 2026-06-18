@@ -58,44 +58,35 @@
 			],
 			"duotone": [
 				{
-					"colors": ["#2e312f", "#2e312f"],
-					"slug": "base",
-					"name": "Base"
+					"_comment": "Each duotone pairs a dark stop with a light stop. Original monochromatic entries (same color twice) replaced with real pairs.",
+					"colors": ["#2e312f", "#48B44F"],
+					"slug": "base-to-primary",
+					"name": "Base to Primary"
 				},
 				{
-					"colors": ["#fff", "#fff"],
-					"slug": "white",
-					"name": "White"
+					"colors": ["#2e312f", "#e8f3eb"],
+					"slug": "base-to-secondary",
+					"name": "Base to Secondary"
 				},
 				{
-					"colors": ["#48B44F", "#48B44F"],
-					"slug": "primary",
-					"name": "Primary"
+					"colors": ["#ffffff", "#48B44F"],
+					"slug": "white-to-primary",
+					"name": "White to Primary"
 				},
 				{
-					"colors": ["#e8f3eb", "#e8f3eb"],
-					"slug": "secondary",
-					"name": "Secondary"
+					"colors": ["#ffffff", "#9da29f"],
+					"slug": "white-to-accent",
+					"name": "White to Accent"
 				},
 				{
-					"colors": ["#a0a0a0", "#a0a0a0"],
-					"slug": "tertiary",
-					"name": "Tertiary"
+					"colors": ["#585a59", "#e8f3eb"],
+					"slug": "dark-to-secondary",
+					"name": "Quaternary to Secondary"
 				},
 				{
-					"colors": ["#585a59", "#585a59"],
-					"slug": "quaternary",
-					"name": "Quaternary"
-				},
-				{
-					"colors": ["#d3d9de", "#d3d9de"],
-					"slug": "quinary",
-					"name": "Quinary"
-				},
-				{
-					"colors": ["#9da29f", "#9da29f"],
-					"slug": "accent",
-					"name": "Accent"
+					"colors": ["#2e312f", "#d3d9de"],
+					"slug": "base-to-quinary",
+					"name": "Base to Quinary"
 				}
 			]
 		},
@@ -118,32 +109,32 @@
 				},
 				{
 					"name": "Small",
-					"size": "clamp(15px, 5vw, 30px);",
+					"size": "clamp(15px, 5vw, 30px)",
 					"slug": "30"
 				},
 				{
 					"name": "Medium",
-					"size": "clamp(40px, 5vw, 40px);",
+					"size": "40px",
 					"slug": "40"
 				},
 				{
 					"name": "Regular",
-					"size": "clamp(25px, 5vw, 50px);",
+					"size": "clamp(25px, 5vw, 50px)",
 					"slug": "50"
 				},
 				{
 					"name": "Large",
-					"size": "clamp(30px, 7vw, 60px);",
+					"size": "clamp(30px, 7vw, 60px)",
 					"slug": "60"
 				},
 				{
 					"name": "X-Large",
-					"size": "clamp(35px, 7vw, 70px);",
+					"size": "clamp(35px, 7vw, 70px)",
 					"slug": "70"
 				},
 				{
 					"name": "XX-Large",
-					"size": "clamp(40px, 10vw, 80px);",
+					"size": "clamp(40px, 10vw, 80px)",
 					"slug": "80"
 				}
 			],
@@ -151,7 +142,6 @@
 		},
 		"typography": {
 			"defaultFontSizes": false,
-			"fluid": false,
 			"fontFamilies": [
 				{
 					"fontFamily": "Mukta",
@@ -205,18 +195,18 @@
 					"fontFamily": "Inter",
 					"slug": "base",
 					"fontFace": [
-						{
-							"fontFamily": "Inter",
-							"fontStyle": "normal",
-							"fontWeight": "100",
-							"src": ["file:./assets/fonts/inter/Inter-ExtraLight.woff2"]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontStyle": "normal",
-							"fontWeight": "200",
-							"src": ["file:./assets/fonts/inter/Inter-Thin.woff2"]
-						},
+					{
+						"fontFamily": "Inter",
+						"fontStyle": "normal",
+						"fontWeight": "100",
+						"src": ["file:./assets/fonts/inter/Inter-Thin.woff2"]
+					},
+					{
+						"fontFamily": "Inter",
+						"fontStyle": "normal",
+						"fontWeight": "200",
+						"src": ["file:./assets/fonts/inter/Inter-ExtraLight.woff2"]
+					},
 						{
 							"fontFamily": "Inter",
 							"fontStyle": "normal",
@@ -253,22 +243,18 @@
 							"fontWeight": "800",
 							"src": ["file:./assets/fonts/inter/Inter-ExtraBold.woff2"]
 						},
-						{
-							"fontFamily": "Inter",
-							"fontStyle": "normal",
-							"fontWeight": "900",
-							"src": ["file:./assets/fonts/inter/Inter-Black.woff2"]
-						}
-					]
-				}
-			],
+					{
+						"fontFamily": "Inter",
+						"fontStyle": "normal",
+						"fontWeight": "900",
+						"src": ["file:./assets/fonts/inter/Inter-Black.woff2"]
+					}
+				]
+			}
+		],
 			"fontSizes": [
 				{
-					"_comment": "The default WordPress CSS variable slug is 'small' and it is generated as '--wp--preset--font-size--x-small' ",
-					"fluid": {
-						"max": "0.875rem",
-						"min": "0.875rem"
-					},
+					"_comment": "Fixed size (min=max fluid is a no-op).",
 					"size": "0.875rem",
 					"slug": "x-small",
 					"name": "Extra Small"
@@ -339,18 +325,20 @@
 	},
 	"styles": {
 		"color": {
-			"text": "var:preset|color|base"
+			"text": "var:preset|color|base",
+			"background": "var:preset|color|default"
 		},
 		"spacing": {
 			"padding": {
 				"left": "var(--wp--preset--spacing--30)",
 				"right": "var(--wp--preset--spacing--30)"
-			}
+			},
+			"blockGap": "1.5rem"
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|base",
 			"fontSize": "var:preset|font-size|small",
-			"lineHeight": "1.4"
+			"lineHeight": "1.5"
 		},
 
 		"elements": {
@@ -360,7 +348,7 @@
 						"background": "var:preset|color|quaternary"
 					},
 					"border": {
-						"color": "var:preset|color|quaternary !important"
+						"color": "var:preset|color|quaternary"
 					}
 				},
 				"border": {
@@ -370,7 +358,6 @@
 					"background": "var:preset|color|primary"
 				},
 				"spacing": {
-					"blockGap": "1.5rem",
 					"padding": {
 						"_comment": "Sets the default padding value of the <button> element",
 						"bottom": "15px",
@@ -405,7 +392,7 @@
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var:preset|font-size|large"
+					"fontSize": "var:preset|font-size|medium"
 				}
 			},
 			"h5": {
@@ -423,7 +410,7 @@
 				"typography": {
 					"fontFamily": "var:preset|font-family|heading",
 					"fontWeight": "800",
-					"lineHeight": "1.4"
+			"lineHeight": "1.5"
 				},
 				"spacing": {
 					"margin": {
@@ -474,7 +461,7 @@
 					"blockGap": "var:preset|spacing|40"
 				},
 				"typography": {
-					"fontSize": "0.8rem",
+					"fontSize": "var:preset|font-size|x-small",
 					"fontWeight": "600",
 					"textTransform": "uppercase",
 					"fontStyle": "normal",
@@ -507,7 +494,7 @@
 					"link": {
 						":hover": {
 							"color": {
-								"text": "var:preset|color|primary !important"
+								"text": "var:preset|color|primary"
 							}
 						}
 					}
@@ -550,7 +537,7 @@
 				"elements": {
 					"link": {
 						"typography": {
-							"textDecoration": "none !important"
+							"textDecoration": "none"
 						},
 						"color": { "text": "var:preset|color|base" },
 						":hover": {
@@ -591,13 +578,6 @@
 			"core/pullquote": {
 				"border": {
 					"color": "var:preset|color|tertiary"
-				}
-			},
-			"core/html": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|base",
-					"fontSize": "var:preset|font-size|small",
-					"lineHeight": "1.3"
 				}
 			},
 			"core/categories": {
@@ -750,7 +730,7 @@
 							}
 						},
 						"border": {
-							"color": "#f5f5f5",
+							"color": "var:preset|color|quinary",
 							"style": "solid",
 							"width": "1px",
 							"radius": "5px"
@@ -770,11 +750,11 @@
 						}
 					}
 				},
-				"css": "& .page-numbers:is(.dots, .current){padding:var(--wp--preset--spacing--10) 15px; border:1px solid #f5f5f5; border-radius:5px;} & .current{background:var(--wp--preset--color--primary); color: var(--wp--preset--color--default);} "
+				"css": "& .page-numbers:is(.dots, .current){padding:var(--wp--preset--spacing--10) 15px; border:1px solid var:preset|color|quinary; border-radius:5px;} & .current{background:var(--wp--preset--color--primary); color: var(--wp--preset--color--default);} "
 			},
 			"core/query-no-results": {
 				"color": {
-					"background": "#f5f5f5"
+					"background": "var:preset|color|quinary"
 				},
 				"spacing": {
 					"padding": {
@@ -916,7 +896,7 @@
 							}
 						},
 						"border": {
-							"color": "#f5f5f5",
+							"color": "var:preset|color|quinary",
 							"style": "solid",
 							"width": "1px",
 							"radius": "5px"
@@ -936,7 +916,7 @@
 						}
 					}
 				},
-				"css": "& .page-numbers:is(.dots, .current){padding:var(--wp--preset--spacing--10) 15px; border:1px solid #f5f5f5; border-radius:5px;} & .current{background:var(--wp--preset--color--primary); color: var(--wp--preset--color--default);} "
+				"css": "& .page-numbers:is(.dots, .current){padding:var(--wp--preset--spacing--10) 15px; border:1px solid var:preset|color|quinary; border-radius:5px;} & .current{background:var(--wp--preset--color--primary); color: var(--wp--preset--color--default);} "
 			},
 			"core/latest-posts": {
 				"color": {
@@ -979,7 +959,7 @@
 			},
 			"core/table": {
 				"_comment": "generate custom css for wp-table",
-				"css": "color:var(--wp--preset--color--base); & th{ border-color:#f5f5f5 !important;} & td{ border-color:#f5f5f5 !important;} & thead{border-bottom:2px solid var(--wp--preset--color--tertiary) !important;} & thead th{ background:#eee; }"
+				"css": "color:var(--wp--preset--color--base); & th{ border-color:var:preset|color|quinary;} & td{ border-color:var:preset|color|quinary;} & thead{border-bottom:2px solid var(--wp--preset--color--tertiary);} & thead th{ background:#eee; }"
 			}
 		}
 	},
