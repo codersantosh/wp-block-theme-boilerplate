@@ -115,8 +115,6 @@ p {
 
 // Ordered List
 ol {
-    list-style-position: inside;
-
     li {
 
         ul,
@@ -129,7 +127,6 @@ ol {
 
 //Unordered List
 ul {
-    list-style-position: inside;
     #{prefix-vars.$varPrefix}-m: 0;
     #{prefix-vars.$varPrefix}-p: 0;
     margin: var(#{prefix-vars.$varPrefix}-m);

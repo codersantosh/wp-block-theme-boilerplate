@@ -33,34 +33,30 @@ class WpBlockThemeBoilerplateSettingsApi {
 
 	bindEvents() {
 		document.addEventListener( 'click', ( event ) => {
+			const target = event.target;
 			if (
-				event.target.classList.contains(
-					'companydomain-wbtb-gsn-close'
-				)
+				target.closest( '.companydomain-wbtb-gsn-close' )
 			) {
 				this.modifySettings( 'hide_get_started_notice', true );
 			} else if (
-				event.target.classList.contains(
-					'companydomain-wbtb-rn-permanent-close'
-				)
+				target.closest( '.companydomain-wbtb-rn-permanent-close' )
 			) {
 				this.modifySettings( 'remove_review_notice_permanently', true );
 			} else if (
-				event.target.classList.contains(
-					'companydomain-wbtb-rn-temporary-close'
-				)
+				target.closest( '.companydomain-wbtb-rn-temporary-close' )
 			) {
 				this.modifySettings(
 					'remove_review_notice_temporary_date_time',
 					1
 				);
-			} else if (
-				event.target.classList.contains(
-					'companydomain-wbtb-install-plugins'
-				)
-			) {
-				event.target.classList.add( 'companydomain-wbtb-processing' );
-				this.installPlugins();
+			} else {
+				const installBtn = target.closest(
+					'.companydomain-wbtb-install-plugins'
+				);
+				if ( installBtn ) {
+					installBtn.classList.add( 'companydomain-wbtb-processing' );
+					this.installPlugins();
+				}
 			}
 		} );
 	}

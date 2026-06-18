@@ -402,7 +402,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_default_user_meta' ) ) :
 	function wp_block_theme_boilerplate_default_user_meta() {
 		$default_user_meta = array(
 			'remove_review_notice_permanently'         => false,
-			'remove_review_notice_temporary_date_time' => time(),
+			'remove_review_notice_temporary_date_time' => 0,
 		);
 
 		return apply_filters( 'wp_block_theme_boilerplate_default_user_meta', $default_user_meta );
