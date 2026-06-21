@@ -19,7 +19,7 @@ const PRODUCTION_FILES = [
 	"functions.php",
 	"index.php",
 	"screenshot.png",
-	"README.txt",
+	"readme.txt",
 	"includes",
 	"admin",
 	"public",

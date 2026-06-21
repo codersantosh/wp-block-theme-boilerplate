@@ -15,6 +15,13 @@ WP Block Theme Boilerplate is a modern WordPress theme boilerplate for creating 
 
 WP Block Theme Boilerplate is a modern WordPress theme boilerplate designed to simplify the development of custom block-based themes. Built with the latest WordPress development practices, it offers a super-fast, easily customizable, and highly flexible framework for creating beautiful and responsive websites. Whether you are building a blog, portfolio, business site, or an e-commerce store, this boilerplate provides the necessary tools and features to get started quickly. It is fully compatible with Gutenberg. With WP Block Theme Boilerplate, you can create unique and powerful websites that cater to various niches and industries.
 
+== Copyright ==
+
+WP Block Theme Boilerplate WordPress Theme, (C) 2025 Santosh Kunwar(codersantosh)
+WP Block Theme Boilerplate is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
 == Translation ==
 
 WP Block Theme Boilerplate is translation ready.
