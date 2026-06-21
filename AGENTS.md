@@ -368,6 +368,32 @@ Both endpoints use `rest_validate_value_from_schema()` and
   this into `languages/<text-domain>.pot`. Run `npm run build` first
   to populate `js.pot`.
 
+## Helper functions
+
+`includes/functions.php` exposes a handful of reusable helpers wrapped in
+`if ( ! function_exists() )` so themes forked via `npm run initial-rename`
+can override them safely.
+
+| Function | Returns | Used by |
+|---|---|---|
+| `wp_block_theme_boilerplate_parse_changelog()` | Sanitized text of the `== Changelog ==` section of `readme.txt`, with per-version headings (`= 1.2.3 =`) stripped. Empty string when the section is missing. | `admin/templates/page-theme-info.php` Changelog card |
+| `wp_block_theme_boilerplate_get_theme_faq()` | Array of `{q, a}` pairs rendered in the FAQ accordion. | `admin/templates/page-theme-info.php` FAQ card |
+| `wp_block_theme_boilerplate_get_recommended_plugins()` | Array of plugin info entries (`name`, `slug`, `plugin`, optional `source`/`url`). | Admin Recommended Plugins card + REST `/install-plugin` endpoint |
+| `wp_block_theme_boilerplate_install_plugin()` | Result array `{success, message}` after installing/activating a plugin. | `includes/api/class-api-install-plugin.php` |
+| `wp_block_theme_boilerplate_file_system()` | Initialized `WP_Filesystem` instance. | `wp_block_theme_boilerplate_parse_changelog()` |
+
+### Filters
+
+- `wp_block_theme_boilerplate_changelog_file` — override the absolute path
+  to `readme.txt` for `wp_block_theme_boilerplate_parse_changelog()`. Useful
+  for tests or for themes whose changelog lives in a separate file.
+- `wp_block_theme_boilerplate_recommended_plugins` — add or remove
+  entries from the Recommended Plugins list.
+- `wp_block_theme_boilerplate_default_options`,
+  `wp_block_theme_boilerplate_default_user_meta` — extend the theme
+  options / user-meta defaults.
+- `wp_block_theme_boilerplate_faq` — add or remove FAQ entries.
+
 ## References
 
 - `README.md` — developer README (architecture narrative, dev setup,

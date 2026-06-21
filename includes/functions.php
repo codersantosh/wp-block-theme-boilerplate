@@ -491,6 +491,62 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_file_system' ) ) {
 	}
 }
 
+if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) :
+	/**
+	 * Parse the changelog section from the theme's readme.txt.
+	 *
+	 * Reads the WP.org-format readme, finds the == Changelog == section,
+	 * strips per-version headings (e.g. `= 1.2.3 =`), and returns the
+	 * resulting text, sanitized via wp_kses_post().
+	 *
+	 * @since 1.0.0
+	 * @return string Sanitized changelog text, or empty string if unavailable.
+	 *
+	 * @author     codersantosh <codersantosh@gmail.com>
+	 */
+	function wp_block_theme_boilerplate_parse_changelog() {
+
+		$wp_filesystem = wp_block_theme_boilerplate_file_system();
+
+		$changelog_file = apply_filters(
+			'wp_block_theme_boilerplate_changelog_file',
+			WP_BLOCK_THEME_BOILERPLATE_PATH . 'readme.txt'
+		);
+
+		/* Check if the changelog file exists and is readable. */
+		if ( ! $changelog_file || ! is_readable( $changelog_file ) ) {
+			return '';
+		}
+
+		$content = $wp_filesystem->get_contents( $changelog_file );
+
+		if ( ! $content ) {
+			return '';
+		}
+
+		$matches   = null;
+		$regexp    = '~==\s*Changelog\s*==(.*)($)~Uis';
+		$changelog = '';
+
+		if ( preg_match( $regexp, $content, $matches ) ) {
+			$changes = preg_split( '/\R/', trim( $matches[1] ) );
+
+			foreach ( $changes as $index => $line ) {
+				$line = preg_replace( '~(=\s*(?:Version\s+)?(\d+(?:\.\d+)+)\s*=|$)~Uis', '', $line );
+
+				/* Skip blank lines so paragraphs render cleanly. */
+				if ( '' === trim( $line ) ) {
+					continue;
+				}
+
+				$changelog .= wp_kses_post( $line ) . "\n";
+			}
+		}
+
+		return $changelog;
+	}
+endif;
+
 if ( ! function_exists( 'wp_block_theme_boilerplate_get_theme_faq' ) ) :
 	/**
 	 * Get FAQ for this theme.
