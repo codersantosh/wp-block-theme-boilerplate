@@ -433,28 +433,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					</div>
 					<?php
-					$changelog = function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ? wp_block_theme_boilerplate_parse_changelog() : '';
-					if ( $changelog ) {
-						?>
-							<div class="at-row">
-								<div class="at-col-12">
-									<div class="companydomain-wbtb-card at-bg-cl at-bdr">
-										<div class="companydomain-wbtb-card-header at-bdr at-p at-jfy-cont-st at-gap at-flx">
-											<span class="dashicons dashicons-backup"></span>
-											<h4 class="companydomain-wbtb-card-header-ttl at-txt at-m">
-												<?php esc_html_e( 'Changelog', 'wp-block-theme-boilerplate' ); ?>
-											</h4>
-										</div>
-										<div class="companydomain-wbtb-card-body at-p">
-											<pre class="companydomain-wbtb-changelog"><?php echo wp_kses_post( $changelog ); ?></pre>
-										</div>
-									</div>
-								</div>
-							</div>
-						<?php
-					}
-					?>
-					<?php
 					$faqs = function_exists( 'wp_block_theme_boilerplate_get_theme_faq' ) ? wp_block_theme_boilerplate_get_theme_faq() : null;
 					if ( $faqs ) {
 						?>
@@ -484,6 +462,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 												}
 												?>
 											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php
+					}
+					?>
+					<?php
+					$changelog = function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ? wp_block_theme_boilerplate_parse_changelog() : '';
+					if ( $changelog ) {
+						?>
+							<div class="at-row">
+								<div class="at-col-12">
+									<div class="companydomain-wbtb-card at-bg-cl at-bdr">
+										<div class="companydomain-wbtb-card-header at-bdr at-p at-jfy-cont-st at-gap at-flx">
+											<span class="dashicons dashicons-backup"></span>
+											<h4 class="companydomain-wbtb-card-header-ttl at-txt at-m">
+												<?php esc_html_e( 'Changelog', 'wp-block-theme-boilerplate' ); ?>
+											</h4>
+										</div>
+										<div class="companydomain-wbtb-card-body at-p">
+											<pre class="companydomain-wbtb-changelog"><?php echo wp_kses_post( $changelog ); ?></pre>
 										</div>
 									</div>
 								</div>

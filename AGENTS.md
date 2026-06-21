@@ -376,7 +376,7 @@ can override them safely.
 
 | Function | Returns | Used by |
 |---|---|---|
-| `wp_block_theme_boilerplate_parse_changelog()` | Sanitized text of the `== Changelog ==` section of `readme.txt`, with per-version headings (`= 1.2.3 =`) stripped. Empty string when the section is missing. | `admin/templates/page-theme-info.php` Changelog card |
+| `wp_block_theme_boilerplate_parse_changelog()` | Sanitized text of the `== Changelog ==` section of `readme.txt`, including per-version headings (e.g. `= 1.2.3 =`), bullets, and blank lines between versions. Empty string when the section is missing. | `admin/templates/page-theme-info.php` Changelog card |
 | `wp_block_theme_boilerplate_get_theme_faq()` | Array of `{q, a}` pairs rendered in the FAQ accordion. | `admin/templates/page-theme-info.php` FAQ card |
 | `wp_block_theme_boilerplate_get_recommended_plugins()` | Array of plugin info entries (`name`, `slug`, `plugin`, optional `source`/`url`). | Admin Recommended Plugins card + REST `/install-plugin` endpoint |
 | `wp_block_theme_boilerplate_install_plugin()` | Result array `{success, message}` after installing/activating a plugin. | `includes/api/class-api-install-plugin.php` |

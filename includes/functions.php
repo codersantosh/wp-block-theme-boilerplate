@@ -496,8 +496,9 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) :
 	 * Parse the changelog section from the theme's readme.txt.
 	 *
 	 * Reads the WP.org-format readme, finds the == Changelog == section,
-	 * strips per-version headings (e.g. `= 1.2.3 =`), and returns the
-	 * resulting text, sanitized via wp_kses_post().
+	 * and returns the resulting text (including per-version headings
+	 * like `= 1.2.3 =` and blank lines between versions), sanitized via
+	 * wp_kses_post().
 	 *
 	 * @since 1.0.0
 	 * @return string Sanitized changelog text, or empty string if unavailable.
@@ -532,13 +533,6 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) :
 			$changes = preg_split( '/\R/', trim( $matches[1] ) );
 
 			foreach ( $changes as $index => $line ) {
-				$line = preg_replace( '~(=\s*(?:Version\s+)?(\d+(?:\.\d+)+)\s*=|$)~Uis', '', $line );
-
-				/* Skip blank lines so paragraphs render cleanly. */
-				if ( '' === trim( $line ) ) {
-					continue;
-				}
-
 				$changelog .= wp_kses_post( $line ) . "\n";
 			}
 		}
