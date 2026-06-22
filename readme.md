@@ -50,7 +50,7 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 
   - Provides `npm run build` command to generate optimized production files for the theme.
 
-- **Language File Creation:** 
+- **Language File Creation:**
 
   - Generates `.pot` files from both JavaScript and PHP code.
   - Includes the `npm run makepot` command to generate the `.pot` file. Note: The JavaScript language file is created using `@wordpress/babel-preset-default`. The `npm run makepot` command utilizes WP-CLI to generate PHP file translations and merge them with the `JavaScript .pot` file to produce the final `.pot` file.

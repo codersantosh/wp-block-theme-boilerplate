@@ -21,7 +21,7 @@
     <!-- /wp:spacer -->
 
 	<!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-single-post-content"} /-->
-	
+
 </main>
 <!-- /wp:group -->
 

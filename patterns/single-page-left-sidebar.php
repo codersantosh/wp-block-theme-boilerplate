@@ -28,7 +28,7 @@
 
 		<!-- wp:column {"width":"70%"} -->
 		<div class="wp-block-column" style="flex-basis:70%">
-			<!-- wp:post-content {"className":"pwp-child-reset","align":"wide","layout":{"type":"constrained"}} /--> 
+			<!-- wp:post-content {"className":"pwp-child-reset","align":"wide","layout":{"type":"constrained"}} /-->
 		</div>
 		<!-- /wp:column -->
 	</div>

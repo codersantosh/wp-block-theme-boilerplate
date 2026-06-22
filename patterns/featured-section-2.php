@@ -52,7 +52,7 @@
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
-	
+
 <!-- wp:button {"className":"is-style-fill"} -->
 <div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Know More', 'wp-block-theme-boilerplate' ); ?></a></div>
 <!-- /wp:button -->

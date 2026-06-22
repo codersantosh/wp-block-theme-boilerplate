@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</svg>
 					<div class="welcome-panel-column-content">
 						<h3>
-							<?php esc_html_e( 'Customize Templates, Template Parts & More', 'wp-block-theme-boilerplate' ); ?>    
+							<?php esc_html_e( 'Customize Templates, Template Parts & More', 'wp-block-theme-boilerplate' ); ?>
 						</h3>
 						<p>
 							<?php esc_html_e( 'With a block theme, you can customize every aspect of both the theme and the site, from headers and footers to individual blocks, providing a cohesive and personalized design.', 'wp-block-theme-boilerplate' ); ?>
@@ -137,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</h4>
 						</div>
 						<div class="companydomain-wbtb-card-body at-p at-p">
-							<div class="companydomain-wbtb-intro-auth--info">								
+							<div class="companydomain-wbtb-intro-auth--info">
 								<ul class="companydomain-wbtb-personal-detail at-flx at-flx-col at-gap">
 									<li class="">
 										<dl class="at-flx at-al-itm-ctr at-gap">
@@ -151,7 +151,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'Create A Ticket', 'wp-block-theme-boilerplate' ); ?>
 												</a>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 									<li class="mt-2">
@@ -166,8 +166,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a href="mailto:email-address" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'email-address', 'wp-block-theme-boilerplate' ); ?>
 												</a>
-											</dd>                                                        
-										</dl>												
+											</dd>
+										</dl>
 									</li>
 									<li class="mt-2">
 										<dl class="at-flx at-al-itm-ctr at-gap">
@@ -179,7 +179,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											</dt>
 											<dd class="at-m">
 												<?php esc_html_e( 'Kathmandu, Nepal', 'wp-block-theme-boilerplate' ); ?>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 								</ul>
@@ -194,7 +194,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<span class="dashicons dashicons-twitter"></span>
 										</a>
 									</li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -335,7 +335,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										<?php
 									}
 									?>
-								</div>				
+								</div>
 							</div>
 						</div>
 							<?php

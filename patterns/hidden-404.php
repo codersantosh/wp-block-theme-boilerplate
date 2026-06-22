@@ -20,7 +20,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
-	
+
 <!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"typography":{"fontSize":"6rem"}}} -->
 <h1 class="wp-block-heading alignwide has-text-align-center" style="font-size:6rem"><?php esc_html_e( 'Ooops!', 'wp-block-theme-boilerplate' ); ?></h1>
 <!-- /wp:heading -->
