@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 					$plugin_count = count( explode( ', ', $plugin_names ) );
 					printf(
-						/* translators: %s: singular/plular . */
+						/* translators: %s: singular/plural . */
 						esc_html__( 'Clicking the button below will install and activate the following %s:', 'wp-block-theme-boilerplate' ),
 						$plugin_count > 1 ? esc_html__( 'plugins', 'wp-block-theme-boilerplate' ) : esc_html__( 'plugin', 'wp-block-theme-boilerplate' )
 					);

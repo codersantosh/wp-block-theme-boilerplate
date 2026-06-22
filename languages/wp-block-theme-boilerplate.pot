@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-21T18:38:03+00:00\n"
+"POT-Creation-Date: 2026-06-22T07:07:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-block-theme-boilerplate\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer, please make sure you visit our %2$swelcome page%3$s."
 msgstr ""
 
-#. translators: %s: singular/plular .
+#. translators: %s: singular/plural .
 #: admin/templates/notice-getting-started.php:43
 #, php-format
 msgid "Clicking the button below will install and activate the following %s:"
