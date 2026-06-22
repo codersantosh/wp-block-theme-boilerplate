@@ -51,7 +51,7 @@ class Wp_Block_Theme_Boilerplate_Notice {
 
 	/**
 	 * Initialize the class.
-	 * Add notice, add theme installation time and remove theme options data from databse if theme is switched to another.
+	 * Add notice, add theme installation time and remove theme options data from database if theme is switched to another.
 	 *
 	 * @access public
 	 * @return void
