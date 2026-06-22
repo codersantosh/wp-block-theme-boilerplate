@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-20T20:08:13+00:00\n"
+"POT-Creation-Date: 2026-06-21T18:38:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-block-theme-boilerplate\n"
@@ -369,6 +369,10 @@ msgstr ""
 msgid "Frequently Asked Questions"
 msgstr ""
 
+#: admin/templates/page-theme-info.php:482
+msgid "Changelog"
+msgstr ""
+
 #. translators: %s: Property name.
 #: includes/api/class-api-settings.php:154
 #, php-format
@@ -490,43 +494,43 @@ msgstr ""
 msgid "and"
 msgstr ""
 
-#: includes/functions.php:507
+#: includes/functions.php:557
 msgid "How can I customize the theme header?"
 msgstr ""
 
-#: includes/functions.php:508
+#: includes/functions.php:558
 msgid "You can customize the theme header by editing the Header template part in the Site Editor. Go to Appearance > Editor > Patterns > Header, then select and edit the Header template part."
 msgstr ""
 
-#: includes/functions.php:511
+#: includes/functions.php:561
 msgid "How do I change the footer credits?"
 msgstr ""
 
-#: includes/functions.php:512
+#: includes/functions.php:562
 msgid "To change the footer credits, go to  Appearance > Editor > Patterns > Footer, then select and edit the Footer template part. You can add your own text or remove the existing credits."
 msgstr ""
 
-#: includes/functions.php:515
+#: includes/functions.php:565
 msgid "Does this theme support block patterns?"
 msgstr ""
 
-#: includes/functions.php:516
+#: includes/functions.php:566
 msgid "Yes, this theme includes several pre-designed block patterns that you can use to quickly create layouts. You can find these patterns in the block inserter."
 msgstr ""
 
-#: includes/functions.php:519
+#: includes/functions.php:569
 msgid "How can I create custom templates?"
 msgstr ""
 
-#: includes/functions.php:520
+#: includes/functions.php:570
 msgid "You can create custom templates by going to Appearance > Editor > Templates, then click Add New Template. You can then design your custom template using blocks."
 msgstr ""
 
-#: includes/functions.php:523
+#: includes/functions.php:573
 msgid "How do I use global styles?"
 msgstr ""
 
-#: includes/functions.php:524
+#: includes/functions.php:574
 msgid "To use global styles, go to Appearance > Editor > Styles, then click on the Edit icon in the top right side of Styles. From there, you can customize the colors, typography, and layout for your entire site."
 msgstr ""
 

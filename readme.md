@@ -441,6 +441,27 @@ copy-paste the prompt below to bootstrap a new theme quickly. The prompt
 is intentionally a template — replace the bracketed placeholders with
 your brand values before pasting.
 
+### Quick start: have AI rewrite this prompt for you
+
+The full prompt below is intentionally detailed and generic, so it
+works for any theme. Before pasting it into your AI chat, you can save
+time by asking your favorite AI chat to **rephrase it for your specific
+theme**. Copy the short prompt below, fill in the bracketed values
+with your own, and paste it into your AI first:
+
+```
+My theme name is '[theme-name]' whose purpose is '[purpose]', rephrase
+this prompt.
+```
+
+Then ask your AI to also customize the larger prompt block in the
+next section (`### Prompt`) for your theme. Once your AI returns the
+rewritten prompt, paste the rewritten version back into this README
+(or feed it directly to a fresh AI session) to bootstrap your theme.
+
+If you prefer, you can skip this step and fill in the full generic
+prompt below manually.
+
 ### Prompt
 
 ``````
