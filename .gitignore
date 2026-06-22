@@ -7,3 +7,6 @@ deploy
 vendor/
 composer.json
 composer.lock
+
+# Source maps (atomic.css compilation)
+*.map
