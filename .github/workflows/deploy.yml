@@ -1,0 +1,151 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no commit)'
+        required: false
+        default: 'false'
+      slug:
+        description: 'WordPress.org theme slug (defaults to repo name)'
+        required: false
+        default: ''
+      version:
+        description: 'Version tag for manual runs, e.g. v2.0.0'
+        required: false
+        default: ''
+
+env:
+  SLUG: ${{ inputs.slug || github.event.repository.name }}
+  VERSION: ${{ inputs.version || github.ref_name }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq subversion rsync php-cli
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          chmod +x wp-cli.phar
+          sudo mv wp-cli.phar /usr/local/bin/wp
+          svn --version | head -1
+          rsync --version | head -1
+          php --version | head -1
+          wp --info
+
+      - name: Build theme
+        run: |
+          if [ -f package.json ]; then
+            npm ci --no-audit --no-fund
+            npm run deploy
+          fi
+
+      - name: Preflight validation
+        env:
+          THEME_SLUG: ${{ env.SLUG }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          V="${VERSION#v}"
+          if [[ ! "$V" =~ ^[0-9]+\.[0-9]+(\.[0-9]+)*$ ]]; then
+            echo "✗ VERSION='$VERSION' is not a valid semver tag"
+            exit 1
+          fi
+          if [[ -z "$THEME_SLUG" ]]; then
+            echo "✗ THEME_SLUG is empty"
+            exit 1
+          fi
+          if [[ -z "$SVN_USERNAME" || -z "$SVN_PASSWORD" ]]; then
+            echo "✗ SVN_USERNAME or SVN_PASSWORD secret is not set"
+            exit 1
+          fi
+          PKG_NAME=$(node -p "require('./package.json').name")
+          DEPLOY_DIR="deploy/${PKG_NAME}"
+          if [[ ! -d "$DEPLOY_DIR" ]]; then
+            echo "✗ Build output '$DEPLOY_DIR/' not found — did the build step succeed?"
+            exit 1
+          fi
+          for f in style.css readme.txt; do
+            if [[ ! -f "$DEPLOY_DIR/$f" ]]; then
+              echo "✗ Required file '$f' not found in $DEPLOY_DIR/"
+              exit 1
+            fi
+          done
+          echo "✓ All preflight checks passed"
+
+      - name: Deploy to WordPress.org SVN
+        env:
+          THEME_SLUG: ${{ env.SLUG }}
+          VERSION: ${{ env.VERSION }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+
+          VERSION="${VERSION#v}"
+
+          SVN_URL="https://themes.svn.wordpress.org/${THEME_SLUG}/"
+          SVN_DIR="${HOME}/svn-${THEME_SLUG}"
+
+          echo "→ Deploying $THEME_SLUG v$VERSION"
+
+          svn checkout --depth immediates \
+            --non-interactive --trust-server-cert \
+            --username "$SVN_USERNAME" --password "$SVN_PASSWORD" \
+            "$SVN_URL" "$SVN_DIR"
+          cd "$SVN_DIR"
+
+          if [[ -d assets/ ]]; then
+            svn update --set-depth infinity assets
+          fi
+
+          if [[ -d "$VERSION" ]]; then
+            echo "ℹ Version $VERSION already published"
+            exit 0
+          fi
+
+          mkdir -p "$VERSION"
+
+          PKG_NAME=$(node -p "require('$GITHUB_WORKSPACE/package.json').name")
+          rsync -rc --delete "$GITHUB_WORKSPACE/deploy/${PKG_NAME}/" "$VERSION/"
+
+          if [[ -d "$GITHUB_WORKSPACE/.wordpress-org/" ]]; then
+            rsync -rc "$GITHUB_WORKSPACE/.wordpress-org/" assets/ --delete
+          fi
+
+          svn add "$VERSION" --force > /dev/null
+
+          if [[ -d assets/ ]]; then
+            for ext in png jpg gif svg; do
+              find assets/ -maxdepth 1 -name "*.${ext}" | while IFS= read -r f; do
+                case $ext in
+                  png) svn propset svn:mime-type "image/png"     "$f" 2>/dev/null || true ;;
+                  jpg) svn propset svn:mime-type "image/jpeg"    "$f" 2>/dev/null || true ;;
+                  gif) svn propset svn:mime-type "image/gif"     "$f" 2>/dev/null || true ;;
+                  svg) svn propset svn:mime-type "image/svg+xml" "$f" 2>/dev/null || true ;;
+                esac
+              done
+            done
+          fi
+
+          echo "→ Files to be committed:"
+          svn status
+
+          if [[ "$DRY_RUN" == "true" ]]; then
+            echo "→ DRY RUN: No commit performed"
+          else
+            svn commit -m "Release version $VERSION from GitHub" \
+              --no-auth-cache --non-interactive \
+              --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
+            echo "✓ Deployed $THEME_SLUG v$VERSION"
+          fi
