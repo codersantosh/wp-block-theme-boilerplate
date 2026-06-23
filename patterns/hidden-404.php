@@ -1,6 +1,6 @@
 <?php
 /**
- * Title:404
+ * Title: 404
  * Slug: wp-block-theme-boilerplate/hidden-404
  * Inserter: no
  *
@@ -10,6 +10,9 @@
  */
 
 ?>
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull">
+
 <!-- wp:group {"align":"full","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-secondary-background-color has-background"><!-- wp:spacer {"height":"200px"} -->
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -17,7 +20,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
-	
+
 <!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"typography":{"fontSize":"6rem"}}} -->
 <h1 class="wp-block-heading alignwide has-text-align-center" style="font-size:6rem"><?php esc_html_e( 'Ooops!', 'wp-block-theme-boilerplate' ); ?></h1>
 <!-- /wp:heading -->
@@ -46,4 +49,7 @@
 <!-- wp:spacer {"height":"200px"} -->
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></div>
+<!-- /wp:group -->
+
+</main>
 <!-- /wp:group -->

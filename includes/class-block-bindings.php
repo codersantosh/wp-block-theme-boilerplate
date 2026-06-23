@@ -75,6 +75,10 @@ if ( ! class_exists( 'Wp_Block_Theme_Boilerplate_Block_Bindings' ) ) {
 		/**
 		 * Gets value of binding data.
 		 *
+		 * The archive-title source returns a string that may contain a
+		 * <span class="screen-reader-text"> wrapper for accessibility.
+		 * Consumers should treat the return as trusted HTML.
+		 *
 		 * @since 1.0.0
 		 *
 		 * @param array    $source_args    Array containing source arguments used to look up the override value.

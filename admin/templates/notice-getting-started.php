@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php esc_html_e( 'Dismiss', 'wp-block-theme-boilerplate' ); ?>
 	</button>
 	<div class="companydomain-wbtb-gsn-container at-flx at-gap at-p">
-		<img class="companydomain-wbtb-gsn-screenshot at-w" src="<?php echo esc_url( WP_BLOCK_THEME_BOILERPLATE_URL . 'screenshot.png' ); ?>" alt="<?php esc_attr_e( 'WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>" />
+		<img class="companydomain-wbtb-gsn-screenshot at-w" src="<?php echo esc_url( WP_BLOCK_THEME_BOILERPLATE_URL . 'screenshot.png' ); ?>" alt="<?php esc_attr_e( 'WP Block Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>" />
 		<div class="companydomain-wbtb-gsn-notice">
 			<h2>
 				<?php
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 					$plugin_count = count( explode( ', ', $plugin_names ) );
 					printf(
-						/* translators: %s: singular/plular . */
+						/* translators: %s: singular/plural . */
 						esc_html__( 'Clicking the button below will install and activate the following %s:', 'wp-block-theme-boilerplate' ),
 						$plugin_count > 1 ? esc_html__( 'plugins', 'wp-block-theme-boilerplate' ) : esc_html__( 'plugin', 'wp-block-theme-boilerplate' )
 					);
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 			?>
 			<button class="companydomain-wbtb-btn-primary button button-primary button-hero companydomain-wbtb-install-plugins">
-				<?php esc_html_e( 'Get started with WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
+				<?php esc_html_e( 'Get started with WP Block Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
 			</button>
 		</div>
 	</div>

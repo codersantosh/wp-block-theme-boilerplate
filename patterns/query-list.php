@@ -29,11 +29,16 @@
 <!-- /wp:post-template -->
 
 <?php
-	// Need to include from PHP since wp:pattern not working
-	// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /-->
-	// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/hidden-query-no-results"} /--> .
+	// Need to include from PHP since wp:pattern not working inside registered patterns.
+	// <!-- wp:pattern {"slug":"wp-block-theme-boilerplate/pagination"} /--> .
 	require 'pagination.php';
-	require 'hidden-query-no-results.php';
+
+	// Search-specific no-results message; fallback to generic on other archives.
+	if ( is_search() ) {
+		require 'hidden-no-search-results.php';
+	} else {
+		require 'hidden-query-no-results.php';
+	}
 ?>
 
 </div>

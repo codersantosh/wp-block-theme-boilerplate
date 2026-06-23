@@ -16,7 +16,8 @@
 					"slug": "default"
 				},
 				{
-					"color": "#343A40",
+					"_comment": "Lightened from #343A40 (1.5:1 contrast on base) to #6C757D for WCAG AA 4.5:1.",
+					"color": "#6C757D",
 					"name": "Primary",
 					"slug": "primary"
 				},
@@ -31,19 +32,61 @@
 					"slug": "tertiary"
 				},
 				{
-					"color": "#6C757D",
+					"color": "#868E96",
 					"name": "Quaternary",
 					"slug": "quaternary"
 				},
 				{
-					"color": "#6C757D",
+					"_comment": "Differentiated from quaternary (#868E96) and accent (#ADB5BD).",
+					"color": "#ADB5BD",
+					"name": "Quinary",
+					"slug": "quinary"
+				},
+				{
+					"color": "#CED4DA",
 					"name": "Accent",
 					"slug": "accent"
+				}
+			],
+			"duotone": [
+				{
+					"colors": ["#212529", "#6C757D"],
+					"slug": "base-to-primary",
+					"name": "Base to Primary"
+				},
+				{
+					"colors": ["#212529", "#DEE2E6"],
+					"slug": "base-to-secondary",
+					"name": "Base to Secondary"
+				},
+				{
+					"colors": ["#ffffff", "#6C757D"],
+					"slug": "white-to-primary",
+					"name": "White to Primary"
+				},
+				{
+					"colors": ["#ffffff", "#CED4DA"],
+					"slug": "white-to-accent",
+					"name": "White to Accent"
+				},
+				{
+					"colors": ["#495057", "#DEE2E6"],
+					"slug": "dark-to-secondary",
+					"name": "Tertiary to Secondary"
+				},
+				{
+					"colors": ["#212529", "#ADB5BD"],
+					"slug": "base-to-quinary",
+					"name": "Base to Quinary"
 				}
 			]
 		}
 	},
 	"styles": {
+		"color": {
+			"background": "var:preset|color|base",
+			"text": "var:preset|color|default"
+		},
 		"elements": {
 			"button": {
 				"color": {
@@ -85,7 +128,7 @@
 				"variations": {
 					"outline": {
 						"border": {
-							"color": "var(--wp--preset--color--secondary) !important"
+							"color": "var(--wp--preset--color--secondary)"
 						},
 						"color": {
 							"text": "var:preset|color|secondary"
@@ -101,6 +144,28 @@
 						}
 					}
 				}
+			},
+			"core/navigation": {
+				"elements": {
+					"link": {
+						":hover": {
+							"color": {
+								"text": "var:preset|color|quinary"
+							}
+						},
+						":active": {
+							"color": {
+								"text": "var:preset|color|quinary"
+							}
+						},
+						":focus": {
+							"color": {
+								"text": "var:preset|color|quinary"
+							}
+						}
+					}
+				},
+				"css": "& .current-menu-item{ color:var(--wp--preset--color--quinary);}"
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 
 ## Description
 
-[Demo WP React Plugin Boilerplate](https://demo.patternswp.com/wp-block-theme-boilerplate/)
+[Demo WP Block Theme Boilerplate](https://demo.patternswp.com/wp-block-theme-boilerplate/)
 
 Creating a block theme often involves repetitive tasks, as much of the code is reused. Typically, you begin by building a comprehensive base theme, and then for niche themes such as business, education, or e-commerce, you only need to adjust global settings and styles in the theme.json, add pre-made patterns to the patterns folder, and include relevant templates in the templates folder, such as single-product.html for WooCommerce.
 
@@ -50,7 +50,7 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 
   - Provides `npm run build` command to generate optimized production files for the theme.
 
-- **Language File Creation:** 
+- **Language File Creation:**
 
   - Generates `.pot` files from both JavaScript and PHP code.
   - Includes the `npm run makepot` command to generate the `.pot` file. Note: The JavaScript language file is created using `@wordpress/babel-preset-default`. The `npm run makepot` command utilizes WP-CLI to generate PHP file translations and merge them with the `JavaScript .pot` file to produce the final `.pot` file.
@@ -432,3 +432,144 @@ WP Block Theme Boilerplate is developed based on the structure of [WP React Plug
 ### Recent Projects
 
 <a href="https://wordpress.org/plugins/patterns-store/" target="_blank"><img src="https://ps.w.org/patterns-store/assets/icon.svg" width="50" height="50" />Patterns Store – Creates a store for WordPress Patterns</a>
+
+## Generate a new theme with AI
+
+This boilerplate is designed to be forked and renamed for new themes. If
+you use an AI assistant (OpenCode, Claude, ChatGPT, Cursor, Copilot, etc.),
+copy-paste the prompt below to bootstrap a new theme quickly. The prompt
+is intentionally a template — replace the bracketed placeholders with
+your brand values before pasting.
+
+### Quick start: have AI rewrite this prompt for you
+
+The full prompt below is intentionally detailed and generic, so it
+works for any theme. Before pasting it into your AI chat, you can save
+time by asking your favorite AI chat to **rephrase it for your specific
+theme**. Copy the short prompt below, fill in the bracketed values
+with your own, and paste it into your AI first:
+
+```
+My theme name is '[theme-name]' whose purpose is '[purpose]', rephrase
+this prompt.
+```
+
+Then ask your AI to also customize the larger prompt block in the
+next section (`### Prompt`) for your theme. Once your AI returns the
+rewritten prompt, paste the rewritten version back into this README
+(or feed it directly to a fresh AI session) to bootstrap your theme.
+
+If you prefer, you can skip this step and fill in the full generic
+prompt below manually.
+
+### Prompt
+
+``````
+You are extending the WordPress block theme boilerplate at
+`wp-content/themes/wp-block-theme-boilerplate` (the repo you're in).
+Create a new sibling theme by following these steps exactly. Read
+`AGENTS.md` and `README.md` first — they document the conventions,
+file layout, and verification gates. Do not skip this step.
+
+# Project parameters (replace these with your brand values)
+
+- New theme slug (kebab-case): `[YOUR-THEME-SLUG]`         e.g. `patterns-foo`
+- New theme name (display): `[Your Theme Display Name]`    e.g. `Patterns Foo`
+- Theme URI: `[https://github.com/your-org/your-repo]`
+- Author name: `[Your Name]`
+- Author URI: `[https://your-site.com]`
+- Brand slug (for CSS prefix): `[yourbrand]`
+- Primary color: `[#hexcode]`                              e.g. `#3B82F6`
+- Secondary color: `[#hexcode]`
+- Accent color: `[#hexcode]`
+- Body font family: `[Font Name]`                          e.g. `Inter`
+- Heading font family: `[Font Name]`                       e.g. `Mukta`
+- Text domain: `[your-theme-slug]`                         (kebab-case, same as slug)
+
+# Steps
+
+1. Copy the boilerplate folder to a new sibling at
+   `wp-content/themes/[YOUR-THEME-SLUG]/`.
+
+2. Open `.bin/initial-rename.js` and replace the `from:` and `to:`
+   arrays to swap these identifiers across all files in one pass:
+   - `wp-block-theme-boilerplate`  → `[YOUR-THEME-SLUG]`
+   - `Wp_Block_Theme_Boilerplate`  → `[Your_Theme_PascalCase]`
+   - `wp_block_theme_boilerplate`  → `wp_[your_slug_snake]`
+   - `WP_BLOCK_THEME_BOILERPLATE`  → `[YOUR_SLUG_UPPER]`
+   - `WpBlockThemeBoilerplate`     → `[YourSlugCamelCase]`
+   - `companydomain-wbtb-`         → `[yourbrand]-[your-theme-slug]-`
+   - `codersantosh` references in headers → your author name
+   Run `npm run initial-rename` from the new theme directory.
+
+3. From the new theme directory, install dependencies:
+   ```bash
+   cd wp-content/themes/[YOUR-THEME-SLUG]
+   npm install
+   ```
+
+4. Edit `theme.json` design tokens to match your brand:
+   - `settings.color.palette` and `settings.color.duotone` — replace
+     the 8 palette entries with your brand colors. Keep the slug
+     naming convention (`base`, `default`, `primary`, `secondary`,
+     `tertiary`, `quaternary`, `quinary`, `accent`).
+   - `settings.typography.fontFamilies` — replace with your font
+     families. If self-hosting fonts, drop `.woff2` files in
+     `assets/fonts/<family>/` and add `fontFace` entries.
+   - `settings.spacing.spacingSizes` — adjust if your spacing scale
+     differs from the boilerplate defaults.
+
+5. Update `style.css` and `README.txt` headers with the new theme
+   name, URIs, and description. Stable tag can stay at `1.0.0`.
+
+6. Audit the 55 boilerplate patterns:
+   - Modify patterns that need adjustment for your brand colors and
+     fonts (most patterns reference `var:preset|color|*` and
+     `var:preset|font-family|*`, so theme.json changes flow through).
+   - Delete patterns you don't need.
+   - Add new patterns in `patterns/` following the docblock format:
+     ```php
+     <?php
+     /**
+      * Title: My Pattern
+      * Slug: [YOUR-THEME-SLUG]/my-pattern
+      * Categories: featured
+      * Description: ...
+      *
+      * @package [Your_Theme_PascalCase]
+      * @subpackage [Your_Theme_PascalCase]/patterns
+      * @since 1.0.0
+      */
+     ?>
+     <!-- wp:group ... -->
+     ```
+
+# Conventions to preserve
+
+These are documented in `AGENTS.md` and observed in the boilerplate
+source code. Do not deviate:
+
+- Singleton method: `get_instance()`.
+- Pattern category slug: `page` (unchanged across derived themes —
+  bare slug is reused, not prefixed).
+- Version constant: `[YOUR_SLUG_UPPER]_VERSION` (defined in `functions.php`).
+  Use this for asset cache busters.
+- Pattern, template, template-part file format: `<?php /** docblock */ ?>`
+  with `Title / Slug / Categories / Description` fields.
+- Cover blocks reference images by URL.
+- `atomic.css` is a utility framework, MIT-licensed third-party. License
+  header at the top of each file. Drop the file unchanged when renaming.
+- Admin external links: replace patternswp.com URLs with your own.
+
+# When uncertain
+
+If you encounter a convention not documented in `AGENTS.md`, prefer
+matching the existing patterns in the source code over inventing new
+ones. The boilerplate is small (~160 files) and reading the relevant
+parts is faster than guessing.
+
+For questions about WordPress core APIs (block bindings, pattern
+registry, theme.json schema), consult the official WordPress developer
+documentation at developer.wordpress.org rather than guessing.
+``````
+

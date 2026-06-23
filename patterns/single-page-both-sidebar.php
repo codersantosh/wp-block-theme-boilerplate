@@ -29,7 +29,7 @@
 
 		<!-- wp:column {"width":"50%"} -->
 		<div class="wp-block-column" style="flex-basis:50%">
-			<!-- wp:post-content {"className":"pwp-child-reset","align":"wide","layout":{"type":"constrained"}} /--> 
+			<!-- wp:post-content {"className":"pwp-child-reset","align":"wide","layout":{"type":"constrained"}} /-->
 		</div>
 		<!-- /wp:column -->
 

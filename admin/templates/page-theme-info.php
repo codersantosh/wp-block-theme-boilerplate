@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="welcome-panel-content">
 			<div class="welcome-panel-header">
 				<h2>
-					<?php esc_html_e( 'Welcome to WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
+					<?php esc_html_e( 'Welcome to WP Block Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
 				</h2>
 				<p>
 					<?php
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 					<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn-primary button button-primary button-hero">
 						<?php
-							esc_html_e( 'Get WP Bock Theme Boilerplate Pro', 'wp-block-theme-boilerplate' );
+							esc_html_e( 'Get WP Block Theme Boilerplate Pro', 'wp-block-theme-boilerplate' );
 						?>
 					</a>
 					<?php
@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</svg>
 					<div class="welcome-panel-column-content">
 						<h3>
-							<?php esc_html_e( 'Customize Templates, Template Parts & More', 'wp-block-theme-boilerplate' ); ?>    
+							<?php esc_html_e( 'Customize Templates, Template Parts & More', 'wp-block-theme-boilerplate' ); ?>
 						</h3>
 						<p>
 							<?php esc_html_e( 'With a block theme, you can customize every aspect of both the theme and the site, from headers and footers to individual blocks, providing a cohesive and personalized design.', 'wp-block-theme-boilerplate' ); ?>
@@ -113,12 +113,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<div class="companydomain-wbtb-intro-auth at-p">
 								<div class="companydomain-wbtb-intro-profile at-h at-w at-bdr at-bdr-rad at-m at-flx at-al-itm-ctr at-jfy-cont-ctr">
 									<span class="at-w at-h at-bdr-rad">
-										<img class="companydomain-wbtb-gsm-screenshot" src="<?php echo esc_url( WP_BLOCK_THEME_BOILERPLATE_URL . 'assets/img/patternswp-logo.png' ); ?>" alt="<?php esc_attr_e( 'WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>" />
+										<img class="companydomain-wbtb-gsm-screenshot" src="<?php echo esc_url( WP_BLOCK_THEME_BOILERPLATE_URL . 'assets/img/patternswp-logo.png' ); ?>" alt="<?php esc_attr_e( 'WP Block Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>" />
 									</span>
 								</div>
 								<div class="companydomain-wbtb-intro-profile-info at-m at-txt-al">
 									<h3 class="txt">
-										<?php esc_html_e( 'WP Bock Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
+										<?php esc_html_e( 'WP Block Theme Boilerplate', 'wp-block-theme-boilerplate' ); ?>
 									</h3>
 									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="button-primary companydomain-wbtb-btn-primary">
 										<?php esc_html_e( 'Visit Site', 'wp-block-theme-boilerplate' ); ?>
@@ -137,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</h4>
 						</div>
 						<div class="companydomain-wbtb-card-body at-p at-p">
-							<div class="companydomain-wbtb-intro-auth--info">								
+							<div class="companydomain-wbtb-intro-auth--info">
 								<ul class="companydomain-wbtb-personal-detail at-flx at-flx-col at-gap">
 									<li class="">
 										<dl class="at-flx at-al-itm-ctr at-gap">
@@ -151,7 +151,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'Create A Ticket', 'wp-block-theme-boilerplate' ); ?>
 												</a>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 									<li class="mt-2">
@@ -166,8 +166,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a href="mailto:email-address" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'email-address', 'wp-block-theme-boilerplate' ); ?>
 												</a>
-											</dd>                                                        
-										</dl>												
+											</dd>
+										</dl>
 									</li>
 									<li class="mt-2">
 										<dl class="at-flx at-al-itm-ctr at-gap">
@@ -179,7 +179,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											</dt>
 											<dd class="at-m">
 												<?php esc_html_e( 'Kathmandu, Nepal', 'wp-block-theme-boilerplate' ); ?>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 								</ul>
@@ -194,7 +194,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<span class="dashicons dashicons-twitter"></span>
 										</a>
 									</li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -213,7 +213,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</div>
 								<div class="companydomain-wbtb-card-body at-p">
 									<p class="at-m">
-										<?php esc_html_e( 'In-depth and well documented articles will help you to use the WP Bock Theme Boilerplate Themes in easiest way.', 'wp-block-theme-boilerplate' ); ?>
+										<?php esc_html_e( 'In-depth and well documented articles will help you to use the WP Block Theme Boilerplate Themes in easiest way.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
 									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'Visit Knowledge Base', 'wp-block-theme-boilerplate' ); ?>
@@ -249,7 +249,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</div>
 								<div class="companydomain-wbtb-card-body at-p">
 									<p class="at-m">
-										<?php esc_html_e( 'We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Bock Theme Boilerplate.', 'wp-block-theme-boilerplate' ); ?>
+										<?php esc_html_e( 'We have dedicated support team 24*7 to help you in case you encounter any issue during and after the use of WP Block Theme Boilerplate.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
 									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'Create A Ticket', 'wp-block-theme-boilerplate' ); ?>
@@ -267,7 +267,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</div>
 								<div class="companydomain-wbtb-card-body at-p">
 									<p class="at-m">
-										<?php esc_html_e( 'WP Bock Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration.', 'wp-block-theme-boilerplate' ); ?>
+										<?php esc_html_e( 'WP Block Theme Boilerplate Theme comes with detailed video tutorials of each and every customization with practical demonstration.', 'wp-block-theme-boilerplate' ); ?>
 									</p>
 									<a href="https://patternswp.com/full-site-editing-fse-themes/wp-block-theme-boilerplate" target="_blank" rel="noopener noreferrer nofollow" class="companydomain-wbtb-btn">
 										<?php esc_html_e( 'View Video Guide', 'wp-block-theme-boilerplate' ); ?>
@@ -335,7 +335,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										<?php
 									}
 									?>
-								</div>				
+								</div>
 							</div>
 						</div>
 							<?php
@@ -429,7 +429,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										</table>
 									</div>
 								</div>
-							</div>           
+							</div>
 						</div>
 					</div>
 					<?php
@@ -462,6 +462,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 												}
 												?>
 											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php
+					}
+					?>
+					<?php
+					$changelog = function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ? wp_block_theme_boilerplate_parse_changelog() : '';
+					if ( $changelog ) {
+						?>
+							<div class="at-row">
+								<div class="at-col-12">
+									<div class="companydomain-wbtb-card at-bg-cl at-bdr">
+										<div class="companydomain-wbtb-card-header at-bdr at-p at-jfy-cont-st at-gap at-flx">
+											<span class="dashicons dashicons-backup"></span>
+											<h4 class="companydomain-wbtb-card-header-ttl at-txt at-m">
+												<?php esc_html_e( 'Changelog', 'wp-block-theme-boilerplate' ); ?>
+											</h4>
+										</div>
+										<div class="companydomain-wbtb-card-body at-p">
+											<pre class="companydomain-wbtb-changelog"><?php echo wp_kses_post( $changelog ); ?></pre>
 										</div>
 									</div>
 								</div>

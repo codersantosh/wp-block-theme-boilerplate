@@ -36,7 +36,7 @@ class Wp_Block_Theme_Boilerplate_Notice {
 	 * @since 1.0.0
 	 * @return object
 	 */
-	public static function instance() {
+	public static function get_instance() {
 		// Store the instance locally to avoid private static replication.
 		static $instance = null;
 
@@ -51,7 +51,7 @@ class Wp_Block_Theme_Boilerplate_Notice {
 
 	/**
 	 * Initialize the class.
-	 * Add notice, add theme installation time and remove theme options data from databse if theme is switched to another.
+	 * Add notice, add theme installation time and remove theme options data from database if theme is switched to another.
 	 *
 	 * @access public
 	 * @return void
@@ -244,6 +244,6 @@ class Wp_Block_Theme_Boilerplate_Notice {
  * @return Wp_Block_Theme_Boilerplate_Notice
  */
 function wp_block_theme_boilerplate_notice() { //phpcs:ignore
-	return Wp_Block_Theme_Boilerplate_Notice::instance();
+	return Wp_Block_Theme_Boilerplate_Notice::get_instance();
 }
 wp_block_theme_boilerplate_notice()->run();

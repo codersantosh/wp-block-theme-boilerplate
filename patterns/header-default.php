@@ -14,7 +14,7 @@
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"backgroundColor":"default","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-default-background-color has-background">
-	
+
 <!-- wp:template-part {"slug":"primary-header","align":"full"} /-->
 
 </div>

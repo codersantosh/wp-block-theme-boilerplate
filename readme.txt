@@ -2,9 +2,9 @@
 
 Contributors: codersantosh
 Tags: block-theme, full-site-editing, wide-blocks, custom-colors, custom-fonts, custom-header, custom-logo, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
-Requires at least: 6.0
-Tested up to: 6.7
-Requires PHP: 7.0
+Requires at least: 7.0
+Tested up to: 7.0
+Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,6 +14,13 @@ WP Block Theme Boilerplate is a modern WordPress theme boilerplate for creating 
 == Description ==
 
 WP Block Theme Boilerplate is a modern WordPress theme boilerplate designed to simplify the development of custom block-based themes. Built with the latest WordPress development practices, it offers a super-fast, easily customizable, and highly flexible framework for creating beautiful and responsive websites. Whether you are building a blog, portfolio, business site, or an e-commerce store, this boilerplate provides the necessary tools and features to get started quickly. It is fully compatible with Gutenberg. With WP Block Theme Boilerplate, you can create unique and powerful websites that cater to various niches and industries.
+
+== Copyright ==
+
+WP Block Theme Boilerplate WordPress Theme, (C) 2025 Santosh Kunwar(codersantosh)
+WP Block Theme Boilerplate is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
 
 == Translation ==
 
@@ -129,6 +136,12 @@ To use global styles, go to Appearance > Editor > Styles, then click on the Edit
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Organized typography folder
+* Converted fonts format .ttf to .woff2
+* Added duotone
+* Fixed skip to content
 
 = 1.0.0 =
 * Initial release

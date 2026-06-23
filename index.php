@@ -1,1 +1,2 @@
-<?php // phpcs:ignore
+<?php
+// Silence is golden.

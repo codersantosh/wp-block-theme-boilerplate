@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WP Bock Theme Boilerplate functions and definitions
+ * WP Block Theme Boilerplate functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WP Bock Theme Boilerplate
+ * @package WP Block Theme Boilerplate
  */
 
 /**

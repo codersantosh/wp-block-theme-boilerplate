@@ -23,18 +23,11 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_get_recommended_plugins' ) )
 	 */
 	function wp_block_theme_boilerplate_get_recommended_plugins() {
 		$plugins = array(
-			// This is an example of how to include a plugin from the WordPress Plugin Repository.
 			array(
-				'name'   => esc_html__( 'Gutentor', 'wp-block-theme-boilerplate' ), // The plugin name.
-				'slug'   => 'gutentor', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/gutentor).
-				'plugin' => 'gutentor/gutentor.php', // The plugin folder and main file.
-				'url'    => 'https://www.gutentor.com/', // // The plugin full url(optional).
-			),
-			array(
-				'name'   => esc_html__( 'Templateberg', 'wp-block-theme-boilerplate' ), // The plugin name.
-				'slug'   => 'templateberg', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/templateberg).
-				'plugin' => 'templateberg/templateberg.php', // The plugin folder and main file.
-				'source' => 'https://downloads.wordpress.org/plugin/templateberg.1.1.8.zip', // Zip file URL of the plugin. Not allowed for theme in WordPress dot org.
+				'name'   => esc_html__( 'Advanced Import', 'wp-block-theme-boilerplate' ),
+				'slug'   => 'advanced-import',
+				'plugin' => 'advanced-import/advanced-import.php',
+				'url'    => 'https://wordpress.org/plugins/advanced-import/',
 			),
 		);
 
@@ -65,7 +58,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_install_plugin' ) ) {
 	 * @return array Associative array with 'success' boolean and 'message' string.
 	 */
 	function wp_block_theme_boilerplate_install_plugin( $plugin_info ) {
-		if ( ! isset( $plugin_info ['name'] ) || ! isset( $plugin_info ['slug'] ) || ! isset( $plugin_info ['plugin'] ) ) {
+		if ( ! isset( $plugin_info['name'] ) || ! isset( $plugin_info['slug'] ) || ! isset( $plugin_info['plugin'] ) ) {
 			// Not enough plugin info.
 			return array(
 				'success' => false,
@@ -170,7 +163,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_install_plugin' ) ) {
 						/* translators: %1$s is the plugin name, %2$s is error message */
 						esc_html__( 'Error retrieving information for plugin "%1$s": %2$s', 'wp-block-theme-boilerplate' ),
 						esc_html( $name ),
-						esc_html( $result->get_error_message() )
+						esc_html( $api->get_error_message() )
 					),
 				);
 			}
@@ -409,7 +402,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_default_user_meta' ) ) :
 	function wp_block_theme_boilerplate_default_user_meta() {
 		$default_user_meta = array(
 			'remove_review_notice_permanently'         => false,
-			'remove_review_notice_temporary_date_time' => time(),
+			'remove_review_notice_temporary_date_time' => 0,
 		);
 
 		return apply_filters( 'wp_block_theme_boilerplate_default_user_meta', $default_user_meta );
@@ -483,7 +476,7 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_file_system' ) ) {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return string|WP_Error directory path or WP_Error object if no permission
+	 * @return WP_Filesystem Initialized WordPress filesystem object.
 	 *
 	 * @author     codersantosh <codersantosh@gmail.com>
 	 */
@@ -498,12 +491,17 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_file_system' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) {
+if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) :
 	/**
-	 * Parse changelog
+	 * Parse the changelog section from the theme's readme.txt.
+	 *
+	 * Reads the WP.org-format readme, finds the == Changelog == section,
+	 * and returns the resulting text (including per-version headings
+	 * like `= 1.2.3 =` and blank lines between versions), sanitized via
+	 * wp_kses_post().
 	 *
 	 * @since 1.0.0
-	 * @return string
+	 * @return string Sanitized changelog text, or empty string if unavailable.
 	 *
 	 * @author     codersantosh <codersantosh@gmail.com>
 	 */
@@ -511,9 +509,12 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) {
 
 		$wp_filesystem = wp_block_theme_boilerplate_file_system();
 
-		$changelog_file = apply_filters( 'wp_block_theme_boilerplate_changelog_file', WP_BLOCK_THEME_BOILERPLATE_PATH . 'readme.txt' );
+		$changelog_file = apply_filters(
+			'wp_block_theme_boilerplate_changelog_file',
+			WP_BLOCK_THEME_BOILERPLATE_PATH . 'readme.txt'
+		);
 
-		/*Check if the changelog file exists and is readable.*/
+		/* Check if the changelog file exists and is readable. */
 		if ( ! $changelog_file || ! is_readable( $changelog_file ) ) {
 			return '';
 		}
@@ -529,16 +530,16 @@ if ( ! function_exists( 'wp_block_theme_boilerplate_parse_changelog' ) ) {
 		$changelog = '';
 
 		if ( preg_match( $regexp, $content, $matches ) ) {
-			$changes = explode( '\r\n', trim( $matches[1] ) );
+			$changes = preg_split( '/\R/', trim( $matches[1] ) );
 
 			foreach ( $changes as $index => $line ) {
-				$changelog .= wp_kses_post( preg_replace( '~(=\s*Version\s*(\d+(?:\.\d+)+)\s*=|$)~Uis', '', $line ) );
+				$changelog .= wp_kses_post( $line ) . "\n";
 			}
 		}
 
-		return wp_kses_post( $changelog );
+		return $changelog;
 	}
-}
+endif;
 
 if ( ! function_exists( 'wp_block_theme_boilerplate_get_theme_faq' ) ) :
 	/**
