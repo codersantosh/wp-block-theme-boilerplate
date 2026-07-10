@@ -28,7 +28,7 @@ WP Block Theme Boilerplate is translation ready.
 
 == License ==
 
-WP Block Theme Boilerplate, Copyright © 2024  Santosh Kunwar(codersantosh)
+WP Block Theme Boilerplate, Copyright © 2025  Santosh Kunwar(codersantosh)
 WP Block Theme Boilerplate is distributed under the terms of the GNU General Public License v2
 The exceptions to license are as follows:
 
@@ -136,12 +136,6 @@ To use global styles, go to Appearance > Editor > Styles, then click on the Edit
 
 
 == Changelog ==
-
-= 1.0.1 =
-* Organized typography folder
-* Converted fonts format .ttf to .woff2
-* Added duotone
-* Fixed skip to content
 
 = 1.0.0 =
 * Initial release
