@@ -26,7 +26,7 @@ By understanding and utilizing this starter theme, you can establish a solid fou
     - [5. Activate the Theme](#5-activate-the-theme)
     - [6. Start Customization and Coding](#6-start-customization-and-coding)
   - [Folder Information](#folder-information)
-  - [Changelog](#changelog)
+  - [Generate a new theme with AI](#generate-a-new-theme-with-ai)
   - [Contributing](#contributing)
   - [Authors](#authors)
   - [Recommendations](#recommendations)
@@ -88,6 +88,30 @@ By understanding and utilizing this starter theme, you can establish a solid fou
 
   - Since the WP Block Theme Boilerplate is designed to be highly customizable, developers are encouraged to modify and adapt `Atomic CSS` according to their specific project requirements.
   - Developers are encouraged to customize any aspect of the theme's structure, styling, or functionality according to their needs. They can remove existing libraries and/or integrate additional CSS, or JavaScript libraries and modify them based on their preferences and expertise. It's important to view this theme as a starting point only, allowing developers to tailor it precisely to their requirements and optimize its performance and user experience.
+
+- **Block Bindings:** Two block binding sources are registered in `includes/class-block-bindings.php` (guarded by `function_exists('register_block_bindings_source')`, hooked on `init`): `wp-block-theme-boilerplate/copyright` (renders `&copy; <year> <site title>`) and `wp-block-theme-boilerplate/archive-title` (renders the archive title, search query, or `Blog` on the home page).
+
+  - *Why it matters:* patterns show dynamic text (an auto-updating copyright line and the correct archive heading) with no hardcoded strings, so any theme derived from this boilerplate inherits it for free.
+
+- **Helper functions & filters:** `includes/functions.php` exposes reusable helpers — `get_recommended_plugins()`, `install_plugin()`, `get_plugin_names()`, default/Get/Update options (`default_options`/`get_options`/`update_options`), default/Get/Update user meta (`default_user_meta`/`get_user_meta`/`update_user_meta`), `parse_changelog()`, `get_theme_faq()`, and `is_pro_active()` — wrapped in `if ( ! function_exists() )` so derived themes can override them. Pluggable filters: `recommended_plugins`, `default_options`, `default_user_meta`, `faq`, `changelog_file`.
+
+  - *Why it matters:* because the helpers are pluggable and the filters exist, a child or forked theme can swap in its own recommended plugins, FAQ, options, or user-meta defaults without editing the core files.
+
+- **Style variations & design tokens:** `theme.json` (v3) defines an 8-color palette (`base`, `default`, `primary`, `secondary`, `tertiary`, `quaternary`, `quinary`, `accent`), 6 duotone pairs, fluid spacing scale `10`–`80`, and self-hosted woff2 fonts (Mukta for headings, Inter for body). Style variations: `styles/dark.json` (global) and `styles/blocks/button.json` (block-style variation).
+
+  - *Why it matters:* all visual styling flows from these tokens — patterns reference `var(--wp--preset--*)` instead of hardcoded values, so rebranding is as simple as editing `theme.json` (and optionally the `dark.json` variation) rather than touching every pattern.
+
+- **Automated Deployment:** `.github/workflows/deploy.yml` builds the theme via `npm run deploy` and pushes the result to the WordPress.org SVN theme repository on a `v*` tag or manual workflow dispatch. Requires `SVN_USERNAME` and `SVN_PASSWORD` repository secrets.
+
+  - *Why it matters:* you normally never run this by hand — it fires on a version tag. See **Automated Deployment to WordPress.org** below for the beginner walkthrough.
+
+- **Contact Form 7 ready:** The `patterns/contact-form.php` pattern provides a styled two-column contact layout with a placeholder for a Contact Form 7 shortcode (`<!-- wp:shortcode -->`), so you can drop in your form shortcode.
+
+  - *Why it matters:* paste your `[contact-form-7 ...]` shortcode into the pattern's shortcode block and the surrounding two-column layout is already styled for you.
+
+- **`atrc` dependency note:** `atrc` (Atomic React Components) is listed in `package.json` for future use but is not currently imported anywhere in `src/`. Do not remove it unless you have a concrete plan to use it.
+
+  - *Why it matters:* it is intentionally kept as a reserved dependency for upcoming interactive (React-based) components. Leaving it in `package.json` avoids a future rename — just don't delete it by accident.
 
 ## Prerequisites
 
@@ -197,241 +221,239 @@ Go to WordPress Dashboard => Appearance => Theme Info and View the Default `Them
 Since this is now your own theme, feel free to customize using your preferred code editor and thoroughly test everything. You have the freedom to add, edit, remove, or update any files, folders, or code within the theme. However, it's important to be knowledgeable about the changes you make. Follow these steps to begin your development:
 
 1. Navigate to theme files `/wp-content/themes/your-renamed-theme-folder`,and open a terminal app.
-2. Run the `npm run start` command to initialize the development of React JS. This command sets up a development server, allowing you to see changes in real time. Use this in the development environment.
+2. Run the `npm run start` command to start the development server for the JavaScript/SCSS sources (4 entrypoints — `editor.js`, `info.js`, `notice.js`, `public.js` — compiled via `@wordpress/scripts`). This sets up a live development server so you can see changes in real time. Use this in the development environment.
 3. Once development is complete, run the `npm run build` command to finalize the development and prepare the theme for production. This command creates production files. After building, move the production files to the appropriate production directory.
-4. Run the `npm run deploy` command directly to create a production-ready deploy folder. This folder contains all the necessary files for deploying your theme to a live WordPress site, skipping the need for `npm run build` beforehand.
+4. Run `npm run deploy` to build the assets, regenerate the `.pot` file, and produce a deployable package. The bundling step (`.bin/deploy.js`, using the `archiver` package) creates `deploy/<slug>/` plus a `deploy/<slug>-<version>.zip` for submission to WordPress.org. `npm run deploy` runs the full pipeline (build + makepot + bundle) in one step — for releases, always run `npm run deploy` rather than `npm run deploy:bundle` alone.
+
+**Code Quality / Verification**
+
+Before committing, run the verification gates (per `AGENTS.md`):
+
+- `npm run build` — compile JS + SCSS from `src/` to `build/`.
+- `npx wp-scripts lint-js src/` and `npx wp-scripts lint-style` — lint JavaScript and SCSS.
+- `vendor/bin/phpcs --standard=WordPress-Extra functions.php includes/ admin/ public/` — PHP coding standards. Requires a one-time `composer` setup to install PHPCS together with the WordPress and PHP Compatibility standards.
+
+
+## Automated Deployment to WordPress.org
+
+This theme ships with a ready-to-use GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the theme and publishes it to the official WordPress.org theme directory for you. You do **not** need to run `svn` commands yourself.
+
+**When does it run?**
+
+- **Automatically** when you push a Git tag that starts with `v` (for example `v1.2.0`).
+- **Manually** from the *Actions* tab in GitHub (workflow_dispatch) — useful for re-running or doing a dry run.
+
+**One-time setup (2 steps):**
+
+1. In your GitHub repository, go to **Settings → Secrets and variables → Actions** and add two repository secrets:
+   - `SVN_USERNAME` — your WordPress.org account username.
+   - `SVN_PASSWORD` — your WordPress.org account password (or an application password).
+2. Make sure the theme slug in `style.css` and `package.json` matches the slug you reserved on WordPress.org.
+
+**To release a new version:**
+
+1. Bump the version in `style.css` and `package.json` (keep them identical).
+2. Commit your changes.
+3. Tag the release and push the tag:
+
+   ```sh
+   git tag v1.2.0
+   git push origin v1.2.0
+   ```
+
+4. GitHub Actions checks out the code, runs `npm run deploy` (build + `.pot` regeneration + zip), validates the output, and commits the result to `https://themes.svn.wordpress.org/<slug>/<version>/`.
+
+**Manual run options:** from the *Actions → Deploy to WordPress.org* page you can pass `slug`, `version`, and `dry_run=true` to test the pipeline without actually committing to SVN.
+
+**Notes for beginners:**
+
+- The theme slug defaults to your **repository name**; override it with the `slug` input if they differ.
+- The workflow uploads any files in a `.wordpress-org/` folder (e.g. screenshot, banner) to the SVN `assets/` directory.
+- A `dry_run` never commits — use it first to confirm the build and secrets are correct.
 
 ## Folder Information
 
 <strong>WP Block Theme Boilerplate</strong> Folder Information
 
 ```sh
-INSIDE: /wp-installatioon-folder/wp-content/themes/your-renamed-theme-folder
+INSIDE: /wp-content/themes/your-renamed-theme-folder
 
 ├── .babelrc
 ├── .gitignore
+├── AGENTS.md
 ├── functions.php
 ├── index.php
 ├── LICENSE.txt
 ├── package-lock.json (auto-generated by NPM)
 ├── package.json
 ├── readme.md (Edit as needed)
-├── README.txt (Edit as needed)
+├── readme.txt (Edit as needed)
 ├── screenshot.png (Edit as needed)
 ├── style.css(Edit as needed)
+├── .stylelintrc.json
 ├── theme.json (Edit as needed)
-|
+│
 ├── .bin
-|  ├── copy.js
-|  ├── initial-rename.js
-|  └── make-string.js
-|
+│  ├── deploy.js
+│  └── initial-rename.js
+│
+├── .github
+│  └── workflows
+│     └── deploy.yml
+│
 ├── admin
-|  ├── templates
-|  |  ├── index.php
-|  |  ├── notice-getting-started.php (Edit as needed)
-|  |  ├── notice-review.php (Edit as needed)
-|  |  └── page-theme-info.php (Edit as needed)
-|  ├── class-editor.php
-|  ├── class-info.php
-|  ├── class-notice.php
-|  └── index.php
-|
+│  ├── templates
+│  |  ├── index.php
+│  |  ├── notice-getting-started.php (Edit as needed)
+│  |  ├── notice-review.php (Edit as needed)
+│  |  └── page-theme-info.php (Edit as needed)
+│  ├── class-editor.php
+│  ├── class-info.php
+│  ├── class-notice.php
+│  └── index.php
+│
 ├── assets
-|  ├── fonts (Add your own fonts as per theme.json)
-|  |  ├── font1.ttf (Add own font)
-|  |  ├── font1.ttf (Add own font)
-|  |  ├── font3.css (Add own font)
-|  |  └── (Add fonts as needed)
-|  ├── img (Add your own images as per patterns and other requirements)
-|  |  ├── banner-img.png (Replace with your image - images for pattern)
-|  |  ├── default-banner.png (Replace with your image - images for pattern)
-|  |  ├── feature-img-1.png (Replace with your image - images for pattern)
-|  |  └── wp-block-theme-boilerplate-logo.png (Replace with your logo)
-|  └── library
-|       └── atomic-css
-|           ├── atomic-rtl.css
-|           ├── atomic-rtl.min.css
-|           ├── atomic.css
-|           └── atomic.min.css
-|
-├── build (auto-generated by NPM)
-|  ├── admin
-|  |   ├── editor
-|  |   |   ├── editor-rtl.css
-|  |   |   ├── editor.asset.php
-|  |   |   ├── editor.css
-|  |   |   └── editor.js
-|  |   ├── info
-|  |   |   ├── info-rtl.css
-|  |   |   ├── info.asset.php
-|  |   |   ├── info.css
-|  |   |   └── info.js
-|  |   └── notice
-|  |       ├── notice-rtl.css
-|  |       ├── notice.asset.php
-|  |       ├── notice.css
-|  |       └── notice.js
-|  |
-|  └── public
-|        ├── public-rtl.css
-|        ├── public.asset.php
-|        ├── public.css
-|        └── public.js
-|
+│  ├── fonts (Self-hosted .woff2 fonts — add your own as per theme.json)
+│  |  ├── inter/   (Inter .woff2 weights)
+│  |  └── mukta/  (Mukta .woff2 weights)
+│  ├── img (Add your own images as per patterns and other requirements)
+│  |  ├── patternswp-logo.png
+│  |  ├── banner-img.png
+│  |   ├── default-banner.jpg
+│  |   ├── featured-img-1.png
+│  |   ├── bs-icon-columns.png
+│  |   ├── bs-icon-columns-gap.png
+│  |   ├── bs-icon-arrow-repeat.png
+│  |   └── bs-icon-ui-check-grid.png
+│  └── library
+│       └── atomic-css
+│           ├── atomic-rtl.css
+│           ├── atomic.css
+│           ├── atomic.min-rtl.css
+│           └── atomic.min.css
+│
+├── build (auto-generated by NPM — `npm run build`)
+│  ├── admin
+│  |   ├── editor
+│  |   |   ├── editor-rtl.css
+│  |   |   ├── editor.asset.php
+│  |   |   ├── editor.css
+│  |   |   └── editor.js
+│  |   ├── info
+│  |   |   ├── info-rtl.css
+│  |   |   ├── info.asset.php
+│  |   |   ├── info.css
+│  |   |   └── info.js
+│  |   └── notice
+│  |       ├── notice-rtl.css
+│  |       ├── notice.asset.php
+│  |       ├── notice.css
+│  |       └── notice.js
+│  └── public
+│        ├── public-rtl.css
+│        ├── public.asset.php
+│        ├── public.css
+│        └── public.js
+│
 ├── includes
-|  ├── api
-|  |  ├── class-api-install-plugin.php
-|  |  ├── class-api-settings.php
-|  |  ├── class-api.php
-|  |  └── index.php
-|  ├── class-include.php
-|  ├── functions.php (Custom functions.php, adjust recommended plugins array as needed)
-|  ├── index.php
-|  └── main.php
-|
+│  ├── api
+│  |  ├── class-api-install-plugin.php
+│  |  ├── class-api-settings.php
+│  |   ├── class-api.php
+│  |   └── index.php
+│  ├── class-block-bindings.php
+│  ├── class-include.php
+│  ├── functions.php (Custom functions, adjust recommended plugins array as needed)
+│  ├── index.php
+│  └── main.php
+│
 ├── languages
-|  └── your-renamed-theme.pot
-|
-├── parts (Core WordPress folder for template parts like header, footer, sidebar, etc. Add/Edit as needed)
-|  ├── comments.html
-|  ├── footer.html
-|  ├── header.html
-|  ├── post-meta.html
-|  ├── post-navigation.html
-|  ├── primary-sidebar.html
-|  ├── secondary-sidebar.html
-|  └── (Add own template parts as needed)
-|
-├── patterns (Core WordPress folder for patterns (pre-designed blocks). Add your own patterns here)
-|  ├── pattern-1.php
-|  ├── another-example.php
-|  └── (Add own patterns as needed)
-|
+│  └── your-renamed-theme.pot
+│
+├── parts (Core WordPress folder for template parts: header, footer, sidebar, etc. Add/Edit as needed)
+│  ├── comments.html
+│  ├── footer.html
+│  ├── header-absolute.html
+│  ├── header-default.html
+│  ├── list-archive-header.html
+│  ├── post-meta.html
+│  ├── post-navigation.html
+│  ├── primary-header.html
+│  ├── primary-sidebar.html
+│  ├── secondary-sidebar.html
+│  └── single-header.html
+│
+├── patterns (Core WordPress folder for patterns — pre-designed blocks. 55 patterns; add/remove as needed)
+│  ├── card-1.php
+│  ├── card-2.php
+│  ├── contact-form.php
+│  ├── copyright.php
+│  ├── faq.php
+│  ├── featured-section-1.php
+│  ├── featured-section-2.php
+│  ├── hero-banner.php
+│  ├── landing.php
+│  ├── list-archive-right-sidebar.php
+│  ├── pagination.php
+│  ├── query-grid.php
+│  ├── query-list.php
+│  ├── query-list-min.php
+│  ├── scroll-to-top-button.php
+│  ├── section-title-1.php
+│  ├── single-post-full-width.php
+│  ├── site-identity.php
+│  └── … (55 patterns total)
+│
 ├── public
-|  ├── class-public.php
-|  └── index.php
-|
-├── src (Remove any unnecessary folders if they are not needed, and make sure to adjust the package.json file accordingly.)
-|  ├── admin
-|  |   ├── editor(for block editor)
-|  |   |   ├── index.js
-|  |   |   └── index.scss
-|  |   ├── info(for theme info page)
-|  |   |   ├── index.js
-|  |   |   └── index.scss
-|  |   └── notice(for theme notice)
-|  |       ├── index.js
-|  |       └── index.scss
-|  |
-|  └── public(for frontend)
-|        ├── index.js
-|        └── index.scss
-|
-├── styles(Core WordPress folder for theme’s global settings and style variations. Add your own json/s)
-|  ├── dark.json (Add own theme.json variation)
-|  ├── ember.json (Add own theme.json variation)
-|  ├── fossil.json (Add own theme.json variation)
-|  ├── blocks (Additional blocks variations)
-|  |  ├── pill.jss (Add own variation)
-|  |  ├── post-terms-1.json (Add own variation)
-|  |  ├── section-1.json (Add own variation)
-|  |  └── (Add blocks variations as needed)
-|  ├── colors (Additional colors variations)
-|  |  ├── 01-evening.json (Add own variation)
-|  |  ├── 02-noon.json (Add own variation)
-|  |  ├── 03-dusk.json (Add own variation)
-|  |  └── (Add colors variations as needed)
-|  ├── typography(Additional typography variations)
-|  |  ├── typography-preset-1.json
-|  |  ├── typography-preset-2.json
-|  |  ├── typography-preset-3.json
-|  |  └── (Add typography variations as needed)
-|  └── (Additional theme.json, blocks, colors and typography variations)
-|
-└── templates(Core WordPress folder for templates. Add/Edit as needed based on Template Hierarchy)
+│  ├── class-public.php
+│  └── index.php
+│
+├── src (Development source — compiled to build/ by `npm run build`. Adjust package.json if removing folders.)
+│  ├── editor.js
+│  ├── info.js
+│  ├── notice.js
+│  ├── public.js
+│  ├── _global.scss
+│  ├── _mixins.scss
+│  ├── prefix-vars.scss
+│  ├── admin
+│  |   ├── common.scss
+│  |   ├── editor
+│  |   |   ├── index.js
+│  |   |   └── index.scss
+│  |   ├── info
+│  |   |   ├── index.js
+│  |   |   └── index.scss
+│  |   └── notice
+│  |       ├── index.js
+│  |       └── index.scss
+│  └── public
+│        ├── index.js
+│        ├── index.scss
+│        └── theme.scss
+│
+├── styles (Core WordPress folder for theme.json global settings and style variations)
+│  ├── dark.json (global style variation)
+│  └── blocks
+│     └── button.json (block-style variation)
+│
+└── templates (Core WordPress folder for templates. Add/Edit as needed per Template Hierarchy)
    ├── 404.html
    ├── archive.html
-   ├── page.html
+   ├── blank.html
+   ├── front-page.html
+   ├── home.html
    ├── index.html
-   └── (Additional templates as needed)
+   ├── page.html
+   ├── page-left-sidebar.html
+   ├── page-right-sidebar.html
+   ├── page-both-sidebar.html
+   ├── search.html
+   ├── single.html
+   ├── single-left-sidebar.html
+   ├── single-right-sidebar.html
+   └── single-both-sidebar.html
 ```
-
-## Changelog
-
-### 1.0.0
-
-- Initial Release
-
-## Contributing
-
-Thank you for your interest in contributing to Project WP Block Theme Boilerplate. To submit your changes, please follow the steps outlined below.
-
-1. **Fork the Repository:** Click on the "Fork" button on the top right corner of the repository page to create your fork.
-
-2. **Clone your Fork:** Clone your forked repository to your local machine using the following command:
-
-   ```sh
-   git clone https://github.com/your-username/wp-block-theme-boilerplate.git
-   ```
-
-3. **Create a Feature Branch:** Create a new branch for your feature or bug fix:
-
-   ```sh
-   git checkout -b my-new-feature
-   ```
-
-4. **Make Changes:** Add your changes to the project. You can use the following command to stage all changes:
-
-   ```sh
-   git add .
-   ```
-
-5. **Commit Changes:** Commit your changes with a descriptive commit message:
-
-   ```sh
-   git commit -a m 'Add some feature'
-   ```
-
-6. **Push to your Branch:** Push your changes to the branch you created on your fork:
-
-   ```sh
-   git push origin my-new-feature
-   ```
-
-7. **Submit a Pull Request:** Go to the Pull Requests tab of the original repository and click on "New Pull Request." Provide a clear title and description for your changes, and submit the pull request.
-
-Thank you for contributing to this project!
-
-## Authors
-
-- **Santosh Kunwar** - [codersantosh](https://twitter.com/codersantosh)
-
-See also the list of [contributors](https://github.com/codersantosh/wp-block-theme-boilerplate/graphs/contributors) who participated in this project.
-
-## Recommendations
-
-- [WP React Plugin Boilerplate](https://github.com/codersantosh/wp-react-plugin-boilerplate)
-- [ATOMIC WP CUSTOM TABLE AND QUERY](https://github.com/codersantosh/atomic-wp-custom-table-and-query)
-- [Atrc (atrc) - Atomic React Components](https://www.npmjs.com/package/atrc)
-- [Atomic CSS](https://github.com/codersantosh/atomic-css)
-
-## License & Attribution
-
-- GPLv2 or later © [Santosh Kunwar](https://twitter.com/codersantosh).
-
-WP Block Theme Boilerplate is developed based on the structure of [WP React Plugin Boilerplate](https://github.com/codersantosh/wp-react-plugin-boilerplate).
-
-## About Me
-
-<strong>I just love WordPress more…</strong>
-
-- [![CoderSantosh on Twitter](https://img.shields.io/twitter/follow/codersantosh.svg)](https://twitter.com/codersantosh/)
-- <a href="https://profiles.wordpress.org/codersantosh/" target="_blank"><img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" width="50" height="50" />WordPress Profile</a>
-
-### Recent Projects
-
-<a href="https://wordpress.org/plugins/patterns-store/" target="_blank"><img src="https://ps.w.org/patterns-store/assets/icon.svg" width="50" height="50" />Patterns Store – Creates a store for WordPress Patterns</a>
 
 ## Generate a new theme with AI
 
@@ -519,7 +541,7 @@ file layout, and verification gates. Do not skip this step.
    - `settings.spacing.spacingSizes` — adjust if your spacing scale
      differs from the boilerplate defaults.
 
-5. Update `style.css` and `README.txt` headers with the new theme
+5. Update `style.css` and `readme.txt` headers with the new theme
    name, URIs, and description. Stable tag can stay at `1.0.0`.
 
 6. Audit the 55 boilerplate patterns:
@@ -572,4 +594,74 @@ For questions about WordPress core APIs (block bindings, pattern
 registry, theme.json schema), consult the official WordPress developer
 documentation at developer.wordpress.org rather than guessing.
 ``````
+
+## Contributing
+
+Thank you for your interest in contributing to Project WP Block Theme Boilerplate. To submit your changes, please follow the steps outlined below.
+
+1. **Fork the Repository:** Click on the "Fork" button on the top right corner of the repository page to create your fork.
+
+2. **Clone your Fork:** Clone your forked repository to your local machine using the following command:
+
+   ```sh
+   git clone https://github.com/your-username/wp-block-theme-boilerplate.git
+   ```
+
+3. **Create a Feature Branch:** Create a new branch for your feature or bug fix:
+
+   ```sh
+   git checkout -b my-new-feature
+   ```
+
+4. **Make Changes:** Add your changes to the project. You can use the following command to stage all changes:
+
+   ```sh
+   git add .
+   ```
+
+5. **Commit Changes:** Commit your changes with a descriptive commit message:
+
+   ```sh
+   git commit -a m 'Add some feature'
+   ```
+
+6. **Push to your Branch:** Push your changes to the branch you created on your fork:
+
+   ```sh
+   git push origin my-new-feature
+   ```
+
+7. **Submit a Pull Request:** Go to the Pull Requests tab of the original repository and click on "New Pull Request." Provide a clear title and description for your changes, and submit the pull request.
+
+Thank you for contributing to this project!
+
+## Authors
+
+- **Santosh Kunwar** - [codersantosh](https://twitter.com/codersantosh)
+
+See also the list of [contributors](https://github.com/codersantosh/wp-block-theme-boilerplate/graphs/contributors) who participated in this project.
+
+## Recommendations
+
+- [WP React Plugin Boilerplate](https://github.com/codersantosh/wp-react-plugin-boilerplate)
+- [ATOMIC WP CUSTOM TABLE AND QUERY](https://github.com/codersantosh/atomic-wp-custom-table-and-query)
+- [Atrc (atrc) - Atomic React Components](https://www.npmjs.com/package/atrc)
+- [Atomic CSS](https://github.com/codersantosh/atomic-css)
+
+## License & Attribution
+
+- GPLv2 or later © [Santosh Kunwar](https://twitter.com/codersantosh).
+
+WP Block Theme Boilerplate is developed based on the structure of [WP React Plugin Boilerplate](https://github.com/codersantosh/wp-react-plugin-boilerplate).
+
+## About Me
+
+<strong>I just love WordPress more…</strong>
+
+- [![CoderSantosh on Twitter](https://img.shields.io/twitter/follow/codersantosh.svg)](https://twitter.com/codersantosh/)
+- <a href="https://profiles.wordpress.org/codersantosh/" target="_blank"><img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" width="50" height="50" />WordPress Profile</a>
+
+### Recent Projects
+
+<a href="https://wordpress.org/plugins/patterns-store/" target="_blank"><img src="https://ps.w.org/patterns-store/assets/icon.svg" width="50" height="50" />Patterns Store – Creates a store for WordPress Patterns</a>
 
